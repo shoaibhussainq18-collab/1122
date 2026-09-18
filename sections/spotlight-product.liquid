@@ -1,83 +1,33 @@
-<section class="py-16 bg-white border-b border-gray-200" id="featured-product">
+<section class="py-14 bg-gradient-to-br from-slate-900 via-neutral-900 to-black text-white" id="spotlight">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-gray-50 border border-gray-200 rounded-2xl p-6 sm:p-10 lg:p-12 shadow-sm">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <!-- Left: Visual -->
-        <div class="lg:col-span-6 flex flex-col items-center">
-          <div class="w-full max-w-md aspect-square bg-gradient-to-b from-gray-100 to-white rounded-2xl border border-gray-200 flex items-center justify-center relative p-8 shadow-inner overflow-hidden">
-            <span class="absolute top-4 left-4 bg-brandTeal text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-              HOTTEST SELLER
-            </span>
-            <div class="flex flex-col items-center justify-center transition-all duration-300" id="productDetailMainDisplay">
-              <div class="w-16 h-8 bg-orange-500 rounded-t-xl transition-colors duration-300" id="strapTop"></div>
-              <div class="w-56 h-64 bg-slate-200 rounded-[40px] border-4 border-slate-300 p-3 shadow-2xl flex items-center justify-center">
-                <div class="w-full h-full bg-black rounded-[30px] flex flex-col items-center justify-center text-center p-4 relative overflow-hidden">
-                  <div class="text-3xl font-black text-white font-mono">10:09</div>
-                  <div class="text-[11px] text-teal-400 font-bold uppercase tracking-widest mt-1">49MM TITANIUM</div>
-                  <div class="mt-4 flex items-center gap-3 text-xs text-gray-300">
-                    <span><i class="fa-solid fa-heart-pulse text-red-500"></i> 78 BPM</span>
-                    <span><i class="fa-solid fa-bolt text-yellow-400"></i> 98%</span>
-                  </div>
-                  <div class="mt-3 text-[9px] text-orange-400 bg-orange-950/60 px-3 py-1 rounded-full border border-orange-700/50">
-                    ALWAYS-ON DISPLAY
-                  </div>
-                </div>
-              </div>
-              <div class="w-16 h-12 bg-orange-500 rounded-b-xl transition-colors duration-300" id="strapBottom"></div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-3 mt-4">
-            <span class="text-xs text-gray-500 font-semibold mr-2">Band Color:</span>
-            <button class="w-8 h-8 rounded-full bg-orange-500 ring-2 ring-offset-2 ring-black focus:outline-none transition-all cursor-pointer" onclick="changeBandColor('orange', '#f97316')"></button>
-            <button class="w-8 h-8 rounded-full bg-blue-900 ring-1 ring-gray-300 hover:ring-2 hover:ring-black focus:outline-none transition-all cursor-pointer" onclick="changeBandColor('navy', '#1e3a8a')"></button>
-            <button class="w-8 h-8 rounded-full bg-zinc-900 ring-1 ring-gray-300 hover:ring-2 hover:ring-black focus:outline-none transition-all cursor-pointer" onclick="changeBandColor('black', '#18181b')"></button>
-            <button class="w-8 h-8 rounded-full bg-slate-200 border border-gray-400 ring-1 ring-gray-300 hover:ring-2 hover:ring-black focus:outline-none transition-all cursor-pointer" onclick="changeBandColor('white', '#e2e8f0')"></button>
-          </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="relative flex items-center justify-center">
+        <div class="w-full max-w-md aspect-square rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-700">
+          <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800&auto=format&fit=crop&q=85" alt="TechTracker Ultra 2 Pro 49mm Titanium Max Watch Always On Display" class="w-full h-full object-cover"/>
         </div>
-
-        <!-- Right: Specs & CTA -->
-        <div class="lg:col-span-6 flex flex-col">
-          <div class="flex items-center gap-2 mb-2">
-            <div class="flex text-amber-400 text-xs">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <span class="text-xs font-semibold text-gray-600">(148 Verified Reviews in Pakistan)</span>
-          </div>
-          <h2 class="text-2xl sm:text-3xl font-black text-gray-950 font-montserrat uppercase tracking-tight">
-            TechTracker Ultra 2 Pro 49mm Titanium Max
-          </h2>
-          <p class="text-xs text-gray-400 uppercase tracking-widest font-semibold mt-1">SKU: TT-ULTRA2-PK-2026</p>
-          
-          <div class="flex items-baseline gap-3 my-4">
-            <span class="text-3xl font-black text-gray-950">Rs.3,000.00</span>
-            <span class="text-base text-gray-400 line-through font-semibold">Rs.5,500.00</span>
-            <span class="text-xs font-bold text-saleRed bg-red-50 border border-red-200 px-2 py-0.5 rounded">SAVE 45%</span>
-          </div>
-
-          <p class="text-sm text-gray-600 leading-relaxed mb-6">
-            Engineered with aerospace-grade titanium alloy and reinforced sapphire crystal display. Enjoy dual-frequency GPS, Bluetooth 5.3 instant hands-free calls, up to 72 hours extended battery life, and complete compatibility with Android &amp; iOS. Includes 6 Months Replacement Warranty.
-          </p>
-
-          <div class="grid grid-cols-2 gap-3 mb-6">
-            <div class="flex items-center gap-2.5 p-2.5 bg-white border border-gray-200 rounded-lg text-xs font-medium text-gray-800">
-              <i class="fa-solid fa-water text-brandTeal text-base"></i>
-              <span>IP68 Waterproof Depth</span>
-            </div>
-            <div class="flex items-center gap-2.5 p-2.5 bg-white border border-gray-200 rounded-lg text-xs font-medium text-gray-800">
-              <i class="fa-solid fa-charging-station text-brandTeal text-base"></i>
-              <span>Fast Wireless Charging</span>
-            </div>
-          </div>
-
-          <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            <button class="flex-1 bg-black hover:bg-neutral-800 text-white font-bold py-3 px-6 rounded text-xs uppercase tracking-widest transition-all cursor-pointer" onclick="addToCart('TechTracker Ultra 2 Pro 49mm Titanium Max', 3000)">
-              Add to Cart
-            </button>
-            <button class="flex-1 bg-brandTeal hover:bg-teal-600 text-gray-950 font-black py-3 px-6 rounded text-xs uppercase tracking-widest transition-all shadow-md cursor-pointer" onclick="openCodCheckout('TechTracker Ultra 2 Pro 49mm Titanium Max', 3000)">
-              Buy Now (Cash on Delivery)
-            </button>
-          </div>
+      </div>
+      <div>
+        <span class="inline-block bg-brandTeal text-black font-black text-[10px] uppercase px-3 py-1 rounded-full mb-3 tracking-widest">
+          HOTTEST SELLER
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black font-montserrat tracking-tight text-white mb-3">
+          TechTracker Ultra 2 Pro 49mm Titanium Max (Spotlight Edition)
+        </h2>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-3xl font-black text-brandTeal font-montserrat">Rs.3,000</span>
+          <span class="text-lg text-gray-400 line-through">Rs.5,500</span>
+          <span class="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded">45% OFF</span>
+        </div>
+        <p class="text-sm text-gray-300 leading-relaxed mb-6">
+          Engineered with aerospace-grade titanium alloy and reinforced sapphire crystal display. Enjoy dual-frequency GPS, Bluetooth 5.3 instant hands-free calls, up to 72 hours extended battery life, and complete compatibility with Android & iOS. Includes 6 Months Replacement Warranty.
+        </p>
+        <div class="grid grid-cols-2 gap-3 mb-6">
+          <button class="w-full bg-brandTeal hover:bg-teal-400 text-black font-black py-3 rounded-lg uppercase tracking-wider text-xs transition-colors cursor-pointer" onclick="addToCart('TechTracker Ultra 2 Pro 49mm Titanium Max (Spotlight Edition)', 3000.0, 1, 'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800&auto=format&fit=crop&q=85'); toggleCartDrawer(true);">
+            Add to Cart
+          </button>
+          <button class="w-full bg-white hover:bg-gray-100 text-black font-black py-3 rounded-lg uppercase tracking-wider text-xs transition-colors cursor-pointer" onclick="openCodModalWithProduct('TechTracker Ultra 2 Pro 49mm Titanium Max (Spotlight Edition)', 3000.0)">
+            Cash On Delivery
+          </button>
         </div>
       </div>
     </div>
