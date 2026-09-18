@@ -1,0 +1,387 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#00c2b2">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    <!-- Tailwind CSS v3 with Forms & Container Queries -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandCyan: '#6be6d3',
+              brandTeal: '#00c2b2',
+              brandDark: '#121212',
+              brandHeaderBg: '#111827',
+              saleRed: '#e53935',
+              softIce: '#dff6f5',
+            },
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif'],
+              inter: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        color: #333333;
+        background-color: #ffffff;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, h4, .font-heading {
+        font-family: 'Montserrat', sans-serif;
+      }
+      .hero-banner-bg {
+        background: radial-gradient(circle at 65% 50%, #d8f5f4 0%, #ecfafa 35%, #ffffff 80%);
+      }
+      .promo-card-bg {
+        background: linear-gradient(135deg, #a5f0e7 0%, #82e7db 50%, #46cfc0 100%);
+      }
+    </style>
+
+    {{ content_for_header }}
+  </head>
+
+  <body class="bg-white text-gray-800 antialiased selection:bg-brandTeal selection:text-white">
+    {% section 'header' %}
+
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    {% section 'footer' %}
+
+    <!-- COD Quick Order Modal -->
+    <div class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4" id="codModal">
+      <div class="bg-white rounded-2xl max-w-lg w-full p-6 relative shadow-2xl border border-gray-200">
+        <button class="absolute top-4 right-4 text-gray-400 hover:text-black text-lg p-1 cursor-pointer" onclick="closeCodModal()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center text-brandTeal text-lg">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-black text-gray-900 font-montserrat uppercase">Cash On Delivery Order</h3>
+            <p class="text-xs text-gray-500">Pay safely upon unboxing parcel anywhere in Pakistan</p>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-lg p-3 mb-4 text-xs">
+          <div class="flex justify-between font-bold text-gray-800">
+            <span id="codItemTitle">TechTracker Ultra 2 Pro</span>
+            <span id="codItemPrice" class="text-brandTeal font-black">Rs.3,000.00</span>
+          </div>
+          <div class="text-[11px] text-green-600 mt-1 flex items-center gap-1">
+            <i class="fa-solid fa-badge-check"></i> FREE Courier Shipping Included
+          </div>
+        </div>
+
+        <form id="codForm" onsubmit="submitCodOrder(event)" class="space-y-3 text-xs">
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Full Name *</label>
+            <input type="text" id="codCustomerName" required placeholder="e.g. Muhammad Ali" class="w-full rounded border-gray-300 text-xs py-2 px-3 focus:border-brandTeal focus:ring-brandTeal"/>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <label class="block font-semibold text-gray-700 mb-1">Phone / WhatsApp *</label>
+              <input type="tel" id="codPhone" required placeholder="0300 1234567" class="w-full rounded border-gray-300 text-xs py-2 px-3 focus:border-brandTeal focus:ring-brandTeal"/>
+            </div>
+            <div>
+              <label class="block font-semibold text-gray-700 mb-1">City *</label>
+              <input type="text" id="codCity" required placeholder="Islamabad, Lahore, Karachi..." class="w-full rounded border-gray-300 text-xs py-2 px-3 focus:border-brandTeal focus:ring-brandTeal"/>
+            </div>
+          </div>
+          <div>
+            <label class="block font-semibold text-gray-700 mb-1">Complete Delivery Address *</label>
+            <textarea id="codAddress" required rows="2" placeholder="House/Flat No, Street, Sector / Area" class="w-full rounded border-gray-300 text-xs py-2 px-3 focus:border-brandTeal focus:ring-brandTeal"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 font-black py-3 rounded text-xs uppercase tracking-widest transition-colors shadow-md mt-2 cursor-pointer">
+            Confirm Order (Pay Rs.<span id="codBtnTotal">3,000</span> on Delivery)
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4" id="quickViewModal">
+      <div class="bg-white rounded-xl max-w-2xl w-full p-6 relative shadow-2xl animate-fade-in border border-gray-100">
+        <button class="absolute top-4 right-4 text-gray-400 hover:text-black text-lg p-1 cursor-pointer" onclick="closeQuickView()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+          <div class="aspect-square bg-gray-100 rounded-lg flex items-center justify-center p-6 border border-gray-200">
+            <div class="w-36 h-36 rounded-2xl bg-black border-4 border-gray-400 flex flex-col items-center justify-center p-2 text-center text-white shadow-xl">
+              <i class="fa-solid fa-clock text-brandTeal text-3xl mb-1"></i>
+              <span class="text-[10px] font-bold text-gray-300" id="modalImgTag">TECH TRACKER</span>
+              <span class="text-xs text-brandCyan font-mono font-bold">PREMIUM EDITION</span>
+            </div>
+          </div>
+          <div>
+            <span class="text-[10px] uppercase font-bold text-brandTeal tracking-wider" id="modalCategory">SMARTWATCH</span>
+            <h3 class="text-lg font-bold text-gray-900 mt-1 font-montserrat" id="modalTitle">Product Name</h3>
+            <p class="text-xl font-extrabold text-gray-900 mt-2" id="modalPrice">Rs.0.00</p>
+            <p class="text-xs text-gray-600 mt-3 leading-relaxed" id="modalDesc">Product description goes here.</p>
+            <div class="mt-6 flex flex-col gap-2">
+              <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-xs font-black py-2.5 rounded uppercase tracking-wider transition-colors cursor-pointer" id="modalAddBtn">
+                Add To Cart
+              </button>
+              <button class="w-full bg-black text-white hover:bg-neutral-800 text-xs font-bold py-2.5 rounded uppercase tracking-wider transition-colors cursor-pointer" id="modalCodBtn">
+                Buy Now (Cash on Delivery)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Slide-Over Drawer -->
+    <div class="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs hidden" id="cartDrawer">
+      <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-2xl flex flex-col justify-between">
+        <div class="p-4 border-b border-gray-200 flex items-center justify-between bg-gray-50">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-bag-shopping text-brandTeal"></i>
+            <h3 class="text-sm font-black text-gray-900 font-montserrat uppercase">Your Shopping Cart</h3>
+            <span class="bg-gray-200 text-gray-800 text-[10px] font-bold px-2 py-0.5 rounded-full" id="drawerBadgeCount">0 items</span>
+          </div>
+          <button class="text-gray-500 hover:text-black p-1 cursor-pointer" onclick="toggleCartDrawer(false)">
+            <i class="fa-solid fa-xmark text-base"></i>
+          </button>
+        </div>
+
+        <div class="p-4 overflow-y-auto flex-1 space-y-3" id="cartItemsContainer">
+          <div class="text-center py-16" id="emptyCartMessage">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto text-gray-400 text-2xl mb-3">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <p class="text-sm font-semibold text-gray-700">Your cart is currently empty</p>
+            <p class="text-xs text-gray-400 mt-1">Add Hublot watches or smart gadgets to begin.</p>
+          </div>
+        </div>
+
+        <div class="p-4 border-t border-gray-200 bg-gray-50">
+          <div class="flex items-center justify-between text-sm font-bold text-gray-900 mb-2">
+            <span>Subtotal:</span>
+            <span id="cartSubtotal">Rs.0.00</span>
+          </div>
+          <p class="text-[11px] text-teal-700 font-medium mb-3">
+            <i class="fa-solid fa-circle-check mr-1"></i> Free delivery applied for orders above Rs.3,000
+          </p>
+          <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 font-black py-3 rounded text-xs uppercase tracking-widest transition-colors shadow-md cursor-pointer mb-2" onclick="openCodCheckoutFromCart()">
+            Checkout (Cash On Delivery)
+          </button>
+          <button class="w-full border border-gray-300 text-gray-700 font-bold py-2 rounded text-xs uppercase tracking-wider hover:bg-gray-100 transition-colors cursor-pointer" onclick="toggleCartDrawer(false)">
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="fixed bottom-5 right-5 z-50 bg-gray-900 text-white text-xs font-semibold px-4 py-3 rounded-lg shadow-xl flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="toast">
+      <i class="fa-solid fa-circle-check text-brandCyan text-sm"></i>
+      <span id="toastMsg">Item added to cart!</span>
+    </div>
+
+    <!-- Interactive Scripts -->
+    <script>
+      let cart = [];
+
+      function updateCartUI() {
+        const badges = document.querySelectorAll('.cart-count-badge');
+        const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+        badges.forEach(b => b.textContent = totalItems);
+
+        const drawerBadge = document.getElementById('drawerBadgeCount');
+        if(drawerBadge) drawerBadge.textContent = `${totalItems} items`;
+
+        const container = document.getElementById('cartItemsContainer');
+        const emptyMsg = document.getElementById('emptyCartMessage');
+        const subtotalEl = document.getElementById('cartSubtotal');
+
+        let subtotal = 0;
+
+        if (cart.length === 0) {
+          if(emptyMsg) emptyMsg.style.display = 'block';
+          if(subtotalEl) subtotalEl.textContent = 'Rs.0.00';
+          return;
+        }
+
+        if(emptyMsg) emptyMsg.style.display = 'none';
+
+        container.innerHTML = '';
+        cart.forEach((item, idx) => {
+          subtotal += item.price * item.qty;
+          const row = document.createElement('div');
+          row.className = 'flex items-center justify-between gap-3 p-2.5 bg-gray-50 border border-gray-200 rounded-lg text-xs';
+          row.innerHTML = `
+            <div class="flex-1">
+              <h4 class="font-bold text-gray-900 line-clamp-1">${item.title}</h4>
+              <div class="text-gray-500 mt-0.5">Rs.${item.price.toLocaleString()} x ${item.qty}</div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="font-black text-gray-900">Rs.${(item.price * item.qty).toLocaleString()}</span>
+              <button onclick="removeFromCart(${idx})" class="text-red-500 hover:text-red-700 p-1 cursor-pointer">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </div>
+          `;
+          container.appendChild(row);
+        });
+
+        if(subtotalEl) subtotalEl.textContent = `Rs.${subtotal.toLocaleString()}.00`;
+      }
+
+      function addToCart(title, price, qty = 1) {
+        const existing = cart.find(i => i.title === title);
+        if (existing) {
+          existing.qty += qty;
+        } else {
+          cart.push({ title, price, qty });
+        }
+        updateCartUI();
+        showToast(`Added "${title}" to your cart!`);
+      }
+
+      function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCartUI();
+      }
+
+      function toggleCartDrawer(open) {
+        const drawer = document.getElementById('cartDrawer');
+        if (open) {
+          drawer.classList.remove('hidden');
+          drawer.classList.add('flex');
+        } else {
+          drawer.classList.add('hidden');
+          drawer.classList.remove('flex');
+        }
+      }
+
+      function showToast(message) {
+        const toast = document.getElementById('toast');
+        const toastMsg = document.getElementById('toastMsg');
+        toastMsg.textContent = message;
+        toast.classList.remove('translate-y-20', 'opacity-0');
+        setTimeout(() => {
+          toast.classList.add('translate-y-20', 'opacity-0');
+        }, 2500);
+      }
+
+      function openQuickView(title, priceStr, category, desc) {
+        document.getElementById('modalTitle').textContent = title;
+        document.getElementById('modalPrice').textContent = priceStr;
+        document.getElementById('modalCategory').textContent = category;
+        document.getElementById('modalDesc').textContent = desc;
+
+        const numPrice = parseInt(priceStr.replace(/[^0-9]/g, '')) || 3000;
+        const addBtn = document.getElementById('modalAddBtn');
+        addBtn.onclick = function() {
+          addToCart(title, numPrice);
+          closeQuickView();
+          toggleCartDrawer(true);
+        };
+
+        const codBtn = document.getElementById('modalCodBtn');
+        codBtn.onclick = function() {
+          closeQuickView();
+          openCodCheckout(title, numPrice);
+        };
+
+        const modal = document.getElementById('quickViewModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+
+      function closeQuickView() {
+        const modal = document.getElementById('quickViewModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+
+      function openCodCheckout(title, price) {
+        document.getElementById('codItemTitle').textContent = title;
+        document.getElementById('codItemPrice').textContent = `Rs.${price.toLocaleString()}.00`;
+        document.getElementById('codBtnTotal').textContent = price.toLocaleString();
+        const modal = document.getElementById('codModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
+
+      function openCodCheckoutFromCart() {
+        if (cart.length === 0) {
+          showToast('Your cart is empty!');
+          return;
+        }
+        const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+        const itemsStr = cart.map(i => `${i.title} (x${i.qty})`).join(', ');
+        toggleCartDrawer(false);
+        openCodCheckout(itemsStr, total);
+      }
+
+      function closeCodModal() {
+        const modal = document.getElementById('codModal');
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+
+      function submitCodOrder(e) {
+        e.preventDefault();
+        const name = document.getElementById('codCustomerName').value;
+        const phone = document.getElementById('codPhone').value;
+        const city = document.getElementById('codCity').value;
+        const orderId = 'TT-' + Math.floor(1000 + Math.random() * 9000);
+
+        closeCodModal();
+        alert(`🎉 Shukriya ${name}! Your Cash on Delivery Order #${orderId} has been confirmed!\n\nWe will ship to ${city} in 2-3 business days. Courier tracking will be sent to WhatsApp ${phone}.`);
+        cart = [];
+        updateCartUI();
+        showToast(`Order #${orderId} confirmed successfully!`);
+        e.target.reset();
+      }
+
+      function changeBandColor(colorName, hexColor) {
+        const strapTop = document.getElementById('strapTop');
+        const strapBottom = document.getElementById('strapBottom');
+        if (strapTop) strapTop.style.backgroundColor = hexColor;
+        if (strapBottom) strapBottom.style.backgroundColor = hexColor;
+        showToast(`Selected ${colorName.toUpperCase()} ocean loop edition.`);
+      }
+
+      function adjustDetailQty(amount) {
+        const el = document.getElementById('detailQty');
+        if (!el) return;
+        let val = parseInt(el.innerText) + amount;
+        if (val < 1) val = 1;
+        el.innerText = val;
+      }
+    </script>
+  </body>
+</html>

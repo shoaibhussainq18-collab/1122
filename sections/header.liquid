@@ -1,0 +1,92 @@
+<!-- Announcement Banner -->
+<div class="bg-brandCyan text-gray-900 text-xs sm:text-sm font-semibold py-2 px-4 relative flex items-center justify-center transition-all duration-300 shadow-sm" id="topBanner">
+  <div class="flex items-center gap-2 tracking-wider">
+    <i class="fa-solid fa-truck-fast text-gray-800 text-sm"></i>
+    <span>{{ section.settings.announcement_text | default: 'FREE SHIPPING OVER RS. 3000 ORDER IN PAKISTAN' }}</span>
+  </div>
+  <button aria-label="Close Announcement" class="absolute right-4 text-gray-700 hover:text-black font-bold p-1 cursor-pointer" onclick="document.getElementById('topBanner').style.display='none'">
+    <i class="fa-solid fa-xmark text-sm"></i>
+  </button>
+</div>
+
+<!-- Main Header -->
+<header class="border-b border-gray-100 bg-white sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5">
+    <div class="flex items-center justify-between gap-4">
+      <a class="flex items-center gap-2 group" href="{{ routes.root_url }}">
+        <div class="relative w-10 h-10 flex items-center justify-center">
+          <svg class="w-10 h-10 transform group-hover:rotate-45 transition-transform duration-300" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" stroke="#1f2937" stroke-dasharray="195 55" stroke-linecap="round" stroke-width="12"></circle>
+            <line stroke="#00c2b2" stroke-linecap="round" stroke-width="12" x1="50" x2="50" y1="12" y2="48"></line>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl sm:text-2xl font-black tracking-tight text-gray-950 font-montserrat uppercase">{{ shop.name | default: 'TECH TRACKER' }}</span>
+          <span class="text-[9px] uppercase tracking-widest text-gray-400 font-semibold -mt-1">Future on your wrist</span>
+        </div>
+      </a>
+
+      <div class="flex flex-col items-end gap-2">
+        <div class="flex items-center gap-4 sm:gap-6 text-xs text-gray-600 font-medium">
+          <a class="hover:text-black transition-colors flex items-center gap-1.5 hidden md:flex" href="https://wa.me/923001234567" target="_blank">
+            <i class="fa-regular fa-headset text-brandTeal"></i> 24/7 WhatsApp Support
+          </a>
+          <div class="flex items-center gap-1.5">
+            <span class="text-sm">🇵🇰</span>
+            <span>PKR (Rs.)</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-5 text-xs sm:text-sm font-semibold">
+          <span class="text-[11px] font-bold text-gray-900 tracking-wider hidden sm:inline-block">CASH ON DELIVERY NATIONWIDE</span>
+          <button class="flex items-center gap-2 hover:text-brandTeal transition-colors group cursor-pointer" onclick="toggleCartDrawer(true)">
+            <div class="relative">
+              <i class="fa-solid fa-basket-shopping text-gray-700 group-hover:text-brandTeal text-base"></i>
+              <span class="cart-count-badge bg-brandTeal text-white text-[10px] font-black rounded-full px-1.5 py-0.2 absolute -top-2 -right-2.5 shadow-sm">0</span>
+            </div>
+            <span class="text-xs text-gray-700 group-hover:text-black font-semibold">Shopping Cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Navigation Bar -->
+<nav class="bg-black text-white sticky top-[68px] z-30 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between overflow-x-auto py-0">
+      <ul class="flex items-center space-x-6 sm:space-x-10 text-[13px] font-bold tracking-wider py-3.5 uppercase font-montserrat whitespace-nowrap">
+        <li><a class="text-brandCyan hover:text-white transition-colors border-b-2 border-brandCyan pb-1" href="#">HOME</a></li>
+        <li><a class="text-gray-300 hover:text-brandCyan transition-colors" href="#watches">HUBLOT WATCHES</a></li>
+        <li><a class="text-gray-300 hover:text-brandCyan transition-colors" href="#newarrivals">SMARTWATCHES</a></li>
+        <li><a class="text-gray-300 hover:text-brandCyan transition-colors" href="#airbuds">AIRBUDS</a></li>
+        <li><a class="text-gray-300 hover:text-brandCyan transition-colors" href="#phonecooler">PHONE COOLER</a></li>
+        <li><a class="text-gray-300 hover:text-brandCyan transition-colors" href="#newarrivals">NEW ARRIVALS</a></li>
+        <li>
+          <a class="text-brandCyan hover:text-white transition-colors flex items-center gap-1" href="#featured-product">
+            <span class="w-2 h-2 rounded-full bg-red-500 animate-ping mr-1"></span>SPOTLIGHT
+          </a>
+        </li>
+      </ul>
+      <div class="hidden lg:flex items-center gap-2 text-xs font-semibold text-gray-400 pl-4 border-l border-neutral-800">
+        <i class="fa-brands fa-whatsapp text-green-400 text-sm"></i>
+        <a href="https://wa.me/923001234567" target="_blank" class="hover:text-green-400">+92 300 1234567</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement Text",
+      "default": "FREE SHIPPING OVER RS. 3000 ORDER IN PAKISTAN"
+    }
+  ]
+}
+{% endschema %}

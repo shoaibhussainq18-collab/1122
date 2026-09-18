@@ -1,0 +1,27 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Tech Tracker Pro",
+    "theme_version": "1.0.0",
+    "theme_author": "Shoaib Hussain",
+    "theme_documentation_url": "https://github.com/shoaibhussainq18-collab/1122",
+    "theme_support_url": "https://github.com/shoaibhussainq18-collab/1122"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "brand_teal",
+        "label": "Brand Teal Accent",
+        "default": "#00c2b2"
+      },
+      {
+        "type": "color",
+        "id": "brand_cyan",
+        "label": "Brand Cyan Accent",
+        "default": "#6be6d3"
+      }
+    ]
+  }
+]

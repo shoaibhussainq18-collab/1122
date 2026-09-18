@@ -1,0 +1,22 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-banner"
+    },
+    "new_arrivals": {
+      "type": "new-arrivals"
+    },
+    "hublot_sale": {
+      "type": "hublot-sale"
+    },
+    "spotlight": {
+      "type": "spotlight-product"
+    }
+  },
+  "order": [
+    "hero",
+    "new_arrivals",
+    "hublot_sale",
+    "spotlight"
+  ]
+}
