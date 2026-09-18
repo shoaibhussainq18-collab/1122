@@ -11,12 +11,20 @@
     },
     "spotlight": {
       "type": "spotlight-product"
+    },
+    "airbuds": {
+      "type": "airbuds-collection"
+    },
+    "phone_coolers": {
+      "type": "phone-coolers"
     }
   },
   "order": [
     "hero",
     "new_arrivals",
     "hublot_sale",
-    "spotlight"
+    "spotlight",
+    "airbuds",
+    "phone_coolers"
   ]
 }
