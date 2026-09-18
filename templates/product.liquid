@@ -1,0 +1,31 @@
+<div class="max-w-7xl mx-auto px-4 py-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+      {% if product.featured_image %}
+        <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="w-full h-auto object-contain rounded-lg"/>
+      {% else %}
+        <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 font-bold">No Image Available</div>
+      {% endif %}
+    </div>
+    <div>
+      <span class="text-xs uppercase font-bold text-[#00c2b2] tracking-wider">{{ product.type }}</span>
+      <h1 class="text-2xl sm:text-3xl font-black text-gray-900 mt-2 font-montserrat">{{ product.title }}</h1>
+      <div class="mt-4 flex items-center gap-3">
+        <span class="text-2xl font-black text-gray-900">{{ product.price | money }}</span>
+        {% if product.compare_at_price > product.price %}
+          <span class="text-base text-gray-400 line-through">{{ product.compare_at_price | money }}</span>
+          <span class="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded">SALE</span>
+        {% endif %}
+      </div>
+      <div class="mt-6 prose text-gray-700 text-sm leading-relaxed">
+        {{ product.description }}
+      </div>
+      <form action="/cart/add" method="post" enctype="multipart/form-data" class="mt-8 space-y-4">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+        <button type="submit" class="w-full bg-[#00c2b2] hover:bg-teal-600 text-black font-black py-3 rounded uppercase text-sm tracking-wider">
+          Add To Cart
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="max-w-4xl mx-auto px-4 py-12">
+  <h1 class="text-3xl font-black text-gray-900 mb-8 font-montserrat uppercase">Shopping Cart</h1>
+  {% if cart.item_count > 0 %}
+    <form action="/cart" method="post">
+      <div class="space-y-4">
+        {% for item in cart.items %}
+          <div class="flex justify-between items-center border-b pb-4">
+            <div>
+              <p class="font-bold text-gray-900">{{ item.product.title }}</p>
+              <p class="text-xs text-gray-500">Qty: {{ item.quantity }}</p>
+            </div>
+            <p class="font-bold">{{ item.line_price | money }}</p>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="mt-8 text-right">
+        <p class="text-xl font-bold">Total: {{ cart.total_price | money }}</p>
+        <button type="submit" name="checkout" class="mt-4 bg-[#00c2b2] text-black font-bold px-8 py-3 rounded uppercase text-sm">Proceed to Checkout</button>
+      </div>
+    </form>
+  {% else %}
+    <p class="text-gray-500">Your cart is currently empty.</p>
+  {% endif %}
+</div>

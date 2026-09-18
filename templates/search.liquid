@@ -1,0 +1,12 @@
+<div class="max-w-7xl mx-auto px-4 py-12">
+  <h1 class="text-3xl font-black text-gray-900 mb-6 font-montserrat uppercase">Search Results</h1>
+  {% if search.performed %}
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+      {% for item in search.results %}
+        <div class="border p-4 rounded">
+          <a href="{{ item.url }}" class="font-bold text-sm">{{ item.title }}</a>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

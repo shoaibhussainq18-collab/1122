@@ -1,0 +1,16 @@
+<div class="max-w-7xl mx-auto px-4 py-12">
+  <h1 class="text-3xl font-black text-gray-900 mb-8 font-montserrat uppercase">{{ collection.title }}</h1>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+    {% for product in collection.products %}
+      <div class="bg-white border border-gray-200 rounded-lg p-4 flex flex-col justify-between">
+        <a href="{{ product.url }}">
+          {% if product.featured_image %}
+            <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" class="w-full aspect-square object-contain mb-3 rounded"/>
+          {% endif %}
+          <h3 class="text-sm font-bold text-gray-900 line-clamp-2">{{ product.title }}</h3>
+          <p class="text-sm font-extrabold text-[#00c2b2] mt-2">{{ product.price | money }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
