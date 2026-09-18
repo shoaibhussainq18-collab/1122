@@ -342,197 +342,341 @@
         <!-- Product Grid: Row 1 (Products 1 - 4) -->
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="newArrivalsGrid">
 
-          <div class="bg-white border border-gray-100 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="1" data-category="smartwatches">
-            <div class="relative overflow-hidden bg-gray-50 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded">4 STRAPS INCLUDED</span>
-              <div class="w-full h-full flex flex-col items-center justify-center p-3 relative group-hover:scale-105 transition-transform">
-                <div class="w-20 h-24 bg-slate-900 rounded-2xl p-2 shadow-xl border-2 border-slate-700 flex flex-col items-center justify-center text-center">
-                  <span class="text-xs font-mono font-bold text-teal-300">10:09</span>
-                  <span class="text-[7px] text-white font-bold uppercase mt-1 line-clamp-1">Z90 Pro Smart Watc</span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('Z90 Pro Smart Watch (4 Straps Included)', 'Rs.4,000.00', 'Smartwatch', 'Features 4 multi-color interchangeable silicone straps (mint green, blush pink, oceanic navy, midnight black). Complete with high-definition IPS touchscreen, Bluetooth call audio speaker, and 48-hour active fitness tracking.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="1" data-category="smartwatch">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">4 STRAPS INCLUDED</span>
+              <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&auto=format&fit=crop&q=80" alt="Z90 Pro Smart Watch with 4 Interchangeable Straps" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('Z90 Pro Smart Watch (4 Straps Included)', 'Rs.4,000.00', 'Smartwatch', 'Features 4 multi-color interchangeable silicone straps (mint green, blush pink, oceanic navy, midnight black). Complete with high-definition IPS touchscreen, Bluetooth call audio speaker, and 48-hour active fitness tracking.', 'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">Z90 Pro Smart Watch (4 Straps Included)</h3>
-              <p class="text-sm sm:text-base font-extrabold text-gray-900 mt-1.5">Rs.4,000.00</p>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('Z90 Pro Smart Watch (4 Straps Included)', 4000)">
-                Add to Cart
-              </button>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Smartwatch</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">Z90 Pro Smart Watch (4 Straps Included)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(92)</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.4,000</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.6,000</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">33% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('Z90 Pro Smart Watch (4 Straps Included)', 4000.0, 1, 'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('Z90 Pro Smart Watch (4 Straps Included)', 4000.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-100 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="2" data-category="smartwatches">
-            <div class="relative overflow-hidden bg-gray-50 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded">SERIES 9 FLAGSHIP</span>
-              <div class="w-full h-full flex flex-col items-center justify-center p-3 relative group-hover:scale-105 transition-transform">
-                <div class="w-20 h-24 bg-slate-900 rounded-2xl p-2 shadow-xl border-2 border-slate-700 flex flex-col items-center justify-center text-center">
-                  <span class="text-xs font-mono font-bold text-teal-300">10:09</span>
-                  <span class="text-[7px] text-white font-bold uppercase mt-1 line-clamp-1">Z81 Pro - Max Seri</span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('Z81 Pro - Max Series 9 2.1" Curved Display Smart Watch', 'Rs.5,000.00', 'Smartwatch', 'Max Edge-to-Edge 2.1-inch curved OLED display, vibrant red alpine loop, fast magnetic wireless charging, NFC access control, and Bluetooth calling with crystal clear microphone.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="2" data-category="smartwatch">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">SERIES 9 FLAGSHIP</span>
+              <img src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80" alt="Z81 Pro Max Series 9 2.1 inch Curved Display Smart Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('Z81 Pro - Max Series 9 2.1" Curved Display Smart Watch', 'Rs.5,000.00', 'Smartwatch', 'Max Edge-to-Edge 2.1-inch curved OLED display, vibrant red alpine loop, fast magnetic wireless charging, NFC access control, and Bluetooth calling with crystal clear microphone.', 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">Z81 Pro - Max Series 9 2.1" Curved Display Smart Watch</h3>
-              <p class="text-sm sm:text-base font-extrabold text-gray-900 mt-1.5">Rs.5,000.00</p>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('Z81 Pro - Max Series 9 2.1" Curved Display Smart Watch', 5000)">
-                Add to Cart
-              </button>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Smartwatch</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">Z81 Pro - Max Series 9 2.1" Curved Display Smart Watch</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(114)</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.5,000</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.7,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">33% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('Z81 Pro - Max Series 9 2.1" Curved Display Smart Watch', 5000.0, 1, 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('Z81 Pro - Max Series 9 2.1" Curved Display Smart Watch', 5000.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-100 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="3" data-category="smartwatches">
-            <div class="relative overflow-hidden bg-gray-50 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded">HOT VALUE</span>
-              <div class="w-full h-full flex flex-col items-center justify-center p-3 relative group-hover:scale-105 transition-transform">
-                <div class="w-20 h-24 bg-slate-900 rounded-2xl p-2 shadow-xl border-2 border-slate-700 flex flex-col items-center justify-center text-center">
-                  <span class="text-xs font-mono font-bold text-teal-300">10:09</span>
-                  <span class="text-[7px] text-white font-bold uppercase mt-1 line-clamp-1">Z80 Pro Smart Watc</span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('Z80 Pro Smart Watch (Retail Packaging)', 'Rs.4,500.00', 'Smartwatch', 'Comes in premium branded retail packaging with magnetic charging dock and spare silicone strap. Accurate optical heart rate monitor, multi-sports tracking, sleep monitoring, and WhatsApp notifications.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="3" data-category="smartwatch">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">HOT VALUE</span>
+              <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80" alt="Z80 Pro Smart Watch Retail Packaging and Charger" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('Z80 Pro Smart Watch (Retail Packaging)', 'Rs.4,500.00', 'Smartwatch', 'Comes in premium branded retail packaging with magnetic charging dock and spare silicone strap. Accurate optical heart rate monitor, multi-sports tracking, sleep monitoring, and WhatsApp notifications.', 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">Z80 Pro Smart Watch (Retail Packaging)</h3>
-              <p class="text-sm sm:text-base font-extrabold text-gray-900 mt-1.5">Rs.4,500.00</p>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('Z80 Pro Smart Watch (Retail Packaging)', 4500)">
-                Add to Cart
-              </button>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Smartwatch</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">Z80 Pro Smart Watch (Retail Packaging)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(68)</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.4,500</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.6,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">30% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('Z80 Pro Smart Watch (Retail Packaging)', 4500.0, 1, 'https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('Z80 Pro Smart Watch (Retail Packaging)', 4500.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-100 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="4" data-category="smartwatches">
-            <div class="relative overflow-hidden bg-gray-50 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded">BESTSELLER</span>
-              <div class="w-full h-full flex flex-col items-center justify-center p-3 relative group-hover:scale-105 transition-transform">
-                <div class="w-20 h-24 bg-slate-900 rounded-2xl p-2 shadow-xl border-2 border-slate-700 flex flex-col items-center justify-center text-center">
-                  <span class="text-xs font-mono font-bold text-teal-300">10:09</span>
-                  <span class="text-[7px] text-white font-bold uppercase mt-1 line-clamp-1">Ultra 2 Watch 49mm</span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('Ultra 2 Watch 49mm Titanium Case (Ocean Band)', 'Rs.3,000.00', 'Smartwatch', 'Flagship 49mm aerospace grade titanium case replica with signature orange/blue ocean band. Action button functional, compass calibrated, waterproof IP68 certification.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="4" data-category="smartwatch">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">BESTSELLER</span>
+              <img src="https://images.unsplash.com/photo-1510017803434-a899398421b3?w=600&auto=format&fit=crop&q=80" alt="Ultra 2 Watch 49mm Titanium Case Ocean Band" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('Ultra 2 Watch 49mm Titanium Case (Ocean Band)', 'Rs.3,000.00', 'Smartwatch', 'Flagship 49mm aerospace grade titanium case replica with signature orange/blue ocean band. Action button functional, compass calibrated, waterproof IP68 certification.', 'https://images.unsplash.com/photo-1510017803434-a899398421b3?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">Ultra 2 Watch 49mm Titanium Case (Ocean Band)</h3>
-              <p class="text-sm sm:text-base font-extrabold text-gray-900 mt-1.5">Rs.3,000.00</p>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('Ultra 2 Watch 49mm Titanium Case (Ocean Band)', 3000)">
-                Add to Cart
-              </button>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Smartwatch</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">Ultra 2 Watch 49mm Titanium Case (Ocean Band)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(180)</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.3,000</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.5,000</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">40% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('Ultra 2 Watch 49mm Titanium Case (Ocean Band)', 3000.0, 1, 'https://images.unsplash.com/photo-1510017803434-a899398421b3?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('Ultra 2 Watch 49mm Titanium Case (Ocean Band)', 3000.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-100 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="6" data-category="smartwatches">
-            <div class="relative overflow-hidden bg-gray-50 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded">2026 NEW RELEASE</span>
-              <div class="w-full h-full flex flex-col items-center justify-center p-3 relative group-hover:scale-105 transition-transform">
-                <div class="w-20 h-24 bg-slate-900 rounded-2xl p-2 shadow-xl border-2 border-slate-700 flex flex-col items-center justify-center text-center">
-                  <span class="text-xs font-mono font-bold text-teal-300">10:09</span>
-                  <span class="text-[7px] text-white font-bold uppercase mt-1 line-clamp-1">Series 10 Ultra Cu</span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('Series 10 Ultra Curved AMOLED Smartwatch', 'Rs.5,500.00', 'Smartwatch', 'Latest 2026 flagship Series 10 replica featuring vibrant AMOLED true black screen, dynamic notification island, metallic chassis, wireless quick charger, and IP68 water resistance.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="6" data-category="smartwatch">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">2026 NEW RELEASE</span>
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80" alt="Series 10 Ultra Curved AMOLED Smartwatch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('Series 10 Ultra Curved AMOLED Smartwatch', 'Rs.5,500.00', 'Smartwatch', 'Latest 2026 flagship Series 10 replica featuring vibrant AMOLED true black screen, dynamic notification island, metallic chassis, wireless quick charger, and IP68 water resistance.', 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">Series 10 Ultra Curved AMOLED Smartwatch</h3>
-              <p class="text-sm sm:text-base font-extrabold text-gray-900 mt-1.5">Rs.5,500.00</p>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('Series 10 Ultra Curved AMOLED Smartwatch', 5500)">
-                Add to Cart
-              </button>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Smartwatch</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">Series 10 Ultra Curved AMOLED Smartwatch</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(84)</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.5,500</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.8,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">35% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('Series 10 Ultra Curved AMOLED Smartwatch', 5500.0, 1, 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('Series 10 Ultra Curved AMOLED Smartwatch', 5500.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-100 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="7" data-category="smartwatches">
-            <div class="relative overflow-hidden bg-gray-50 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded">BUDGET CHAMPION</span>
-              <div class="w-full h-full flex flex-col items-center justify-center p-3 relative group-hover:scale-105 transition-transform">
-                <div class="w-20 h-24 bg-slate-900 rounded-2xl p-2 shadow-xl border-2 border-slate-700 flex flex-col items-center justify-center text-center">
-                  <span class="text-xs font-mono font-bold text-teal-300">10:09</span>
-                  <span class="text-[7px] text-white font-bold uppercase mt-1 line-clamp-1">T900 Ultra Big Scr</span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('T900 Ultra Big Screen Smart Watch (Orange Alpine Loop)', 'Rs.2,200.00', 'Smartwatch', 'Best budget 2.09-inch big display smartwatch with Bluetooth calling, social media message pop-ups, music playback control, game center, and rugged orange alpine loop strap.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="7" data-category="smartwatch">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">BUDGET CHAMPION</span>
+              <img src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&auto=format&fit=crop&q=80" alt="T900 Ultra Big Screen Smart Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('T900 Ultra Big Screen Smart Watch (Orange Alpine Loop)', 'Rs.2,200.00', 'Smartwatch', 'Best budget 2.09-inch big display smartwatch with Bluetooth calling, social media message pop-ups, music playback control, game center, and rugged orange alpine loop strap.', 'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">T900 Ultra Big Screen Smart Watch (Orange Alpine Loop)</h3>
-              <p class="text-sm sm:text-base font-extrabold text-gray-900 mt-1.5">Rs.2,200.00</p>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('T900 Ultra Big Screen Smart Watch (Orange Alpine Loop)', 2200)">
-                Add to Cart
-              </button>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Smartwatch</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">T900 Ultra Big Screen Smart Watch (Orange Alpine Loop)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(210)</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.2,200</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.3,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">37% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('T900 Ultra Big Screen Smart Watch (Orange Alpine Loop)', 2200.0, 1, 'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('T900 Ultra Big Screen Smart Watch (Orange Alpine Loop)', 2200.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-100 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="8" data-category="smartwatches">
-            <div class="relative overflow-hidden bg-gray-50 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded">7 STRAPS GIFT SET</span>
-              <div class="w-full h-full flex flex-col items-center justify-center p-3 relative group-hover:scale-105 transition-transform">
-                <div class="w-20 h-24 bg-slate-900 rounded-2xl p-2 shadow-xl border-2 border-slate-700 flex flex-col items-center justify-center text-center">
-                  <span class="text-xs font-mono font-bold text-teal-300">10:09</span>
-                  <span class="text-[7px] text-white font-bold uppercase mt-1 line-clamp-1">WS92 Max Ultra Sma</span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('WS92 Max Ultra Smartwatch with 7 Straps Gift Box Set', 'Rs.4,800.00', 'Smartwatch', 'Ultimate luxury gift set featuring the WS92 Max Ultra smartwatch along with 7 designer interchangeable straps (stainless steel link, ocean silicone, alpine loop, trail loop, leather, sport band).')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="8" data-category="smartwatch">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">7 STRAPS GIFT SET</span>
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop&q=80" alt="WS92 Max Ultra Smartwatch with 7 Straps Gift Box Set" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('WS92 Max Ultra Smartwatch with 7 Straps Gift Box Set', 'Rs.4,800.00', 'Smartwatch', 'Ultimate luxury gift set featuring the WS92 Max Ultra smartwatch along with 7 designer interchangeable straps (stainless steel link, ocean silicone, alpine loop, trail loop, leather, sport band).', 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">WS92 Max Ultra Smartwatch with 7 Straps Gift Box Set</h3>
-              <p class="text-sm sm:text-base font-extrabold text-gray-900 mt-1.5">Rs.4,800.00</p>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('WS92 Max Ultra Smartwatch with 7 Straps Gift Box Set', 4800)">
-                Add to Cart
-              </button>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Smartwatch</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">WS92 Max Ultra Smartwatch with 7 Straps Gift Box Set</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(95)</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.4,800</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.7,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">36% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('WS92 Max Ultra Smartwatch with 7 Straps Gift Box Set', 4800.0, 1, 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('WS92 Max Ultra Smartwatch with 7 Straps Gift Box Set', 4800.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-100 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="9" data-category="smartwatches">
-            <div class="relative overflow-hidden bg-gray-50 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded">AMOLED + CHATGPT</span>
-              <div class="w-full h-full flex flex-col items-center justify-center p-3 relative group-hover:scale-105 transition-transform">
-                <div class="w-20 h-24 bg-slate-900 rounded-2xl p-2 shadow-xl border-2 border-slate-700 flex flex-col items-center justify-center text-center">
-                  <span class="text-xs font-mono font-bold text-teal-300">10:09</span>
-                  <span class="text-[7px] text-white font-bold uppercase mt-1 line-clamp-1">HK9 Pro+ Gen 2 AMO</span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('HK9 Pro+ Gen 2 AMOLED Smartwatch with ChatGPT & Compass', 'Rs.6,500.00', 'Smartwatch', 'The gold standard of 1:1 replicas with authentic 60Hz AMOLED screen, real working optical compass, ChatGPT onboard integration, sound recording, and ultra-smooth gesture navigation.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="9" data-category="smartwatch">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">AMOLED + CHATGPT</span>
+              <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=600&auto=format&fit=crop&q=80" alt="HK9 Pro Plus Gen 2 AMOLED Smartwatch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('HK9 Pro+ Gen 2 AMOLED Smartwatch with ChatGPT & Compass', 'Rs.6,500.00', 'Smartwatch', 'The gold standard of 1:1 replicas with authentic 60Hz AMOLED screen, real working optical compass, ChatGPT onboard integration, sound recording, and ultra-smooth gesture navigation.', 'https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">HK9 Pro+ Gen 2 AMOLED Smartwatch with ChatGPT & Compass</h3>
-              <p class="text-sm sm:text-base font-extrabold text-gray-900 mt-1.5">Rs.6,500.00</p>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('HK9 Pro+ Gen 2 AMOLED Smartwatch with ChatGPT & Compass', 6500)">
-                Add to Cart
-              </button>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Smartwatch</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">HK9 Pro+ Gen 2 AMOLED Smartwatch with ChatGPT & Compass</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(112)</span>
+                </div>
+              </div>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.6,500</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.9,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">32% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('HK9 Pro+ Gen 2 AMOLED Smartwatch with ChatGPT & Compass', 6500.0, 1, 'https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('HK9 Pro+ Gen 2 AMOLED Smartwatch with ChatGPT & Compass', 6500.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 </div>
 </div></section>
     <!-- END: NewArrivalsSection -->
@@ -554,253 +698,341 @@
         <!-- Product Grid: Row 2 (Hublot Replicas with Red 'Sale' Badges) -->
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6" id="hublotGrid">
 
-          <div class="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all relative group product-item" data-product-id="10" data-category="hublot">
-            <span class="absolute top-3 left-3 z-20 bg-saleRed text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">SALE -40%</span>
-            <div class="relative overflow-hidden bg-neutral-100 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <div class="w-full h-full flex flex-col items-center justify-center relative group-hover:scale-105 transition-transform p-2">
-                <div class="w-20 h-5 bg-zinc-900 rounded-t-sm"></div>
-                <div class="w-22 h-22 rounded-full bg-slate-300 border-4 border-slate-400 p-1 flex items-center justify-center shadow-lg">
-                  <div class="w-full h-full bg-stone-900 rounded-full flex flex-col items-center justify-center border border-amber-800 text-[7px] text-amber-200 font-bold">
-                    <span>HUBLOT</span>
-                    <span class="text-[5px] text-teal-300">GENEVE</span>
-                  </div>
-                </div>
-                <div class="w-20 h-7 bg-zinc-900 rounded-b-sm"></div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('HUBLOT REPLICA MEN'S WATCH (Brown Textured Leather Strap)', 'Rs.3,000.00', 'Luxury Replica Watch', 'Brown textured leather strap with steel deployant clasp. Polished steel bezel with 6 H-shaped screws, automatic quartz movement, and working chronograph sub-dials.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="10" data-category="hublot luxury">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">SALE -40%</span>
+              <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&auto=format&fit=crop&q=80" alt="Hublot Replica Men's Watch Brown Textured Leather Strap" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('HUBLOT REPLICA MEN'S WATCH (Brown Textured Leather Strap)', 'Rs.3,000.00', 'Luxury Replica Watch', 'Brown textured leather strap with steel deployant clasp. Polished steel bezel with 6 H-shaped screws, automatic quartz movement, and working chronograph sub-dials.', 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">HUBLOT REPLICA MEN'S WATCH (Brown Textured Leather Strap)</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.5,000.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.3,000.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Hublot Luxury</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">HUBLOT REPLICA MEN'S WATCH (Brown Textured Leather Strap)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(85)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('HUBLOT REPLICA MEN'S WATCH (Brown Textured Leather Strap)', 3000)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.3,000</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.5,000</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">40% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('HUBLOT REPLICA MEN'S WATCH (Brown Textured Leather Strap)', 3000.0, 1, 'https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('HUBLOT REPLICA MEN'S WATCH (Brown Textured Leather Strap)', 3000.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all relative group product-item" data-product-id="11" data-category="hublot">
-            <span class="absolute top-3 left-3 z-20 bg-saleRed text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">SALE -40%</span>
-            <div class="relative overflow-hidden bg-neutral-100 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <div class="w-full h-full flex flex-col items-center justify-center relative group-hover:scale-105 transition-transform p-2">
-                <div class="w-20 h-5 bg-zinc-900 rounded-t-sm"></div>
-                <div class="w-22 h-22 rounded-full bg-slate-300 border-4 border-slate-400 p-1 flex items-center justify-center shadow-lg">
-                  <div class="w-full h-full bg-stone-900 rounded-full flex flex-col items-center justify-center border border-amber-800 text-[7px] text-amber-200 font-bold">
-                    <span>HUBLOT</span>
-                    <span class="text-[5px] text-teal-300">GENEVE</span>
-                  </div>
-                </div>
-                <div class="w-20 h-7 bg-zinc-900 rounded-b-sm"></div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('HUBLOT REPLICA MEN'S WATCH (Silver White Sunray Dial)', 'Rs.3,000.00', 'Luxury Replica Watch', 'Crisp silver-white sunray dial with polished baton indices, black rubberized structured strap, water-resistant casing, and engraved case back.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="11" data-category="hublot luxury">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">SALE -40%</span>
+              <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&auto=format&fit=crop&q=80" alt="Hublot Replica Men's Watch Silver White Dial" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('HUBLOT REPLICA MEN'S WATCH (Silver White Sunray Dial)', 'Rs.3,000.00', 'Luxury Replica Watch', 'Crisp silver-white sunray dial with polished baton indices, black rubberized structured strap, water-resistant casing, and engraved case back.', 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">HUBLOT REPLICA MEN'S WATCH (Silver White Sunray Dial)</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.5,000.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.3,000.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Hublot Luxury</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">HUBLOT REPLICA MEN'S WATCH (Silver White Sunray Dial)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(64)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('HUBLOT REPLICA MEN'S WATCH (Silver White Sunray Dial)', 3000)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.3,000</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.5,000</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">40% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('HUBLOT REPLICA MEN'S WATCH (Silver White Sunray Dial)', 3000.0, 1, 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('HUBLOT REPLICA MEN'S WATCH (Silver White Sunray Dial)', 3000.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all relative group product-item" data-product-id="12" data-category="hublot">
-            <span class="absolute top-3 left-3 z-20 bg-saleRed text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">SALE -40%</span>
-            <div class="relative overflow-hidden bg-neutral-100 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <div class="w-full h-full flex flex-col items-center justify-center relative group-hover:scale-105 transition-transform p-2">
-                <div class="w-20 h-5 bg-zinc-900 rounded-t-sm"></div>
-                <div class="w-22 h-22 rounded-full bg-slate-300 border-4 border-slate-400 p-1 flex items-center justify-center shadow-lg">
-                  <div class="w-full h-full bg-stone-900 rounded-full flex flex-col items-center justify-center border border-amber-800 text-[7px] text-amber-200 font-bold">
-                    <span>HUBLOT</span>
-                    <span class="text-[5px] text-teal-300">GENEVE</span>
-                  </div>
-                </div>
-                <div class="w-20 h-7 bg-zinc-900 rounded-b-sm"></div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('HUBLOT AERO FUSION ORLINSKI SILVER (Faceted Skeleton)', 'Rs.3,000.00', 'Luxury Replica Watch', 'Iconic faceted sculptural bezel designed in homage to Richard Orlinski. Skeleton dial layout, mirror silver polished finish, and premium matte black silicone strap.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="12" data-category="hublot luxury">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">SALE -40%</span>
+              <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&auto=format&fit=crop&q=80" alt="Hublot Aero Fusion Orlinski Silver Faceted Skeleton Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('HUBLOT AERO FUSION ORLINSKI SILVER (Faceted Skeleton)', 'Rs.3,000.00', 'Luxury Replica Watch', 'Iconic faceted sculptural bezel designed in homage to Richard Orlinski. Skeleton dial layout, mirror silver polished finish, and premium matte black silicone strap.', 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">HUBLOT AERO FUSION ORLINSKI SILVER (Faceted Skeleton)</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.5,000.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.3,000.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Hublot Luxury</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">HUBLOT AERO FUSION ORLINSKI SILVER (Faceted Skeleton)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(96)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('HUBLOT AERO FUSION ORLINSKI SILVER (Faceted Skeleton)', 3000)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.3,000</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.5,000</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">40% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('HUBLOT AERO FUSION ORLINSKI SILVER (Faceted Skeleton)', 3000.0, 1, 'https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('HUBLOT AERO FUSION ORLINSKI SILVER (Faceted Skeleton)', 3000.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all relative group product-item" data-product-id="13" data-category="hublot">
-            <span class="absolute top-3 left-3 z-20 bg-saleRed text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">SALE -30%</span>
-            <div class="relative overflow-hidden bg-neutral-100 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <div class="w-full h-full flex flex-col items-center justify-center relative group-hover:scale-105 transition-transform p-2">
-                <div class="w-20 h-5 bg-zinc-900 rounded-t-sm"></div>
-                <div class="w-22 h-22 rounded-full bg-slate-300 border-4 border-slate-400 p-1 flex items-center justify-center shadow-lg">
-                  <div class="w-full h-full bg-stone-900 rounded-full flex flex-col items-center justify-center border border-amber-800 text-[7px] text-amber-200 font-bold">
-                    <span>HUBLOT</span>
-                    <span class="text-[5px] text-teal-300">GENEVE</span>
-                  </div>
-                </div>
-                <div class="w-20 h-7 bg-zinc-900 rounded-b-sm"></div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('HUBLOT CHRONOGRAPH BLACK MAGIC (Stealth Ceramic)', 'Rs.3,500.00', 'Luxury Replica Watch', 'Stealth aesthetic with all-black micro-blasted ceramic style casing, black composite resin inserts, titanium screws, and luminescent black hands.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="13" data-category="hublot luxury">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">SALE -30%</span>
+              <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&auto=format&fit=crop&q=80" alt="Hublot Chronograph Black Magic All Black Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('HUBLOT CHRONOGRAPH BLACK MAGIC (Stealth Ceramic)', 'Rs.3,500.00', 'Luxury Replica Watch', 'Stealth aesthetic with all-black micro-blasted ceramic style casing, black composite resin inserts, titanium screws, and luminescent black hands.', 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">HUBLOT CHRONOGRAPH BLACK MAGIC (Stealth Ceramic)</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.5,000.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.3,500.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Hublot Luxury</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">HUBLOT CHRONOGRAPH BLACK MAGIC (Stealth Ceramic)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(79)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('HUBLOT CHRONOGRAPH BLACK MAGIC (Stealth Ceramic)', 3500)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.3,500</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.5,000</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">30% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('HUBLOT CHRONOGRAPH BLACK MAGIC (Stealth Ceramic)', 3500.0, 1, 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('HUBLOT CHRONOGRAPH BLACK MAGIC (Stealth Ceramic)', 3500.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all relative group product-item" data-product-id="14" data-category="hublot">
-            <span class="absolute top-3 left-3 z-20 bg-saleRed text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">PREMIUM GOLD</span>
-            <div class="relative overflow-hidden bg-neutral-100 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <div class="w-full h-full flex flex-col items-center justify-center relative group-hover:scale-105 transition-transform p-2">
-                <div class="w-20 h-5 bg-zinc-900 rounded-t-sm"></div>
-                <div class="w-22 h-22 rounded-full bg-slate-300 border-4 border-slate-400 p-1 flex items-center justify-center shadow-lg">
-                  <div class="w-full h-full bg-stone-900 rounded-full flex flex-col items-center justify-center border border-amber-800 text-[7px] text-amber-200 font-bold">
-                    <span>HUBLOT</span>
-                    <span class="text-[5px] text-teal-300">GENEVE</span>
-                  </div>
-                </div>
-                <div class="w-20 h-7 bg-zinc-900 rounded-b-sm"></div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('HUBLOT BIG BANG UNICO ROSE GOLD REPLICA (Skeleton Dial)', 'Rs.4,500.00', 'Luxury Replica Watch', 'Satin-finished 18K rose gold plated bezel with exposed micro-gears skeleton dial. Working chronograph pushers, flyback simulation, and ribbed black vulcanized rubber strap.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="14" data-category="hublot luxury">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">PREMIUM GOLD</span>
+              <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&auto=format&fit=crop&q=80" alt="Hublot Big Bang Unico Rose Gold Skeleton Chrono Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('HUBLOT BIG BANG UNICO ROSE GOLD REPLICA (Skeleton Dial)', 'Rs.4,500.00', 'Luxury Replica Watch', 'Satin-finished 18K rose gold plated bezel with exposed micro-gears skeleton dial. Working chronograph pushers, flyback simulation, and ribbed black vulcanized rubber strap.', 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">HUBLOT BIG BANG UNICO ROSE GOLD REPLICA (Skeleton Dial)</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.7,500.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.4,500.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Hublot Luxury</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">HUBLOT BIG BANG UNICO ROSE GOLD REPLICA (Skeleton Dial)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(63)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('HUBLOT BIG BANG UNICO ROSE GOLD REPLICA (Skeleton Dial)', 4500)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.4,500</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.7,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">40% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('HUBLOT BIG BANG UNICO ROSE GOLD REPLICA (Skeleton Dial)', 4500.0, 1, 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('HUBLOT BIG BANG UNICO ROSE GOLD REPLICA (Skeleton Dial)', 4500.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all relative group product-item" data-product-id="15" data-category="hublot">
-            <span class="absolute top-3 left-3 z-20 bg-saleRed text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">CLASSIC ELEGANCE</span>
-            <div class="relative overflow-hidden bg-neutral-100 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <div class="w-full h-full flex flex-col items-center justify-center relative group-hover:scale-105 transition-transform p-2">
-                <div class="w-20 h-5 bg-zinc-900 rounded-t-sm"></div>
-                <div class="w-22 h-22 rounded-full bg-slate-300 border-4 border-slate-400 p-1 flex items-center justify-center shadow-lg">
-                  <div class="w-full h-full bg-stone-900 rounded-full flex flex-col items-center justify-center border border-amber-800 text-[7px] text-amber-200 font-bold">
-                    <span>HUBLOT</span>
-                    <span class="text-[5px] text-teal-300">GENEVE</span>
-                  </div>
-                </div>
-                <div class="w-20 h-7 bg-zinc-900 rounded-b-sm"></div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('HUBLOT CLASSIC FUSION TITANIUM BLUE DIAL', 'Rs.3,800.00', 'Luxury Replica Watch', 'Timeless sunray satin navy blue dial with polished titanium finish case and integrated rubber-backed blue alligator textured strap. Ideal for formal suits and daily luxury.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="15" data-category="hublot luxury">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">CLASSIC ELEGANCE</span>
+              <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&auto=format&fit=crop&q=80" alt="Hublot Classic Fusion Titanium Blue Dial Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('HUBLOT CLASSIC FUSION TITANIUM BLUE DIAL', 'Rs.3,800.00', 'Luxury Replica Watch', 'Timeless sunray satin navy blue dial with polished titanium finish case and integrated rubber-backed blue alligator textured strap. Ideal for formal suits and daily luxury.', 'https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">HUBLOT CLASSIC FUSION TITANIUM BLUE DIAL</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.6,000.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.3,800.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Hublot Luxury</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">HUBLOT CLASSIC FUSION TITANIUM BLUE DIAL</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(51)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('HUBLOT CLASSIC FUSION TITANIUM BLUE DIAL', 3800)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.3,800</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.6,000</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">37% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('HUBLOT CLASSIC FUSION TITANIUM BLUE DIAL', 3800.0, 1, 'https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('HUBLOT CLASSIC FUSION TITANIUM BLUE DIAL', 3800.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all relative group product-item" data-product-id="16" data-category="hublot">
-            <span class="absolute top-3 left-3 z-20 bg-saleRed text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">TONNEAU BARREL</span>
-            <div class="relative overflow-hidden bg-neutral-100 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <div class="w-full h-full flex flex-col items-center justify-center relative group-hover:scale-105 transition-transform p-2">
-                <div class="w-20 h-5 bg-zinc-900 rounded-t-sm"></div>
-                <div class="w-22 h-22 rounded-full bg-slate-300 border-4 border-slate-400 p-1 flex items-center justify-center shadow-lg">
-                  <div class="w-full h-full bg-stone-900 rounded-full flex flex-col items-center justify-center border border-amber-800 text-[7px] text-amber-200 font-bold">
-                    <span>HUBLOT</span>
-                    <span class="text-[5px] text-teal-300">GENEVE</span>
-                  </div>
-                </div>
-                <div class="w-20 h-7 bg-zinc-900 rounded-b-sm"></div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('HUBLOT SPIRIT OF BIG BANG TONNEAU CURVED CASE', 'Rs.4,800.00', 'Luxury Replica Watch', 'Signature barrel-shaped curved tonneau case that hugs the wrist ergonomically. Multi-layered skeleton dial, frosted titanium finish, and quick-release silicone strap.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="16" data-category="hublot luxury">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">TONNEAU BARREL</span>
+              <img src="https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&auto=format&fit=crop&q=80" alt="Hublot Spirit of Big Bang Tonneau Barrel Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('HUBLOT SPIRIT OF BIG BANG TONNEAU CURVED CASE', 'Rs.4,800.00', 'Luxury Replica Watch', 'Signature barrel-shaped curved tonneau case that hugs the wrist ergonomically. Multi-layered skeleton dial, frosted titanium finish, and quick-release silicone strap.', 'https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">HUBLOT SPIRIT OF BIG BANG TONNEAU CURVED CASE</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.8,000.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.4,800.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Hublot Luxury</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">HUBLOT SPIRIT OF BIG BANG TONNEAU CURVED CASE</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(42)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('HUBLOT SPIRIT OF BIG BANG TONNEAU CURVED CASE', 4800)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.4,800</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.8,000</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">40% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('HUBLOT SPIRIT OF BIG BANG TONNEAU CURVED CASE', 4800.0, 1, 'https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('HUBLOT SPIRIT OF BIG BANG TONNEAU CURVED CASE', 4800.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-200 rounded-lg p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all relative group product-item" data-product-id="17" data-category="hublot">
-            <span class="absolute top-3 left-3 z-20 bg-saleRed text-white text-[10px] font-black uppercase px-2 py-0.5 rounded shadow-sm">GEOMETRIC ART</span>
-            <div class="relative overflow-hidden bg-neutral-100 rounded-md mb-3 aspect-square flex items-center justify-center">
-              <div class="w-full h-full flex flex-col items-center justify-center relative group-hover:scale-105 transition-transform p-2">
-                <div class="w-20 h-5 bg-zinc-900 rounded-t-sm"></div>
-                <div class="w-22 h-22 rounded-full bg-slate-300 border-4 border-slate-400 p-1 flex items-center justify-center shadow-lg">
-                  <div class="w-full h-full bg-stone-900 rounded-full flex flex-col items-center justify-center border border-amber-800 text-[7px] text-amber-200 font-bold">
-                    <span>HUBLOT</span>
-                    <span class="text-[5px] text-teal-300">GENEVE</span>
-                  </div>
-                </div>
-                <div class="w-20 h-7 bg-zinc-900 rounded-b-sm"></div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('HUBLOT BIG BANG SANG BLEU II GEOMETRIC EDITION', 'Rs.4,200.00', 'Luxury Replica Watch', 'Maxime Buchi geometric polygon hands design. Faceted octagonal sapphire crystal, diamond-cut case architecture, and engraved deployant safety buckle.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="17" data-category="hublot luxury">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">GEOMETRIC ART</span>
+              <img src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&auto=format&fit=crop&q=80" alt="Hublot Big Bang Sang Bleu II Geometric Watch" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('HUBLOT BIG BANG SANG BLEU II GEOMETRIC EDITION', 'Rs.4,200.00', 'Luxury Replica Watch', 'Maxime Buchi geometric polygon hands design. Faceted octagonal sapphire crystal, diamond-cut case architecture, and engraved deployant safety buckle.', 'https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">HUBLOT BIG BANG SANG BLEU II GEOMETRIC EDITION</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.7,000.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.4,200.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Hublot Luxury</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">HUBLOT BIG BANG SANG BLEU II GEOMETRIC EDITION</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(39)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('HUBLOT BIG BANG SANG BLEU II GEOMETRIC EDITION', 4200)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.4,200</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.7,000</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">40% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('HUBLOT BIG BANG SANG BLEU II GEOMETRIC EDITION', 4200.0, 1, 'https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('HUBLOT BIG BANG SANG BLEU II GEOMETRIC EDITION', 4200.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 </div>
 </div></section>
     <!-- END: LuxuryWatchesSaleSection -->
@@ -934,167 +1166,257 @@
         </div>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-5 sm:gap-6">
           
-          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="18" data-category="airbuds">
-            <div class="relative overflow-hidden bg-white rounded-lg mb-3 aspect-square flex items-center justify-center border border-gray-100 p-4">
-              <span class="absolute top-2 left-2 z-10 bg-brandTeal text-gray-950 text-[9px] font-black uppercase px-2 py-0.5 rounded">ANC + POP-UP</span>
-              <div class="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform text-gray-900">
-                <div class="w-20 h-24 bg-neutral-900 rounded-3xl p-2 shadow-lg flex flex-col items-center justify-center border border-neutral-700 text-center">
-                  <i class="fa-solid fa-headphones text-teal-300 text-3xl mb-1"></i>
-                  <span class="text-[7px] text-teal-400 font-mono font-bold line-clamp-1">AirPods Pro 2nd </span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('AirPods Pro 2nd Gen Master Replica (Active Noise Cancelling)', 'Rs.3,500.00', 'Audio & Airbuds', 'High-fidelity master replica with working Active Noise Cancellation (ANC), Transparency mode, iOS pop-up animation, touch volume slide control, and MagSafe speaker lanyard case.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="18" data-category="wireless audio">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">ANC + POP-UP</span>
+              <img src="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80" alt="AirPods Pro 2 Master Replica with Active Noise Cancelling" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('AirPods Pro 2nd Gen Master Replica (Active Noise Cancelling)', 'Rs.3,500.00', 'Wireless Earbuds', 'High-fidelity master replica with working Active Noise Cancellation (ANC), Transparency mode, iOS pop-up animation, touch volume slide control, and MagSafe speaker lanyard case.', 'https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">AirPods Pro 2nd Gen Master Replica (Active Noise Cancelling)</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.6,000.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.3,500.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Wireless Audio</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">AirPods Pro 2nd Gen Master Replica (Active Noise Cancelling)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(164)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('AirPods Pro 2nd Gen Master Replica (Active Noise Cancelling)', 3500)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.3,500</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.6,000</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">42% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('AirPods Pro 2nd Gen Master Replica (Active Noise Cancelling)', 3500.0, 1, 'https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('AirPods Pro 2nd Gen Master Replica (Active Noise Cancelling)', 3500.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="19" data-category="airbuds">
-            <div class="relative overflow-hidden bg-white rounded-lg mb-3 aspect-square flex items-center justify-center border border-gray-100 p-4">
-              <span class="absolute top-2 left-2 z-10 bg-brandTeal text-gray-950 text-[9px] font-black uppercase px-2 py-0.5 rounded">STUDIO BASS</span>
-              <div class="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform text-gray-900">
-                <div class="w-20 h-24 bg-neutral-900 rounded-3xl p-2 shadow-lg flex flex-col items-center justify-center border border-neutral-700 text-center">
-                  <i class="fa-solid fa-headphones text-teal-300 text-3xl mb-1"></i>
-                  <span class="text-[7px] text-teal-400 font-mono font-bold line-clamp-1">TechTracker ANC </span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('TechTracker ANC Studio Pro Wireless Airbuds', 'Rs.2,800.00', 'Audio & Airbuds', 'Active Noise Cancellation (ANC), Transparency mode, 13mm dynamic titanium drivers for deep bass, 30 hours total playback with charging case, Type-C quick charging.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="19" data-category="wireless audio">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">STUDIO BASS</span>
+              <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80" alt="TechTracker ANC Studio Pro Wireless Airbuds with Deep Bass" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('TechTracker ANC Studio Pro Wireless Airbuds', 'Rs.2,800.00', 'Wireless Earbuds', 'Active Noise Cancellation (ANC), Transparency mode, 13mm dynamic titanium drivers for deep bass, 30 hours total playback with charging case, Type-C quick charging.', 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">TechTracker ANC Studio Pro Wireless Airbuds</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.4,500.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.2,800.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Wireless Audio</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">TechTracker ANC Studio Pro Wireless Airbuds</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(88)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('TechTracker ANC Studio Pro Wireless Airbuds', 2800)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.2,800</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.4,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">38% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('TechTracker ANC Studio Pro Wireless Airbuds', 2800.0, 1, 'https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('TechTracker ANC Studio Pro Wireless Airbuds', 2800.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="20" data-category="airbuds">
-            <div class="relative overflow-hidden bg-white rounded-lg mb-3 aspect-square flex items-center justify-center border border-gray-100 p-4">
-              <span class="absolute top-2 left-2 z-10 bg-brandTeal text-gray-950 text-[9px] font-black uppercase px-2 py-0.5 rounded">ERGONOMIC FIT</span>
-              <div class="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform text-gray-900">
-                <div class="w-20 h-24 bg-neutral-900 rounded-3xl p-2 shadow-lg flex flex-col items-center justify-center border border-neutral-700 text-center">
-                  <i class="fa-solid fa-headphones text-teal-300 text-3xl mb-1"></i>
-                  <span class="text-[7px] text-teal-400 font-mono font-bold line-clamp-1">AirPods 3rd Gen </span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('AirPods 3rd Gen Wireless Earbuds (Spatial Audio)', 'Rs.2,800.00', 'Audio & Airbuds', 'Contoured in-ear design without silicone tips for natural comfort. Adaptive EQ, force sensor controls, sweat and water resistance, and 30-hour battery life with wireless case.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="20" data-category="wireless audio">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">ERGONOMIC FIT</span>
+              <img src="https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=600&auto=format&fit=crop&q=80" alt="AirPods 3rd Gen Wireless Earbuds" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('AirPods 3rd Gen Wireless Earbuds (Spatial Audio)', 'Rs.2,800.00', 'Wireless Earbuds', 'Contoured in-ear design without silicone tips for natural comfort. Adaptive EQ, force sensor controls, sweat and water resistance, and 30-hour battery life with wireless case.', 'https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">AirPods 3rd Gen Wireless Earbuds (Spatial Audio)</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.4,500.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.2,800.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Wireless Audio</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">AirPods 3rd Gen Wireless Earbuds (Spatial Audio)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(75)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('AirPods 3rd Gen Wireless Earbuds (Spatial Audio)', 2800)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.2,800</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.4,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">38% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('AirPods 3rd Gen Wireless Earbuds (Spatial Audio)', 2800.0, 1, 'https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('AirPods 3rd Gen Wireless Earbuds (Spatial Audio)', 2800.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="21" data-category="airbuds">
-            <div class="relative overflow-hidden bg-white rounded-lg mb-3 aspect-square flex items-center justify-center border border-gray-100 p-4">
-              <span class="absolute top-2 left-2 z-10 bg-brandTeal text-gray-950 text-[9px] font-black uppercase px-2 py-0.5 rounded">40MS LOW LATENCY</span>
-              <div class="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform text-gray-900">
-                <div class="w-20 h-24 bg-neutral-900 rounded-3xl p-2 shadow-lg flex flex-col items-center justify-center border border-neutral-700 text-center">
-                  <i class="fa-solid fa-headphones text-teal-300 text-3xl mb-1"></i>
-                  <span class="text-[7px] text-teal-400 font-mono font-bold line-clamp-1">TechTracker Cybe</span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('TechTracker Cyberpunk Transparent Gaming TWS Earbuds', 'Rs.2,600.00', 'Audio & Airbuds', 'Ultra-low latency 40ms gaming mode for instant footsteps in PUBG and FreeFire. Futuristic transparent clear charging case with breathing neon RGB LEDs and dual noise-reduction microphones.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="21" data-category="wireless audio">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">40MS LOW LATENCY</span>
+              <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80" alt="TechTracker Cyberpunk Transparent Gaming TWS Earbuds" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('TechTracker Cyberpunk Transparent Gaming TWS Earbuds', 'Rs.2,600.00', 'Gaming Earbuds', 'Ultra-low latency 40ms gaming mode for instant footsteps in PUBG and FreeFire. Futuristic transparent clear charging case with breathing neon RGB LEDs and dual noise-reduction microphones.', 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">TechTracker Cyberpunk Transparent Gaming TWS Earbuds</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.4,200.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.2,600.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Wireless Audio</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">TechTracker Cyberpunk Transparent Gaming TWS Earbuds</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(62)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('TechTracker Cyberpunk Transparent Gaming TWS Earbuds', 2600)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.2,600</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.4,200</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">38% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('TechTracker Cyberpunk Transparent Gaming TWS Earbuds', 2600.0, 1, 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('TechTracker Cyberpunk Transparent Gaming TWS Earbuds', 2600.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="22" data-category="airbuds">
-            <div class="relative overflow-hidden bg-white rounded-lg mb-3 aspect-square flex items-center justify-center border border-gray-100 p-4">
-              <span class="absolute top-2 left-2 z-10 bg-brandTeal text-gray-950 text-[9px] font-black uppercase px-2 py-0.5 rounded">MASSIVE VALUE</span>
-              <div class="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform text-gray-900">
-                <div class="w-20 h-24 bg-neutral-900 rounded-3xl p-2 shadow-lg flex flex-col items-center justify-center border border-neutral-700 text-center">
-                  <i class="fa-solid fa-headphones text-teal-300 text-3xl mb-1"></i>
-                  <span class="text-[7px] text-teal-400 font-mono font-bold line-clamp-1">M10 TWS Wireless</span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('M10 TWS Wireless Earbuds with Powerbank Display Case', 'Rs.1,500.00', 'Audio & Airbuds', 'Pakistan's most popular daily earbuds with built-in emergency phone charging powerbank case, digital LED percentage battery display, waterproof touch sensors, and punchy 9D stereo sound.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="22" data-category="wireless audio">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">MASSIVE VALUE</span>
+              <img src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=600&auto=format&fit=crop&q=80" alt="M10 TWS Wireless Earbuds with Powerbank Display Case" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('M10 TWS Wireless Earbuds with Powerbank Display Case', 'Rs.1,500.00', 'Wireless Earbuds', 'Pakistan's most popular daily earbuds with built-in emergency phone charging powerbank case, digital LED percentage battery display, waterproof touch sensors, and punchy 9D stereo sound.', 'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">M10 TWS Wireless Earbuds with Powerbank Display Case</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.2,500.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.1,500.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Wireless Audio</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">M10 TWS Wireless Earbuds with Powerbank Display Case</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(230)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('M10 TWS Wireless Earbuds with Powerbank Display Case', 1500)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.1,500</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.2,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">40% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('M10 TWS Wireless Earbuds with Powerbank Display Case', 1500.0, 1, 'https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('M10 TWS Wireless Earbuds with Powerbank Display Case', 1500.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="23" data-category="airbuds">
-            <div class="relative overflow-hidden bg-white rounded-lg mb-3 aspect-square flex items-center justify-center border border-gray-100 p-4">
-              <span class="absolute top-2 left-2 z-10 bg-brandTeal text-gray-950 text-[9px] font-black uppercase px-2 py-0.5 rounded">100H STANDBY</span>
-              <div class="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform text-gray-900">
-                <div class="w-20 h-24 bg-neutral-900 rounded-3xl p-2 shadow-lg flex flex-col items-center justify-center border border-neutral-700 text-center">
-                  <i class="fa-solid fa-headphones text-teal-300 text-3xl mb-1"></i>
-                  <span class="text-[7px] text-teal-400 font-mono font-bold line-clamp-1">TechTracker Pro </span>
-                </div>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('TechTracker Pro Wireless Sports Magnetic Neckband', 'Rs.1,999.00', 'Audio & Airbuds', 'Premium flexible silicone neckband with magnetic instant lock earbuds. Up to 50 hours non-stop music playback, vibration call alert, fast Type-C charge, and sweatproof running design.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="23" data-category="wireless audio">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">100H STANDBY</span>
+              <img src="https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=600&auto=format&fit=crop&q=80" alt="TechTracker Pro Wireless Sports Magnetic Neckband" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('TechTracker Pro Wireless Sports Magnetic Neckband', 'Rs.1,999.00', 'Wireless Neckband', 'Premium flexible silicone neckband with magnetic instant lock earbuds. Up to 50 hours non-stop music playback, vibration call alert, fast Type-C charge, and sweatproof running design.', 'https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1 product-title">TechTracker Pro Wireless Sports Magnetic Neckband</h3>
-              <div class="flex items-center justify-center gap-2 mt-1.5">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.3,200.00</span>
-                <span class="text-sm sm:text-base font-extrabold text-saleRed">Rs.1,999.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Wireless Audio</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">TechTracker Pro Wireless Sports Magnetic Neckband</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(57)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('TechTracker Pro Wireless Sports Magnetic Neckband', 1999)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.1,999</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.3,200</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">38% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('TechTracker Pro Wireless Sports Magnetic Neckband', 1999.0, 1, 'https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('TechTracker Pro Wireless Sports Magnetic Neckband', 1999.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
         </div>
       </div>
     </section>
@@ -1113,80 +1435,131 @@
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6">
           
-          <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="24" data-category="phonecooler">
-            <div class="relative overflow-hidden bg-slate-900 rounded-lg mb-4 aspect-square flex items-center justify-center p-4">
-              <span class="absolute top-2 left-2 z-10 bg-teal-400 text-black text-[9px] font-black uppercase px-2 py-0.5 rounded">GAMING TURBO</span>
-              <div class="w-24 h-24 bg-slate-950 rounded-full border-2 border-teal-400 shadow-xl flex items-center justify-center group-hover:rotate-180 transition-transform duration-700">
-                <i class="fa-solid fa-fan text-teal-400 text-4xl animate-spin" style="animation-duration: 5s;"></i>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('TechTracker Semiconductor Gaming Phone Cooler (Magnetic RGB)', 'Rs.2,500.00', 'Gaming Accessories', 'Instant peltier semiconductor cooling down to 5°C, vibrant RGB illumination, magnetic snap-on and clamp-on dual mounting, silent 6000 RPM turbofan preventing FPS drop in PUBG and FreeFire.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="24" data-category="gaming gear">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">GAMING TURBO</span>
+              <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&auto=format&fit=crop&q=80" alt="TechTracker Magnetic Semiconductor Gaming Phone Cooler with RGB Fan" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('TechTracker Semiconductor Gaming Phone Cooler (Magnetic RGB)', 'Rs.2,500.00', 'Mobile Phone Cooler', 'Instant peltier semiconductor cooling down to 5°C, vibrant RGB illumination, magnetic snap-on and clamp-on dual mounting, silent 6000 RPM turbofan preventing FPS drop in PUBG and FreeFire.', 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-sm font-bold text-gray-800 line-clamp-1 product-title">TechTracker Semiconductor Gaming Phone Cooler (Magnetic RGB)</h3>
-              <p class="text-xs text-gray-500 mt-1 line-clamp-2">Instant peltier semiconductor cooling down to 5°C, vibrant RGB illumination...</p>
-              <div class="flex items-center justify-center gap-2 mt-2">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.3,800.00</span>
-                <span class="text-base font-extrabold text-saleRed">Rs.2,500.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Gaming Gear</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">TechTracker Semiconductor Gaming Phone Cooler (Magnetic RGB)</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(73)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('TechTracker Semiconductor Gaming Phone Cooler (Magnetic RGB)', 2500)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.2,500</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.3,800</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">34% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('TechTracker Semiconductor Gaming Phone Cooler (Magnetic RGB)', 2500.0, 1, 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('TechTracker Semiconductor Gaming Phone Cooler (Magnetic RGB)', 2500.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="25" data-category="phonecooler">
-            <div class="relative overflow-hidden bg-slate-900 rounded-lg mb-4 aspect-square flex items-center justify-center p-4">
-              <span class="absolute top-2 left-2 z-10 bg-teal-400 text-black text-[9px] font-black uppercase px-2 py-0.5 rounded">TEMP DISPLAY</span>
-              <div class="w-24 h-24 bg-slate-950 rounded-full border-2 border-teal-400 shadow-xl flex items-center justify-center group-hover:rotate-180 transition-transform duration-700">
-                <i class="fa-solid fa-fan text-teal-400 text-4xl animate-spin" style="animation-duration: 5s;"></i>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('TechTracker MEMO DL05 Digital Temp Display Phone Cooler', 'Rs.2,999.00', 'Gaming Accessories', 'Live real-time digital LED temperature display showing degrees Celsius right on the cooler back. Freezes down in 10 seconds, dual silicone non-slip clamp, and USB-C powered.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="25" data-category="gaming gear">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">TEMP DISPLAY</span>
+              <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80" alt="TechTracker MEMO DL05 Digital Temp Display Phone Cooler" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('TechTracker MEMO DL05 Digital Temp Display Phone Cooler', 'Rs.2,999.00', 'Mobile Phone Cooler', 'Live real-time digital LED temperature display showing degrees Celsius right on the cooler back. Freezes down in 10 seconds, dual silicone non-slip clamp, and USB-C powered.', 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-sm font-bold text-gray-800 line-clamp-1 product-title">TechTracker MEMO DL05 Digital Temp Display Phone Cooler</h3>
-              <p class="text-xs text-gray-500 mt-1 line-clamp-2">Live real-time digital LED temperature display showing degrees Celsius righ...</p>
-              <div class="flex items-center justify-center gap-2 mt-2">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.4,500.00</span>
-                <span class="text-base font-extrabold text-saleRed">Rs.2,999.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Gaming Gear</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">TechTracker MEMO DL05 Digital Temp Display Phone Cooler</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(46)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('TechTracker MEMO DL05 Digital Temp Display Phone Cooler', 2999)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.2,999</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.4,500</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">33% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('TechTracker MEMO DL05 Digital Temp Display Phone Cooler', 2999.0, 1, 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('TechTracker MEMO DL05 Digital Temp Display Phone Cooler', 2999.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
 
-          <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col justify-between hover:shadow-xl transition-all group product-item" data-product-id="26" data-category="phonecooler">
-            <div class="relative overflow-hidden bg-slate-900 rounded-lg mb-4 aspect-square flex items-center justify-center p-4">
-              <span class="absolute top-2 left-2 z-10 bg-teal-400 text-black text-[9px] font-black uppercase px-2 py-0.5 rounded">EXTREME COOLING</span>
-              <div class="w-24 h-24 bg-slate-950 rounded-full border-2 border-teal-400 shadow-xl flex items-center justify-center group-hover:rotate-180 transition-transform duration-700">
-                <i class="fa-solid fa-fan text-teal-400 text-4xl animate-spin" style="animation-duration: 5s;"></i>
-              </div>
-              <button class="absolute bottom-2 inset-x-2 bg-black/80 hover:bg-brandTeal text-white text-[11px] font-bold py-2 rounded uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" onclick="openQuickView('TechTracker Black Shark Style Dual Peltier Magnetic Radiator', 'Rs.3,200.00', 'Gaming Accessories', 'Heavy-duty dual-layer semiconductor Peltier plate cooling module. Perfect for iPhone 12/13/14/15/16 MagSafe direct snap and Android devices. Eliminates 90FPS thermal throttling entirely.')">
+          <div class="bg-white border border-gray-100 rounded-xl p-3 sm:p-4 flex flex-col justify-between hover:shadow-xl transition-all duration-300 group product-item" data-product-id="26" data-category="gaming gear">
+            <div class="relative overflow-hidden bg-gray-50 rounded-lg mb-3 aspect-square flex items-center justify-center">
+              <span class="absolute top-2 left-2 z-10 bg-black text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded shadow-sm">EXTREME COOLING</span>
+              <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&auto=format&fit=crop&q=80" alt="TechTracker Black Shark Style Dual Peltier Magnetic Radiator" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80';"/>
+              <button class="absolute bottom-2 inset-x-2 bg-black/85 hover:bg-brandTeal text-white hover:text-black text-[11px] font-bold py-2 rounded-md uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-all cursor-pointer shadow-md" onclick="openQuickView('TechTracker Black Shark Style Dual Peltier Magnetic Radiator', 'Rs.3,200.00', 'Mobile Phone Cooler', 'Heavy-duty dual-layer semiconductor Peltier plate cooling module. Perfect for iPhone 12/13/14/15/16 MagSafe direct snap and Android devices. Eliminates 90FPS thermal throttling entirely.', 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&auto=format&fit=crop&q=80')">
                 Quick View
               </button>
             </div>
-            <div class="text-center">
-              <span class="text-[10px] text-gray-400 uppercase tracking-widest font-semibold block mb-1">TECH TRACKER</span>
-              <h3 class="text-sm font-bold text-gray-800 line-clamp-1 product-title">TechTracker Black Shark Style Dual Peltier Magnetic Radiator</h3>
-              <p class="text-xs text-gray-500 mt-1 line-clamp-2">Heavy-duty dual-layer semiconductor Peltier plate cooling module. Perfect f...</p>
-              <div class="flex items-center justify-center gap-2 mt-2">
-                <span class="text-xs text-gray-400 line-through font-semibold">Rs.4,800.00</span>
-                <span class="text-base font-extrabold text-saleRed">Rs.3,200.00</span>
+            <div class="flex flex-col flex-grow justify-between">
+              <div>
+                <span class="text-[10px] uppercase font-bold text-gray-400 tracking-wider block mb-0.5">Gaming Gear</span>
+                <h3 class="font-bold text-gray-900 text-xs sm:text-sm line-clamp-2 group-hover:text-brandTeal transition-colors font-montserrat">TechTracker Black Shark Style Dual Peltier Magnetic Radiator</h3>
+                <div class="flex items-center gap-1.5 mt-1.5 text-xs text-amber-500">
+                  <div class="flex text-[10px]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                  <span class="text-gray-400 text-[10px]">(38)</span>
+                </div>
               </div>
-              <button class="mt-3 w-full border border-gray-800 hover:bg-black hover:text-white text-gray-900 text-xs font-bold py-1.5 rounded uppercase tracking-wider transition-colors cursor-pointer" onclick="addToCart('TechTracker Black Shark Style Dual Peltier Magnetic Radiator', 3200)">
-                Add to Cart
-              </button>
+              <div class="mt-3 pt-2.5 border-t border-gray-100">
+                <div class="flex items-baseline gap-2">
+                  <span class="text-sm sm:text-base font-extrabold text-gray-950 font-montserrat">Rs.3,200</span>
+                  <span class="text-[11px] text-gray-400 line-through">Rs.4,800</span>
+                  <span class="text-[10px] text-saleRed font-bold ml-auto">33% OFF</span>
+                </div>
+                <div class="grid grid-cols-2 gap-1.5 mt-2.5">
+                  <button class="w-full bg-gray-100 hover:bg-brandCyan/40 text-gray-900 text-[11px] font-bold py-2 rounded transition-colors cursor-pointer" onclick="addToCart('TechTracker Black Shark Style Dual Peltier Magnetic Radiator', 3200.0, 1, 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&auto=format&fit=crop&q=80'); toggleCartDrawer(true);">
+                    Add to Cart
+                  </button>
+                  <button class="w-full bg-brandTeal hover:bg-teal-600 text-gray-950 text-[11px] font-black py-2 rounded transition-colors uppercase tracking-wider cursor-pointer" onclick="openCodModalWithProduct('TechTracker Black Shark Style Dual Peltier Magnetic Radiator', 3200.0)">
+                    COD Buy
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        
+    
         </div>
       </div>
     </section>
