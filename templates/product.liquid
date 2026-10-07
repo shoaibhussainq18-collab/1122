@@ -1,28 +1,28 @@
-<div class="max-w-7xl mx-auto px-4 py-12">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-    <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+<div class="max-w-7xl mx-auto px-4 py-16 text-white">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+    <div class="bg-neutral-950 rounded-2xl p-8 border border-neutral-800">
       {% if product.featured_image %}
-        <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="w-full h-auto object-contain rounded-lg"/>
+        <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}" class="w-full h-auto object-contain rounded-xl"/>
       {% else %}
-        <div class="aspect-square bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 font-bold">No Image Available</div>
+        <div class="aspect-square bg-neutral-900 rounded-xl flex items-center justify-center text-neutral-500 font-bold">TECHNO Hardware Image</div>
       {% endif %}
     </div>
     <div>
-      <span class="text-xs uppercase font-bold text-[#00c2b2] tracking-wider">{{ product.type }}</span>
-      <h1 class="text-2xl sm:text-3xl font-black text-gray-900 mt-2 font-montserrat">{{ product.title }}</h1>
-      <div class="mt-4 flex items-center gap-3">
-        <span class="text-2xl font-black text-gray-900">{{ product.price | money }}</span>
+      <span class="text-xs uppercase font-mono font-bold text-cyan-400 tracking-widest">{{ product.type }}</span>
+      <h1 class="text-3xl sm:text-4xl font-black text-white mt-2">{{ product.title }}</h1>
+      <div class="mt-4 flex items-center space-x-4">
+        <span class="text-3xl font-black text-white font-mono">{{ product.price | money }}</span>
         {% if product.compare_at_price > product.price %}
-          <span class="text-base text-gray-400 line-through">{{ product.compare_at_price | money }}</span>
-          <span class="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded">SALE</span>
+          <span class="text-base text-neutral-500 line-through font-mono">{{ product.compare_at_price | money }}</span>
+          <span class="bg-cyan-500 text-black text-xs font-black px-2.5 py-1 rounded">SAVE</span>
         {% endif %}
       </div>
-      <div class="mt-6 prose text-gray-700 text-sm leading-relaxed">
+      <div class="mt-6 text-neutral-300 text-sm leading-relaxed border-t border-b border-neutral-800 py-6">
         {{ product.description }}
       </div>
       <form action="/cart/add" method="post" enctype="multipart/form-data" class="mt-8 space-y-4">
         <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-        <button type="submit" class="w-full bg-[#00c2b2] hover:bg-teal-600 text-black font-black py-3 rounded uppercase text-sm tracking-wider">
+        <button type="submit" class="w-full bg-cyan-400 hover:bg-cyan-300 text-black font-black py-4 rounded-xl uppercase text-xs tracking-widest transition-all shadow-[0_0_20px_rgba(0,229,255,0.4)]">
           Add To Cart
         </button>
       </form>

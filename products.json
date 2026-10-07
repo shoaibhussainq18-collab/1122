@@ -1,470 +1,1145 @@
 [
   {
-    "product_number": "1",
-    "title": "Z90 Pro Smart Watch (4 Straps Included)",
+    "id": "techno-chrono-ultra-titanium-smartwatch",
+    "title": "TECHNO Chrono Ultra Titanium Smartwatch",
+    "shortTitle": "Chrono Ultra Titanium",
+    "series": "TECHNO CHRONO",
     "category": "Smartwatches",
-    "type": "Smartwatch",
-    "price": 4000.0,
-    "original_price": 6000.0,
-    "discount": "33% OFF",
-    "sku": "TT-Z90-PRO",
+    "price": 349.0,
+    "compareAtPrice": 449.0,
+    "rating": 5.0,
+    "reviewCount": 142,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Aerospace-grade Grade 5 titanium smartwatch with edge-to-edge Sapphire AMOLED display, dual-band GPS, medical-grade PPG biosensors, and 14-day battery longevity.",
+    "images": [
+      "images/smartwatch-ultra.jpg",
+      "images/smartwatch-sport.jpg"
+    ],
+    "variants": [
+      {
+        "name": "Natural Titanium",
+        "hex": "#9E9E9E",
+        "imageIndex": 0
+      },
+      {
+        "name": "Stealth DLC Black",
+        "hex": "#111111",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Grade 5 Aerospace Titanium Unibody with Sapphire Crystal Glass",
+      "1.43-inch Always-On AMOLED Retina Display (1,000 nits outdoor peak)",
+      "14-Day Battery Life on a Single Fast Magnetic Charge",
+      "10 ATM Water Resistance (100 meters dive & open-water swim rated)",
+      "Dual-Frequency GPS (L1+L5) with Real-Time Turn-by-Turn Waypoints"
+    ],
+    "specs": {
+      "Case Material": "Grade 5 Titanium with Micro-Blasted Matte Finish",
+      "Display": "1.43\" Ultra-Retina Sapphire AMOLED (466x466, 326 PPI)",
+      "Battery Life": "14 Days Typical Use / 36 Hours Continuous Dual-GPS",
+      "Biosensors": "8-Channel PPG Optical Heart Rate, SpO2, ECG Sensor, Skin Temp",
+      "Water Resistance": "100m / 10 ATM / MIL-STD-810H Certified",
+      "Connectivity": "Bluetooth 5.3 BLE, Dual-Band GPS (L1+L5), NFC Contactless Pay",
+      "Dimensions & Weight": "46mm x 46mm x 12.1mm \u2022 52 grams (without strap)"
+    },
+    "inTheBox": [
+      "1x TECHNO Chrono Ultra Titanium Smartwatch",
+      "1x Magnetic Fast-Charging Puck (USB-C)",
+      "1x Grade 5 Titanium Link Bracelet + 1x Fluoroelastomer Sport Strap",
+      "1x Certificate of Authenticity & 2-Year International Warranty"
+    ]
+  },
+  {
+    "id": "techno-pulse-pro-sport-smartwatch",
+    "title": "TECHNO Pulse Pro Ceramic Sport Watch",
+    "shortTitle": "Pulse Pro Sport",
+    "series": "TECHNO CHRONO",
+    "category": "Smartwatches",
+    "price": 179.0,
+    "compareAtPrice": 249.0,
     "rating": 4.8,
-    "reviews": 92,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "4 STRAPS INCLUDED",
-    "tags": "Smartwatch, Calling, IPS Touchscreen, 4 Straps, New Arrival, Tech Tracker",
-    "description": "Features 4 multi-color interchangeable silicone straps (mint green, blush pink, oceanic navy, midnight black). Complete with high-definition IPS touchscreen, Bluetooth call audio speaker, and 48-hour active fitness tracking.",
-    "image_alt": "Z90 Pro Smart Watch with 4 Interchangeable Straps",
-    "image_url": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 98,
+    "isSale": true,
+    "isBestSeller": false,
+    "inStock": true,
+    "description": "Curved borderless OLED sport watch featuring high-temperature ceramic bezel, real-time VO2 Max tracking, apnea sleep analysis, and breathable fluoroelastomer loop strap.",
+    "images": [
+      "images/smartwatch-sport.jpg",
+      "images/smartwatch-ultra.jpg"
+    ],
+    "variants": [
+      {
+        "name": "Onyx Black",
+        "hex": "#171717",
+        "imageIndex": 0
+      },
+      {
+        "name": "Glacier Cyan",
+        "hex": "#00E5FF",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Curved Borderless OLED Display with Neon Ambient Telemetry Rings",
+      "VO2 Max, Lactate Threshold, and Real-Time Heart Rate Zone Alerts",
+      "5 ATM Water Resistance with Automatic Lap Counting & Stroke Detection",
+      "Featherweight 34g Ergonomic Aerodynamic Chassis"
+    ],
+    "specs": {
+      "Case Material": "Zirconia Ceramic Bezel with Polycarbonate Subframe",
+      "Display": "1.78\" Curved AMOLED (368x448, 800 nits)",
+      "Battery Life": "Up to 9 Days Normal / 24 Hours Continuous Sport Mode",
+      "Sport Modes": "120+ Tracked Disciplines with Auto-Recognition",
+      "Biosensors": "PPG 4.0 BioTracker, Continuous SpO2, HRV Stress Monitor",
+      "Water Resistance": "5 ATM (50 meters swim proof)",
+      "Weight": "34 grams ultra-balanced"
+    },
+    "inTheBox": [
+      "1x TECHNO Pulse Pro Ceramic Sport Watch",
+      "1x High-Tension Fluoroelastomer Sport Loop",
+      "1x Fast Magnetic USB-C Charging Cable",
+      "1x Quick Setup Guide & Warranty Card"
+    ]
   },
   {
-    "product_number": "2",
-    "title": "Z81 Pro - Max Series 9 2.1\" Curved Display Smart Watch",
+    "id": "techno-apex-stealth-tactical-watch",
+    "title": "TECHNO Apex Stealth Tactical GPS Watch",
+    "shortTitle": "Apex Stealth Tactical",
+    "series": "TECHNO CHRONO",
     "category": "Smartwatches",
-    "type": "Smartwatch",
-    "price": 5000.0,
-    "original_price": 7500.0,
-    "discount": "33% OFF",
-    "sku": "TT-Z81-MAX9",
+    "price": 299.0,
+    "compareAtPrice": 399.0,
     "rating": 4.9,
-    "reviews": 114,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "SERIES 9 FLAGSHIP",
-    "tags": "Smartwatch, Series 9, 2.1 OLED, Alpine Loop, NFC, Wireless Charging, Tech Tracker",
-    "description": "Max Edge-to-Edge 2.1-inch curved OLED display, vibrant red alpine loop, fast magnetic wireless charging, NFC access control, and Bluetooth calling with crystal clear microphone.",
-    "image_alt": "Z81 Pro Max Series 9 2.1 inch Curved Display Smart Watch",
-    "image_url": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 76,
+    "isSale": true,
+    "isBestSeller": false,
+    "inStock": true,
+    "description": "Engineered to MIL-STD-810H military standards with solar power harvesting, night vision compatibility, barometric storm alerts, and tactical stealth mode.",
+    "images": [
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80",
+      "images/smartwatch-ultra.jpg"
+    ],
+    "variants": [
+      {
+        "name": "Matte Tactical Black",
+        "hex": "#121212",
+        "imageIndex": 0
+      },
+      {
+        "name": "Desert Olive",
+        "hex": "#4B5320",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Real-Time Outdoor Tactical Telemetry on High-Contrast Sunlight Screen",
+      "Night Vision Compatible Backlight & Stealth Mode",
+      "Built-in 3-Axis Compass, Barometric Altimeter, and Gyroscope",
+      "Dual-Position Coordinate Formatting (MGRS & Lat/Long)"
+    ],
+    "specs": {
+      "Bezel Material": "Diamond-Like Carbon (DLC) Coated Titanium",
+      "Display": "1.4\" Sunlight-Visible Transflective Memory-in-Pixel",
+      "Battery Life": "24 Days Typical / 48 Hours Full GPS Mode",
+      "Durability": "MIL-STD-810H Thermal, Shock, and Water Resistance",
+      "Water Rating": "10 ATM / 100 meters",
+      "Weight": "58 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Apex Stealth Tactical Watch",
+      "1x Tactical Ballistic Nylon Quick-Release Strap",
+      "1x Heavy-Duty Braided Charging Cord",
+      "1x Tactical Field Manual"
+    ]
   },
   {
-    "product_number": "3",
-    "title": "Z80 Pro Smart Watch (Retail Packaging)",
+    "id": "techno-aero-slim-active-watch",
+    "title": "TECHNO Aero Slim Ultra-Light Fitness Watch",
+    "shortTitle": "Aero Slim Active",
+    "series": "TECHNO CHRONO",
     "category": "Smartwatches",
-    "type": "Smartwatch",
-    "price": 4500.0,
-    "original_price": 6500.0,
-    "discount": "30% OFF",
-    "sku": "TT-Z80-PRO",
+    "price": 129.0,
+    "compareAtPrice": 179.0,
     "rating": 4.7,
-    "reviews": 68,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "HOT VALUE",
-    "tags": "Smartwatch, Health Sensors, Heart Rate, Retail Pack, WhatsApp Alerts, Tech Tracker",
-    "description": "Comes in premium branded retail packaging with magnetic charging dock and spare silicone strap. Accurate optical heart rate monitor, multi-sports tracking, sleep monitoring, and WhatsApp notifications.",
-    "image_alt": "Z80 Pro Smart Watch Retail Packaging and Charger",
-    "image_url": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 112,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Weighing only 26 grams, the Aero Slim features a continuous health telemetry engine, 10-day battery life, and high-refresh 60Hz curved Retina display.",
+    "images": [
+      "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=800&q=80",
+      "images/smartwatch-sport.jpg"
+    ],
+    "variants": [
+      {
+        "name": "Space Gray",
+        "hex": "#4B5563",
+        "imageIndex": 0
+      },
+      {
+        "name": "Rose Quartz",
+        "hex": "#F43F5E",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Featherweight 26g Chassis Designed for 24/7 Sleep Tracking",
+      "1.82\" Curved Borderless Retina Display with Smooth 60Hz Refresh",
+      "Personalized AI Sleep & Recovery Coach with HRV Monitoring",
+      "One-Tap Measurement of Heart Rate, SpO2, and Stress in 45 Seconds"
+    ],
+    "specs": {
+      "Case Material": "Aviation-Grade 6063 Anodized Aluminum Alloy",
+      "Display": "1.82\" AMOLED Retina (408x480, 347 PPI, 60Hz)",
+      "Battery Life": "10 Days Typical / 14 Days Battery Saver Mode",
+      "Sensors": "BioTracker 4.0 Optical Sensor, 3-Axis Accelerometer",
+      "Water Resistance": "5 ATM (50 meters)",
+      "Weight": "26 grams without strap"
+    },
+    "inTheBox": [
+      "1x TECHNO Aero Slim Active Watch",
+      "1x Soft-Touch Breathable Silicone Band",
+      "1x Magnetic Charging Cable",
+      "1x Quick Start Guide"
+    ]
   },
   {
-    "product_number": "4",
-    "title": "Ultra 2 Watch 49mm Titanium Case (Ocean Band)",
+    "id": "techno-vanguard-esim-lte-smartwatch",
+    "title": "TECHNO Vanguard eSIM LTE Smartwatch",
+    "shortTitle": "Vanguard 4G LTE",
+    "series": "TECHNO CHRONO",
     "category": "Smartwatches",
-    "type": "Smartwatch",
-    "price": 3000.0,
-    "original_price": 5000.0,
-    "discount": "40% OFF",
-    "sku": "TT-ULTRA2-OCN",
-    "rating": 4.9,
-    "reviews": 180,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "BESTSELLER",
-    "tags": "Smartwatch, Ultra 2, 49mm, Titanium, Ocean Band, Compass, Waterproof, Tech Tracker",
-    "description": "Flagship 49mm aerospace grade titanium case replica with signature orange/blue ocean band. Action button functional, compass calibrated, waterproof IP68 certification.",
-    "image_alt": "Ultra 2 Watch 49mm Titanium Case Ocean Band",
-    "image_url": "https://images.unsplash.com/photo-1510017803434-a899398421b3?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "5",
-    "title": "TechTracker Ultra 2 Pro 49mm Titanium Max (Spotlight Edition)",
-    "category": "Smartwatches",
-    "type": "Flagship Smartwatch",
-    "price": 3000.0,
-    "original_price": 5500.0,
-    "discount": "45% OFF",
-    "sku": "TT-ULTRA2-PK-2026",
-    "rating": 5.0,
-    "reviews": 148,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "HOTTEST SELLER",
-    "tags": "Smartwatch, Ultra 2 Pro, Titanium, Sapphire Display, GPS, Calling, COD, Tech Tracker",
-    "description": "Engineered with aerospace-grade titanium alloy and reinforced sapphire crystal display. Enjoy dual-frequency GPS, Bluetooth 5.3 instant hands-free calls, up to 72 hours extended battery life, and complete compatibility with Android & iOS. Includes 6 Months Replacement Warranty.",
-    "image_alt": "TechTracker Ultra 2 Pro 49mm Titanium Max Watch Always On Display",
-    "image_url": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=800&auto=format&fit=crop&q=85"
-  },
-  {
-    "product_number": "6",
-    "title": "Series 10 Ultra Curved AMOLED Smartwatch",
-    "category": "Smartwatches",
-    "type": "Smartwatch",
-    "price": 5500.0,
-    "original_price": 8500.0,
-    "discount": "35% OFF",
-    "sku": "TT-SERIES10-AMOLED",
-    "rating": 4.9,
-    "reviews": 84,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "2026 NEW RELEASE",
-    "tags": "Smartwatch, Series 10, AMOLED, Dynamic Island, Fast Charge, Tech Tracker",
-    "description": "Latest 2026 flagship Series 10 replica featuring vibrant AMOLED true black screen, dynamic notification island, metallic chassis, wireless quick charger, and IP68 water resistance.",
-    "image_alt": "Series 10 Ultra Curved AMOLED Smartwatch",
-    "image_url": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "7",
-    "title": "T900 Ultra Big Screen Smart Watch (Orange Alpine Loop)",
-    "category": "Smartwatches",
-    "type": "Smartwatch",
-    "price": 2200.0,
-    "original_price": 3500.0,
-    "discount": "37% OFF",
-    "sku": "TT-T900-ULTRA",
-    "rating": 4.6,
-    "reviews": 210,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "BUDGET CHAMPION",
-    "tags": "Smartwatch, T900, Big Screen, Budget Friendly, Calling, Tech Tracker",
-    "description": "Best budget 2.09-inch big display smartwatch with Bluetooth calling, social media message pop-ups, music playback control, game center, and rugged orange alpine loop strap.",
-    "image_alt": "T900 Ultra Big Screen Smart Watch",
-    "image_url": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "8",
-    "title": "WS92 Max Ultra Smartwatch with 7 Straps Gift Box Set",
-    "category": "Smartwatches",
-    "type": "Smartwatch",
-    "price": 4800.0,
-    "original_price": 7500.0,
-    "discount": "36% OFF",
-    "sku": "TT-WS92-7STRAPS",
-    "rating": 5.0,
-    "reviews": 95,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "7 STRAPS GIFT SET",
-    "tags": "Smartwatch, Gift Set, 7 Straps, Silicone, Metal, Alpine, Tech Tracker",
-    "description": "Ultimate luxury gift set featuring the WS92 Max Ultra smartwatch along with 7 designer interchangeable straps (stainless steel link, ocean silicone, alpine loop, trail loop, leather, sport band).",
-    "image_alt": "WS92 Max Ultra Smartwatch with 7 Straps Gift Box Set",
-    "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "9",
-    "title": "HK9 Pro+ Gen 2 AMOLED Smartwatch with ChatGPT & Compass",
-    "category": "Smartwatches",
-    "type": "Smartwatch",
-    "price": 6500.0,
-    "original_price": 9500.0,
-    "discount": "32% OFF",
-    "sku": "TT-HK9-PRO-PLUS",
-    "rating": 4.9,
-    "reviews": 112,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "AMOLED + CHATGPT",
-    "tags": "Smartwatch, HK9 Pro, AMOLED, High Refresh Rate, ChatGPT, Tech Tracker",
-    "description": "The gold standard of 1:1 replicas with authentic 60Hz AMOLED screen, real working optical compass, ChatGPT onboard integration, sound recording, and ultra-smooth gesture navigation.",
-    "image_alt": "HK9 Pro Plus Gen 2 AMOLED Smartwatch",
-    "image_url": "https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "10",
-    "title": "HUBLOT REPLICA MEN'S WATCH (Brown Textured Leather Strap)",
-    "category": "Luxury Replica Watches",
-    "type": "Luxury Replica Watch",
-    "price": 3000.0,
-    "original_price": 5000.0,
-    "discount": "40% OFF",
-    "sku": "TT-HUB-BRN-CHR",
-    "rating": 5.0,
-    "reviews": 85,
-    "stock": "In Stock (Limited Edition)",
-    "badge": "SALE -40%",
-    "tags": "Hublot, Replica, Luxury Watch, Brown Leather, Chronograph, Flash Sale, Tech Tracker",
-    "description": "Brown textured leather strap with steel deployant clasp. Polished steel bezel with 6 H-shaped screws, automatic quartz movement, and working chronograph sub-dials.",
-    "image_alt": "Hublot Replica Men's Watch Brown Textured Leather Strap",
-    "image_url": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "11",
-    "title": "HUBLOT REPLICA MEN'S WATCH (Silver White Sunray Dial)",
-    "category": "Luxury Replica Watches",
-    "type": "Luxury Replica Watch",
-    "price": 3000.0,
-    "original_price": 5000.0,
-    "discount": "40% OFF",
-    "sku": "TT-HUB-WHT-GEN",
+    "price": 369.0,
+    "compareAtPrice": 479.0,
     "rating": 4.8,
-    "reviews": 64,
-    "stock": "In Stock (Limited Edition)",
-    "badge": "SALE -40%",
-    "tags": "Hublot, Replica, Luxury Watch, White Dial, Rubber Strap, Flash Sale, Tech Tracker",
-    "description": "Crisp silver-white sunray dial with polished baton indices, black rubberized structured strap, water-resistant casing, and engraved case back.",
-    "image_alt": "Hublot Replica Men's Watch Silver White Dial",
-    "image_url": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 85,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Untether from your phone. Autonomous 4G LTE cellular connectivity with built-in speaker, beamforming microphone, NFC payments, and music streaming.",
+    "images": [
+      "https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&w=800&q=80",
+      "images/smartwatch-ultra.jpg"
+    ],
+    "variants": [
+      {
+        "name": "Stealth Obsidian",
+        "hex": "#111827",
+        "imageIndex": 0
+      },
+      {
+        "name": "Polar White Ceramic",
+        "hex": "#F3F4F6",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Autonomous eSIM 4G LTE Connectivity for Independent Phone Calls & SMS",
+      "Stream Offline Audio Directly to Bluetooth Headphones",
+      "Contactless NFC Payments via TECHNO Pay Global Gateway",
+      "Dual HD Microphones with AI Noise Suppression for Clear Wrist Calls"
+    ],
+    "specs": {
+      "Connectivity": "4G LTE Standalone eSIM, Wi-Fi 2.4/5GHz, Bluetooth 5.3, NFC",
+      "Display": "1.43\" Super AMOLED (466x466, 326 PPI, Always-On)",
+      "Storage": "32GB High-Speed Flash Memory for Apps & Audio",
+      "Battery Life": "5 Days Smart Mode / 48 Hours Heavy LTE Usage",
+      "Water Rating": "5 ATM Water Resistance",
+      "Weight": "54 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Vanguard eSIM LTE Smartwatch",
+      "1x Quick Release Matte Silicone Strap",
+      "1x Magnetic Charging Stand",
+      "1x eSIM Activation Guide"
+    ]
   },
   {
-    "product_number": "12",
-    "title": "HUBLOT AERO FUSION ORLINSKI SILVER (Faceted Skeleton)",
-    "category": "Luxury Replica Watches",
-    "type": "Luxury Replica Watch",
-    "price": 3000.0,
-    "original_price": 5000.0,
-    "discount": "40% OFF",
-    "sku": "TT-HUB-ORL-SLV",
-    "rating": 5.0,
-    "reviews": 96,
-    "stock": "In Stock (Limited Edition)",
-    "badge": "SALE -40%",
-    "tags": "Hublot, Orlinski, Aero Fusion, Skeleton, Silver Polished, Luxury Watch, Tech Tracker",
-    "description": "Iconic faceted sculptural bezel designed in homage to Richard Orlinski. Skeleton dial layout, mirror silver polished finish, and premium matte black silicone strap.",
-    "image_alt": "Hublot Aero Fusion Orlinski Silver Faceted Skeleton Watch",
-    "image_url": "https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "13",
-    "title": "HUBLOT CHRONOGRAPH BLACK MAGIC (Stealth Ceramic)",
-    "category": "Luxury Replica Watches",
-    "type": "Luxury Replica Watch",
-    "price": 3500.0,
-    "original_price": 5000.0,
-    "discount": "30% OFF",
-    "sku": "TT-HUB-BLK-MGC",
+    "id": "techno-wireless-noise-cancelling-headphones-pro",
+    "title": "TECHNO Wireless Noise-Cancelling Headphones Pro",
+    "shortTitle": "Wireless Pro",
+    "series": "TECHNO SERIES X",
+    "category": "Headphones",
+    "price": 199.0,
+    "compareAtPrice": 299.0,
     "rating": 4.9,
-    "reviews": 79,
-    "stock": "In Stock (Limited Edition)",
-    "badge": "SALE -30%",
-    "tags": "Hublot, Black Magic, Ceramic, Chronograph, Stealth Black, Tech Tracker",
-    "description": "Stealth aesthetic with all-black micro-blasted ceramic style casing, black composite resin inserts, titanium screws, and luminescent black hands.",
-    "image_alt": "Hublot Chronograph Black Magic All Black Watch",
-    "image_url": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 184,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Engineered for supreme acoustic fidelity with personalized Spatial Audio, adaptive ANC, and unmatched 40-hour wireless playtime. Precision crafted in lightweight matte composite.",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAhzeAfkVnIFbTvX5yZrgkk251E9hSCkp2M3Tn1tOYXoiXBjmcMpqf-hgPIOxHC_e1AyLBA4CoNA1K75G0w001pXRLWovNJbkjW-wiOPU8aL5Afplz6EY8pv-IIGA83yrunIDWXxvwOzxj_62ipNjL6N8CLb-pNQBP1tnJl84S7XOF7n76FfWn2mtgFxafWH6xPMJFSq0_goaPS-xc1_xxKgnoB36GO60vykpjbi3M7",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBrw64PfO2ZJcgO6xZlxLTltn4NcpGdeSPmraI5we3gxeShHtODAJB4y_RwUBtNPAQ4H5EkejyBwYLUgrlc4QieHFUBSdbJwShmaTsDD1DvdccQw-nvL6EBgI5PYejr4HWrXXEbPnk6_qi3Jxl_clEJkAvrTaAb0Nowxnb3-tGJ0LfgS681seampXxeohmYe9ICOcPYl3gAN-5lHg8eqLyCY35mC-WTSaTW8rz2qe3G"
+    ],
+    "variants": [
+      {
+        "name": "Matte White / Silver",
+        "hex": "#EAEAEA",
+        "imageIndex": 0
+      },
+      {
+        "name": "Stealth Black",
+        "hex": "#1A1A1A",
+        "imageIndex": 1
+      }
+    ],
+    "features": [
+      "Active Noise Cancellation (ANC) with Transparency Mode",
+      "Up to 40 Hours of Playback with Fast USB-C Quick Charge",
+      "Custom 40mm Hi-Res Audio Certified Titanium Drivers",
+      "Ergonomic Ultra-Plush Memory Foam Ear Cushions"
+    ],
+    "specs": {
+      "Transducer Size": "40mm Custom High-Excursion Titanium",
+      "Frequency Response": "10Hz - 40,000Hz (Hi-Res Certified)",
+      "Noise Cancellation": "Hybrid ANC with 6 Adaptive Microphones",
+      "Bluetooth": "Bluetooth 5.3 Multipoint & LDAC High-Res",
+      "Battery Life": "40 Hours (ANC On) / 55 Hours (ANC Off)",
+      "Weight": "248 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Wireless Pro Headphones",
+      "1x Protective Magnetic Travel Case",
+      "1x 3.5mm Gold-Plated Audio Cable",
+      "1x USB-C Fast-Charging Braided Cable"
+    ]
   },
   {
-    "product_number": "14",
-    "title": "HUBLOT BIG BANG UNICO ROSE GOLD REPLICA (Skeleton Dial)",
-    "category": "Luxury Replica Watches",
-    "type": "Luxury Replica Watch",
-    "price": 4500.0,
-    "original_price": 7500.0,
-    "discount": "40% OFF",
-    "sku": "TT-HUB-UNICO-GLD",
+    "id": "techno-studio-air-open-back-monitor",
+    "title": "TECHNO Studio Air Open-Back Reference Monitor",
+    "shortTitle": "Studio Air Open-Back",
+    "series": "TECHNO SERIES X",
+    "category": "Headphones",
+    "price": 249.0,
+    "compareAtPrice": 349.0,
     "rating": 5.0,
-    "reviews": 63,
-    "stock": "In Stock (Limited Edition)",
-    "badge": "PREMIUM GOLD",
-    "tags": "Hublot, Big Bang, Unico, Rose Gold, Skeleton Chrono, Luxury Watch, Tech Tracker",
-    "description": "Satin-finished 18K rose gold plated bezel with exposed micro-gears skeleton dial. Working chronograph pushers, flyback simulation, and ribbed black vulcanized rubber strap.",
-    "image_alt": "Hublot Big Bang Unico Rose Gold Skeleton Chrono Watch",
-    "image_url": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 92,
+    "isSale": true,
+    "isBestSeller": false,
+    "inStock": true,
+    "description": "50mm planar magnetic acoustic transducers in an open-back aluminum mesh chamber. Delivers surgical mastering accuracy, zero inner-ear pressure, and limitless soundstage.",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDkIbnZpshtyNmE0iWr11pFI9uPaRi-kEOabvsUs72354KDYfTp1dn3EoOzyRXJC1rdgrte2w_yyY-BQU8ecXDdDZKaMQuAyEDshaDka0Lp_wR9oUdEeKnCgftMEpn90K-xuUEshlcNEjenK-opYcwE8-DmRv7BTuAYRnYx1NbSjTtRpd1Cq56mSljRxIxnCX_bH8QExJE2Su0wkKA-yybhGgdBrM3r65GZuaO0m9kP"
+    ],
+    "variants": [
+      {
+        "name": "Anodized Silver Mesh",
+        "hex": "#D1D5DB",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Custom 50mm Planar Magnetic Diaphragms with Neodymium Stator Array",
+      "Acoustically Transparent Open-Back Honeycomb Stainless Steel Grille",
+      "Zero Fatigue Ultra-Breathable Velour Memory Foam Ear Cushions",
+      "Dual-Entry Detachable Silver-Plated OFC Audiophile Cable"
+    ],
+    "specs": {
+      "Driver Type": "50mm Planar Magnetic Ultra-Thin Diaphragm",
+      "Acoustic Design": "Open-Back Circumaural",
+      "Frequency Response": "5Hz - 50,000Hz Audiophile Grade",
+      "Impedance": "38 Ohms",
+      "Weight": "285 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Studio Air Reference Headphones",
+      "1x 2.5m Silver-Plated OFC 3.5mm Cable",
+      "1x 6.35mm Gold-Plated Studio Adapter"
+    ]
   },
   {
-    "product_number": "15",
-    "title": "HUBLOT CLASSIC FUSION TITANIUM BLUE DIAL",
-    "category": "Luxury Replica Watches",
-    "type": "Luxury Replica Watch",
-    "price": 3800.0,
-    "original_price": 6000.0,
-    "discount": "37% OFF",
-    "sku": "TT-HUB-CLS-BLU",
+    "id": "techno-studio-anc-plus-edition",
+    "title": "TECHNO Studio ANC+ Spatial Audio Headphones",
+    "shortTitle": "Studio ANC+ Edition",
+    "series": "TECHNO SERIES X",
+    "category": "Headphones",
+    "price": 279.0,
+    "compareAtPrice": 369.0,
     "rating": 4.9,
-    "reviews": 51,
-    "stock": "In Stock (Limited Edition)",
-    "badge": "CLASSIC ELEGANCE",
-    "tags": "Hublot, Classic Fusion, Blue Dial, Sunray, Slim Bezel, Tech Tracker",
-    "description": "Timeless sunray satin navy blue dial with polished titanium finish case and integrated rubber-backed blue alligator textured strap. Ideal for formal suits and daily luxury.",
-    "image_alt": "Hublot Classic Fusion Titanium Blue Dial Watch",
-    "image_url": "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 118,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Dynamic head-tracking 3D spatial acoustics with custom carbon-fiber acoustic chambers, room calibration microphones, and 50-hour battery longevity.",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAKWiKmrwGyImiWkFAT7Tdxt5p-2WkIBkhmGU5rlKvXSTDY8bbjfVYiTlvgiXd29K_QC-dwOtTGrWvUGlMSvhrkjQIgRBQSNLtN4AHkJ4an_pNiLx_tDh4rzyBbQWtTWNuYZ3eKM_AlD-uYeNxM2lHcgcFWntbBfFx8SEouDY4iTlrG7TQ3L5Eqskr6gNUJGDS6gzdscy61JtajMeOuArDJU8rYFtNgf4GztsIZAqSM"
+    ],
+    "variants": [
+      {
+        "name": "Carbon Weave Black",
+        "hex": "#18181B",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Real-Time Spatial Audio with Dynamic 6-Axis Gyroscopic Head Tracking",
+      "Carbon Fiber Enclosure Dampening Resonances for Micro-Detail Clarity",
+      "Lossless LDAC 990kbps Transmission and USB-C 24-bit/96kHz DAC",
+      "50-Hour Extended Battery Life with Quick Charge"
+    ],
+    "specs": {
+      "Acoustic Chambers": "Multi-Layered Real Carbon Fiber Composite",
+      "Drivers": "45mm Carbon Bio-Cellulose Dome Drivers",
+      "ANC Performance": "Adaptive Hybrid ANC up to 45dB Noise Reduction",
+      "Battery": "50 Hours Playtime / 15m Charge = 8 Hours",
+      "Weight": "260 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Studio ANC+ Headphones",
+      "1x Hard Shell Molded Storage Case",
+      "1x Lossless USB-C Audio Cable",
+      "1x 3.5mm Braided Auxiliary Cable"
+    ]
   },
   {
-    "product_number": "16",
-    "title": "HUBLOT SPIRIT OF BIG BANG TONNEAU CURVED CASE",
-    "category": "Luxury Replica Watches",
-    "type": "Luxury Replica Watch",
-    "price": 4800.0,
-    "original_price": 8000.0,
-    "discount": "40% OFF",
-    "sku": "TT-HUB-SPIRIT-TNN",
+    "id": "techno-carbon-master-audiophile-headphone",
+    "title": "TECHNO Carbon Master Audiophile Headphones",
+    "shortTitle": "Carbon Master Audiophile",
+    "series": "TECHNO SERIES X",
+    "category": "Headphones",
+    "price": 389.0,
+    "compareAtPrice": 499.0,
     "rating": 5.0,
-    "reviews": 42,
-    "stock": "In Stock (Limited Edition)",
-    "badge": "TONNEAU BARREL",
-    "tags": "Hublot, Spirit of Big Bang, Tonneau, Curved Case, Richard Mille Style, Tech Tracker",
-    "description": "Signature barrel-shaped curved tonneau case that hugs the wrist ergonomically. Multi-layered skeleton dial, frosted titanium finish, and quick-release silicone strap.",
-    "image_alt": "Hublot Spirit of Big Bang Tonneau Barrel Watch",
-    "image_url": "https://images.unsplash.com/photo-1622434641406-a158123450f9?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 47,
+    "isSale": true,
+    "isBestSeller": false,
+    "inStock": true,
+    "description": "The pinnacle of acoustic engineering. Real forged carbon fiber earcups, 50mm pure beryllium-coated drivers, balanced 4.4mm pentaconn connectivity, and plush Alcantara padding.",
+    "images": [
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80"
+    ],
+    "variants": [
+      {
+        "name": "Forged Marble Carbon",
+        "hex": "#171717",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "50mm Pure Beryllium-Coated Diaphragms for Instantaneous Transient Speed",
+      "Solid Forged Carbon Acoustic Resonators CNC Milled from Solid Blocks",
+      "Dual Balanced 4.4mm Pentaconn + 3.5mm OFC Silver-Litz Wiring",
+      "Italian Alcantara Memory Foam Cushions for Supreme Comfort"
+    ],
+    "specs": {
+      "Transducer": "50mm Beryllium Deposited Ultra-Rigid Diaphragm",
+      "Frequency Response": "4Hz - 52,000Hz Master Reference",
+      "Impedance": "32 Ohms",
+      "Weight": "295 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Carbon Master Audiophile Headphones",
+      "1x 4.4mm Balanced Silver-Plated Cable (1.8m)",
+      "1x 3.5mm Single-Ended Audiophile Cable (1.8m)"
+    ]
   },
   {
-    "product_number": "17",
-    "title": "HUBLOT BIG BANG SANG BLEU II GEOMETRIC EDITION",
-    "category": "Luxury Replica Watches",
-    "type": "Luxury Replica Watch",
-    "price": 4200.0,
-    "original_price": 7000.0,
-    "discount": "40% OFF",
-    "sku": "TT-HUB-SANG-BLEU",
+    "id": "techno-quiet-commute-anc-headphones",
+    "title": "TECHNO QuietCommute Ultra-Comfort ANC Headphones",
+    "shortTitle": "QuietCommute ANC",
+    "series": "TECHNO SERIES X",
+    "category": "Headphones",
+    "price": 159.0,
+    "compareAtPrice": 219.0,
     "rating": 4.8,
-    "reviews": 39,
-    "stock": "In Stock (Limited Edition)",
-    "badge": "GEOMETRIC ART",
-    "tags": "Hublot, Sang Bleu, Geometric, Polygonal Hands, Tattoo Art, Tech Tracker",
-    "description": "Maxime Buchi geometric polygon hands design. Faceted octagonal sapphire crystal, diamond-cut case architecture, and engraved deployant safety buckle.",
-    "image_alt": "Hublot Big Bang Sang Bleu II Geometric Watch",
-    "image_url": "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 139,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Engineered for subway, airplane, and open-office commuters. Delivers 45dB noise suppression, zero clamping pressure headband, and massive 60-hour runtime.",
+    "images": [
+      "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80"
+    ],
+    "variants": [
+      {
+        "name": "Stealth Charcoal",
+        "hex": "#27272A",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "45dB Active Noise Cancellation Targeting Low-Frequency Engine Drone",
+      "Zero Clamping Force Memory Headband for 12-Hour Continuous Wearing",
+      "60-Hour Industry-Leading Battery Life with Fast Charge",
+      "Fold-Flat Dual-Axis Swivel Mechanism for Compact Bag Storage"
+    ],
+    "specs": {
+      "Drivers": "40mm Custom Neodymium Dynamic Drivers",
+      "Battery Life": "60 Hours (ANC On) / 75 Hours (ANC Off)",
+      "Connectivity": "Bluetooth 5.3 Multipoint Dual-Device Pairing",
+      "Weight": "220 grams Featherweight Over-Ear"
+    },
+    "inTheBox": [
+      "1x TECHNO QuietCommute ANC Headphones",
+      "1x Compact Slim Travel Case",
+      "1x Fast Charging USB-C Cable"
+    ]
   },
   {
-    "product_number": "18",
-    "title": "AirPods Pro 2nd Gen Master Replica (Active Noise Cancelling)",
-    "category": "Audio & Airbuds",
-    "type": "Wireless Earbuds",
-    "price": 3500.0,
-    "original_price": 6000.0,
-    "discount": "42% OFF",
-    "sku": "TT-AIRPODS-PRO2",
+    "id": "techno-aero-pods-pro-gen2-anc",
+    "title": "TECHNO Aero Pods Pro Gen 2 ANC Earbuds",
+    "shortTitle": "Aero Pods Pro Gen 2",
+    "series": "AERO SERIES",
+    "category": "Airbuds",
+    "price": 149.0,
+    "compareAtPrice": 199.0,
     "rating": 5.0,
-    "reviews": 164,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "ANC + POP-UP",
-    "tags": "Airbuds, AirPods Pro 2, ANC, Transparency, Spatial Audio, Master Replica, Tech Tracker",
-    "description": "High-fidelity master replica with working Active Noise Cancellation (ANC), Transparency mode, iOS pop-up animation, touch volume slide control, and MagSafe speaker lanyard case.",
-    "image_alt": "AirPods Pro 2 Master Replica with Active Noise Cancelling",
-    "image_url": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 215,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Next-generation true wireless earbuds with dual-driver acoustic architecture, 42dB smart adaptive ANC, dynamic head-tracking spatial audio, and Qi wireless charging case.",
+    "images": [
+      "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=800&q=80"
+    ],
+    "variants": [
+      {
+        "name": "Glacier White",
+        "hex": "#F8FAFC",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Dual-Driver Acoustic System (11mm Sub-Bass Woofer + Micro Tweeter)",
+      "42dB Adaptive Noise Cancellation with Auto Environmental Sensing",
+      "3D Spatial Audio with Dynamic Real-Time Head Tracking",
+      "Qi Wireless & MagSafe Fast-Charging Aluminum-Hinged Case"
+    ],
+    "specs": {
+      "Drivers": "11mm Liquid Crystal Polymer + Balanced Micro-Tweeter",
+      "Battery Life": "8.5 Hours Single Charge / 36 Hours with Charging Case",
+      "Noise Cancellation": "Adaptive Smart Hybrid ANC up to 42dB",
+      "Water Rating": "IPX5 Water & Sweat Resistance",
+      "Weight": "4.2 grams per bud \u2022 46g charging case"
+    },
+    "inTheBox": [
+      "2x TECHNO Aero Pods Pro Earbuds (L/R)",
+      "1x Wireless Fast-Charging Protective Case",
+      "4x Pairs Ergonomic Silicone Ear Tips (XS, S, M, L)",
+      "1x Braided USB-C Fast Charging Cable"
+    ]
   },
   {
-    "product_number": "19",
-    "title": "TechTracker ANC Studio Pro Wireless Airbuds",
-    "category": "Audio & Airbuds",
-    "type": "Wireless Earbuds",
-    "price": 2800.0,
-    "original_price": 4500.0,
-    "discount": "38% OFF",
-    "sku": "TT-ANC-BUDS-01",
+    "id": "techno-earbuds-pro-high-res",
+    "title": "TECHNO True Wireless Earbuds Pro",
+    "shortTitle": "True Wireless Pro",
+    "series": "AERO SERIES",
+    "category": "Airbuds",
+    "price": 199.0,
+    "compareAtPrice": 299.0,
+    "rating": 4.9,
+    "reviewCount": 164,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Lossless wireless in-ear monitors with custom graphene drivers, beamforming quad microphones, and wireless charging case.",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAG8qwu8PQm-tsEaM_sK7xqCHzTlMtlSyf9Auh7MOunv2Lwi7T2_L4oy9y6g7c_Z7RYGbRuHRIL1ILRgm4hUJXWiwObkDIZmT7gUAP7oa4Jn3JoI3YkXHFAQP2MUUAasuxP1SKZ3uGtOFlPnxUBV8gaVP-PoxkfFt9cMckizpQJJKLQE7ZFk6cxjuwnQNr_qJNB7A-oFzfC6ewtPJXxKcQ1TawznuYqR9wlHRlkY8-_"
+    ],
+    "variants": [
+      {
+        "name": "Obsidian Black",
+        "hex": "#111827",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Custom Graphene Excursion Drivers for Audiophile Bass Precision",
+      "Quad Beamforming Microphones with Wind-Noise Reduction",
+      "Fast Wireless Qi Charging + Rapid USB-C Recharge",
+      "IPX7 Water Resistance for Active Workouts"
+    ],
+    "specs": {
+      "Drivers": "10mm Custom Ultra-Rigid Graphene Drivers",
+      "Battery Life": "8 Hours Single Play / 32 Hours Total",
+      "Bluetooth": "Bluetooth 5.3 Low Latency Multipoint",
+      "Weight": "4.8 grams per bud"
+    },
+    "inTheBox": [
+      "2x TECHNO True Wireless Earbuds (L/R)",
+      "1x Wireless Charging Case",
+      "3x Sets Memory Foam & Silicone Ear Tips",
+      "1x USB-C Cable"
+    ]
+  },
+  {
+    "id": "techno-aero-pods-wireless-active",
+    "title": "TECHNO Aero Pods Wireless Active",
+    "shortTitle": "Aero Pods Active",
+    "series": "AERO SERIES",
+    "category": "Airbuds",
+    "price": 129.0,
+    "compareAtPrice": 179.0,
     "rating": 4.8,
-    "reviews": 88,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "STUDIO BASS",
-    "tags": "Airbuds, Wireless Earbuds, Active Noise Cancelling, Deep Bass, Studio Sound, Tech Tracker",
-    "description": "Active Noise Cancellation (ANC), Transparency mode, 13mm dynamic titanium drivers for deep bass, 30 hours total playback with charging case, Type-C quick charging.",
-    "image_alt": "TechTracker ANC Studio Pro Wireless Airbuds with Deep Bass",
-    "image_url": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 110,
+    "isSale": true,
+    "isBestSeller": false,
+    "inStock": true,
+    "description": "Ultra-compact ergonomic true wireless earbuds featuring sub-bass boost chamber, touch controls, and IPX7 sweat resistance.",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDh1IgBMLixmfXRjfWHp9PSVT5mPv9rZ36a-CChq9MkYaX2BwKJgYbnM-ZjWjYu5jHIhKzJJs84PPrlTeUYwFsaQrvNqWziYLf0ixkyF7OhorelxtCeCLVPNRQS8Tjx46zQEliwNGITgCxK1R6wSovEuic027_elWMMuDtLQYk9J5RC-PJq_IuyZ7tLUc18iLaHaDY1ii3aXyaTLnmqr3rncIiploDU46yNECEh6cpj"
+    ],
+    "variants": [
+      {
+        "name": "Matte Slate",
+        "hex": "#374151",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Ergonomic Concha Contour for Zero Slip During Sprints",
+      "Sub-Bass Acoustic Resonator Tube for Deep Punchy Impact",
+      "Capacitive Touch Panels on Stems",
+      "IPX7 Submersible Waterproofing"
+    ],
+    "specs": {
+      "Drivers": "10mm Bio-Cellulose Diaphragms",
+      "Battery": "7 Hours Buds / 28 Hours Total",
+      "Weight": "3.9 grams Ultra-Light"
+    },
+    "inTheBox": [
+      "2x TECHNO Aero Pods Wireless Active Earbuds",
+      "1x Charging Pod Case",
+      "3x Pairs Sport Grip Tips",
+      "1x Fast Charging Cord"
+    ]
   },
   {
-    "product_number": "20",
-    "title": "AirPods 3rd Gen Wireless Earbuds (Spatial Audio)",
-    "category": "Audio & Airbuds",
-    "type": "Wireless Earbuds",
-    "price": 2800.0,
-    "original_price": 4500.0,
-    "discount": "38% OFF",
-    "sku": "TT-AIRPODS-GEN3",
-    "rating": 4.7,
-    "reviews": 75,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "ERGONOMIC FIT",
-    "tags": "Airbuds, AirPods 3, Spatial Audio, Wireless Charging, Siri, Tech Tracker",
-    "description": "Contoured in-ear design without silicone tips for natural comfort. Adaptive EQ, force sensor controls, sweat and water resistance, and 30-hour battery life with wireless case.",
-    "image_alt": "AirPods 3rd Gen Wireless Earbuds",
-    "image_url": "https://images.unsplash.com/photo-1588423771073-b8903fbb85b5?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "21",
-    "title": "TechTracker Cyberpunk Transparent Gaming TWS Earbuds",
-    "category": "Audio & Airbuds",
-    "type": "Gaming Earbuds",
-    "price": 2600.0,
-    "original_price": 4200.0,
-    "discount": "38% OFF",
-    "sku": "TT-CYBER-TWS",
-    "rating": 4.9,
-    "reviews": 62,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "40MS LOW LATENCY",
-    "tags": "Airbuds, Gaming TWS, Cyberpunk, Transparent, RGB, PUBG, Tech Tracker",
-    "description": "Ultra-low latency 40ms gaming mode for instant footsteps in PUBG and FreeFire. Futuristic transparent clear charging case with breathing neon RGB LEDs and dual noise-reduction microphones.",
-    "image_alt": "TechTracker Cyberpunk Transparent Gaming TWS Earbuds",
-    "image_url": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "22",
-    "title": "M10 TWS Wireless Earbuds with Powerbank Display Case",
-    "category": "Audio & Airbuds",
-    "type": "Wireless Earbuds",
-    "price": 1500.0,
-    "original_price": 2500.0,
-    "discount": "40% OFF",
-    "sku": "TT-M10-TWS",
-    "rating": 4.5,
-    "reviews": 230,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "MASSIVE VALUE",
-    "tags": "Airbuds, M10, Powerbank Case, LED Display, Budget, Bluetooth 5.3, Tech Tracker",
-    "description": "Pakistan's most popular daily earbuds with built-in emergency phone charging powerbank case, digital LED percentage battery display, waterproof touch sensors, and punchy 9D stereo sound.",
-    "image_alt": "M10 TWS Wireless Earbuds with Powerbank Display Case",
-    "image_url": "https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "23",
-    "title": "TechTracker Pro Wireless Sports Magnetic Neckband",
-    "category": "Audio & Airbuds",
-    "type": "Wireless Neckband",
-    "price": 1999.0,
-    "original_price": 3200.0,
-    "discount": "38% OFF",
-    "sku": "TT-NECKBAND-PRO",
-    "rating": 4.8,
-    "reviews": 57,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "100H STANDBY",
-    "tags": "Neckband, Bluetooth Headset, Gym, Running, Magnetic, Heavy Bass, Tech Tracker",
-    "description": "Premium flexible silicone neckband with magnetic instant lock earbuds. Up to 50 hours non-stop music playback, vibration call alert, fast Type-C charge, and sweatproof running design.",
-    "image_alt": "TechTracker Pro Wireless Sports Magnetic Neckband",
-    "image_url": "https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "24",
-    "title": "TechTracker Semiconductor Gaming Phone Cooler (Magnetic RGB)",
-    "category": "Gaming Accessories",
-    "type": "Mobile Phone Cooler",
-    "price": 2500.0,
-    "original_price": 3800.0,
-    "discount": "34% OFF",
-    "sku": "TT-COOL-MAG-01",
-    "rating": 4.9,
-    "reviews": 73,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "GAMING TURBO",
-    "tags": "Phone Cooler, Semiconductor, Magnetic Cooler, Peltier Cooling, PUBG, FreeFire, Tech Tracker",
-    "description": "Instant peltier semiconductor cooling down to 5°C, vibrant RGB illumination, magnetic snap-on and clamp-on dual mounting, silent 6000 RPM turbofan preventing FPS drop in PUBG and FreeFire.",
-    "image_alt": "TechTracker Magnetic Semiconductor Gaming Phone Cooler with RGB Fan",
-    "image_url": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "25",
-    "title": "TechTracker MEMO DL05 Digital Temp Display Phone Cooler",
-    "category": "Gaming Accessories",
-    "type": "Mobile Phone Cooler",
-    "price": 2999.0,
-    "original_price": 4500.0,
-    "discount": "33% OFF",
-    "sku": "TT-MEMO-DL05",
-    "rating": 4.9,
-    "reviews": 46,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "TEMP DISPLAY",
-    "tags": "Phone Cooler, DL05, Digital Temperature, Peltier, Overheating Fix, Tech Tracker",
-    "description": "Live real-time digital LED temperature display showing degrees Celsius right on the cooler back. Freezes down in 10 seconds, dual silicone non-slip clamp, and USB-C powered.",
-    "image_alt": "TechTracker MEMO DL05 Digital Temp Display Phone Cooler",
-    "image_url": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80"
-  },
-  {
-    "product_number": "26",
-    "title": "TechTracker Black Shark Style Dual Peltier Magnetic Radiator",
-    "category": "Gaming Accessories",
-    "type": "Mobile Phone Cooler",
-    "price": 3200.0,
-    "original_price": 4800.0,
-    "discount": "33% OFF",
-    "sku": "TT-COOL-DUAL-PELT",
+    "id": "techno-reference-tws-balanced-armature",
+    "title": "TECHNO Reference TWS Balanced Armature Buds",
+    "shortTitle": "Reference TWS Buds",
+    "series": "AERO SERIES",
+    "category": "Airbuds",
+    "price": 179.0,
+    "compareAtPrice": 239.0,
     "rating": 5.0,
-    "reviews": 38,
-    "stock": "In Stock (Islamabad Hub)",
-    "badge": "EXTREME COOLING",
-    "tags": "Phone Cooler, Black Shark, Extreme Cooling, iPhone MagSafe, Android, Tech Tracker",
-    "description": "Heavy-duty dual-layer semiconductor Peltier plate cooling module. Perfect for iPhone 12/13/14/15/16 MagSafe direct snap and Android devices. Eliminates 90FPS thermal throttling entirely.",
-    "image_alt": "TechTracker Black Shark Style Dual Peltier Magnetic Radiator",
-    "image_url": "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=600&auto=format&fit=crop&q=80"
+    "reviewCount": 78,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Triple-driver hybrid configuration featuring Knowles balanced armature and 10mm DLC dynamic woofer. Delivers certified 24-bit/96kHz LDAC lossless wireless audiophile sound.",
+    "images": [
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=800&q=80"
+    ],
+    "variants": [
+      {
+        "name": "Pure Obsidian",
+        "hex": "#111827",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Triple-Driver Hybrid Architecture (Knowles Balanced Armature + 10mm DLC)",
+      "Lossless LDAC Transmission at 990 kbps (Hi-Res Audio Certified)",
+      "Precision Charging Case with Battery Indicator LEDs",
+      "Custom 10-Band Parametric EQ Calibration via TECHNO App"
+    ],
+    "specs": {
+      "Acoustic System": "Dual Knowles BA + 10mm Diamond-Like Carbon Dynamic",
+      "Frequency Response": "10Hz - 45,000Hz Ultra-Wide",
+      "Audio Codecs": "LDAC, aptX Lossless, AAC, SBC",
+      "Battery": "7 Hours (LDAC On) / 30 Hours Total with Case",
+      "Weight": "5.1 grams per earbud"
+    },
+    "inTheBox": [
+      "2x TECHNO Reference TWS Earbuds",
+      "1x Charging Case",
+      "6x Sets SpinFit & Memory Foam Tips",
+      "1x Braided USB-C Cable"
+    ]
+  },
+  {
+    "id": "techno-nano-stealth-wireless-buds",
+    "title": "TECHNO Nano Buds Ultra-Mini Stealth Earbuds",
+    "shortTitle": "Nano Buds Stealth",
+    "series": "AERO SERIES",
+    "category": "Airbuds",
+    "price": 89.0,
+    "compareAtPrice": 129.0,
+    "rating": 4.8,
+    "reviewCount": 167,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Compact stealth wireless earbuds. Low-profile in-concha fit delivers punchy Hi-Fi sound and passive noise isolation with 24 hours total battery reserve.",
+    "images": [
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80"
+    ],
+    "variants": [
+      {
+        "name": "Stealth Black",
+        "hex": "#18181B",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Ultra-Low Profile 3.4g Flush Fit Design",
+      "Passive Noise Blocking (-26dB) Without Ear Canal Pressure Fatigue",
+      "Pocketable Micro Capsule Charging Case",
+      "Bluetooth 5.3 Instant Auto-Connect"
+    ],
+    "specs": {
+      "Driver": "6mm Custom Micro Dynamic Driver",
+      "Form Factor": "Ultra-Miniature Flush Ear-Canal Fit",
+      "Battery": "6 Hours Continuous Play / 24 Hours with Capsule Case",
+      "Weight": "3.4 grams"
+    },
+    "inTheBox": [
+      "2x TECHNO Nano Buds (L/R)",
+      "1x Capsule Charging Case",
+      "3x Soft-Touch Silicon Tips",
+      "1x USB-C Cable"
+    ]
+  },
+  {
+    "id": "techno-apex-75-mechanical-keyboard",
+    "title": "TECHNO Apex 75 Low-Profile Mechanical Keyboard",
+    "shortTitle": "Apex 75 Keyboard",
+    "series": "DESK SERIES",
+    "category": "Keyboards",
+    "price": 149.0,
+    "compareAtPrice": 199.0,
+    "rating": 4.9,
+    "reviewCount": 162,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "CNC machined aluminum 75% wireless mechanical keyboard. Features hot-swappable low-profile switches, custom acoustic dampening pads, and 1000Hz polling rate.",
+    "images": [
+      "images/keyboard-minimal.jpg"
+    ],
+    "variants": [
+      {
+        "name": "Space Gray Anodized",
+        "hex": "#4B5563",
+        "imageIndex": 0
+      },
+      {
+        "name": "Matte Obsidian",
+        "hex": "#111111",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "CNC Machined 6063 Aerospace Aluminum Unibody Top Plate",
+      "Hot-Swappable Low-Profile Tactile Switches with Factory Pre-Lube",
+      "Tri-Mode Connectivity: 2.4GHz Ultra-Low Latency, Bluetooth 5.3, USB-C",
+      "Dual Acoustic PORON Gaskets and IXPE Sound Dampening Sheet",
+      "220 Hours Wireless Battery Life with 4000mAh Cell"
+    ],
+    "specs": {
+      "Form Factor": "75% Compact Layout (84 Keys)",
+      "Switch Type": "TECHNO Low-Profile Mechanical Switches (Hot-Swappable)",
+      "Keycaps": "Premium Doubleshot PBT Ergonomic Profile",
+      "Connectivity": "Wireless 2.4GHz (1000Hz), Bluetooth 5.3, USB-C",
+      "Battery": "4000mAh Rechargeable (Up to 220 Hours)",
+      "Weight": "680 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Apex 75 Mechanical Keyboard",
+      "1x 2.4GHz Ultra-Slim USB-A Receiver",
+      "1x Braided USB-C Cable (1.8m)",
+      "1x Dual Switch & Keycap Puller Tool"
+    ]
+  },
+  {
+    "id": "techno-cyberboard-65-gasket-keyboard",
+    "title": "TECHNO Cyberboard 65% Gasket-Mount Keyboard",
+    "shortTitle": "Cyberboard 65 Gasket",
+    "series": "DESK SERIES",
+    "category": "Keyboards",
+    "price": 179.0,
+    "compareAtPrice": 249.0,
+    "rating": 5.0,
+    "reviewCount": 114,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Heavyweight CNC anodized aluminum 65% custom keyboard. Built with pure PORON gasket suspension, flexible poly-carbonate plate, and deep acoustic thock.",
+    "images": [
+      "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80",
+      "images/keyboard-minimal.jpg"
+    ],
+    "variants": [
+      {
+        "name": "Anodized Silver",
+        "hex": "#D1D5DB",
+        "imageIndex": 0
+      },
+      {
+        "name": "Deep Midnight Purple",
+        "hex": "#581C87",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Solid 1.2kg CNC Milled 6063 Aluminum Chassis with Brass Accent Weight",
+      "True Gasket-Mount Isolation Eliminates Harsh Bottom-Out Vibrations",
+      "Factory Lubed Mechanical Switches with Custom Thock Acoustics",
+      "Custom RGB South-Facing LEDs with Underglow Diffuser Strip"
+    ],
+    "specs": {
+      "Form Factor": "65% Exploded Layout (68 Keys)",
+      "Mounting": "Multi-Layer PORON Gasket Isolation Mount",
+      "Plate": "CNC Precision Polycarbonate Flex-Cut Plate",
+      "Switches": "Hot-Swap 5-Pin Compatible (Pre-Lubed Linear 45g)",
+      "Weight": "1250 grams solid desktop anchor"
+    },
+    "inTheBox": [
+      "1x TECHNO Cyberboard 65 Mechanical Keyboard",
+      "1x Coiled Aviator USB-C Custom Cable",
+      "1x Aluminum Keycap & Switch Puller",
+      "1x Acrylic Dust Cover"
+    ]
+  },
+  {
+    "id": "techno-matrix-80-tkl-tournament-keyboard",
+    "title": "TECHNO Matrix 80 Tenkeyless Tournament Keyboard",
+    "shortTitle": "Matrix 80 TKL",
+    "series": "DESK SERIES",
+    "category": "Keyboards",
+    "price": 169.0,
+    "compareAtPrice": 229.0,
+    "rating": 4.9,
+    "reviewCount": 96,
+    "isSale": true,
+    "isBestSeller": false,
+    "inStock": true,
+    "description": "Tournament tenkeyless board equipped with mechanical switches, rapid trigger reset, hot-swap PCB sockets, and aircraft-grade aluminum top plate.",
+    "images": [
+      "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=800&q=80",
+      "images/keyboard-minimal.jpg"
+    ],
+    "variants": [
+      {
+        "name": "Tournament Matte Black",
+        "hex": "#111827",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "1000Hz Ultra-Low Latency Tournament Polling Engine",
+      "Hot-Swappable 5-Pin Mechanical Switch Sockets",
+      "Aircraft-Grade Anodized Aluminum Top Plate",
+      "High-Durability Textured PBT Keycaps"
+    ],
+    "specs": {
+      "Layout": "80% Tenkeyless (87 Keys ANSI)",
+      "Switches": "TECHNO Custom Mechanical Linear Switches (Hot-Swappable)",
+      "Keycaps": "Doubleshot PBT Textured Profile",
+      "Weight": "980 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Matrix 80 TKL Keyboard",
+      "1x Detachable High-Speed Braided USB-C Cable",
+      "1x Keycap Puller Tool"
+    ]
+  },
+  {
+    "id": "techno-cyberacoustic-rgb-gaming-keyboard",
+    "title": "TECHNO CyberAcoustic RGB Mechanical Keyboard",
+    "shortTitle": "CyberAcoustic RGB Keyboard",
+    "series": "DESK SERIES",
+    "category": "Keyboards",
+    "price": 139.0,
+    "compareAtPrice": 189.0,
+    "rating": 4.8,
+    "reviewCount": 88,
+    "isSale": true,
+    "isBestSeller": false,
+    "inStock": true,
+    "description": "Full-spectrum RGB mechanical keyboard with sound-dampening silicon base, responsive linear mechanical switches, and wireless Bluetooth 5.3 connection.",
+    "images": [
+      "https://images.unsplash.com/photo-1626958390898-162d3577f293?auto=format&fit=crop&w=800&q=80"
+    ],
+    "variants": [
+      {
+        "name": "Cyber Black Edition",
+        "hex": "#09090B",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Per-Key South-Facing RGB Backlight with 18 Custom Lighting Presets",
+      "Pre-Lubed Linear Mechanical Switches with Satisfying Tactile Return",
+      "Sound-Absorbing Silicone Base Pad for Clean Acoustic Resonance",
+      "Tri-Mode Wireless Connectivity: 2.4GHz, Bluetooth 5.3, USB-C"
+    ],
+    "specs": {
+      "Layout": "75% Layout (84 Keys)",
+      "Switches": "Hot-Swap Mechanical Linear Red (45g)",
+      "Battery": "3000mAh Lithium-Polymer (Up to 180 Hours)",
+      "Weight": "720 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO CyberAcoustic RGB Keyboard",
+      "1x USB-C Braided Cable",
+      "1x 2.4GHz Nano Wireless Receiver",
+      "1x Keycap & Switch Puller"
+    ]
+  },
+  {
+    "id": "techno-ultra-slim-aluminum-wireless-keyboard",
+    "title": "TECHNO Ultra-Slim Aluminum Wireless Keyboard",
+    "shortTitle": "Ultra-Slim Aluminum Keyboard",
+    "series": "DESK SERIES",
+    "category": "Keyboards",
+    "price": 119.0,
+    "compareAtPrice": 169.0,
+    "rating": 4.9,
+    "reviewCount": 105,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Minimalist low-profile aluminum wireless keyboard. Scissor-switch quiet keycaps, multi-device fast switching, and ultra-thin 12mm profile.",
+    "images": [
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"
+    ],
+    "variants": [
+      {
+        "name": "Anodized Silver",
+        "hex": "#E5E7EB",
+        "imageIndex": 0
+      },
+      {
+        "name": "Space Gray",
+        "hex": "#4B5563",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Precision CNC Anodized Aluminum Top Enclosure",
+      "Whisper-Quiet Scissor Switch Key Travel (1.5mm)",
+      "Bluetooth 5.3 Multi-Pairing with Instant 1-Key Device Switch",
+      "Type-C Rechargeable with 3 Months Battery on a Single Charge"
+    ],
+    "specs": {
+      "Form Factor": "Compact Tenkeyless (78 Keys)",
+      "Thickness": "12mm Ultra-Slim Profile",
+      "Battery": "Rechargeable Lithium-Ion (3 Months Typical)",
+      "Weight": "420 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Ultra-Slim Aluminum Keyboard",
+      "1x USB-C Charging Cable",
+      "1x User Manual"
+    ]
+  },
+  {
+    "id": "techno-magflow-magnetic-powerbank",
+    "title": "TECHNO MagFlow 10,000mAh Magnetic Power Bank",
+    "shortTitle": "MagFlow 10K Power Bank",
+    "series": "DESK SERIES",
+    "category": "Hardware & Power",
+    "price": 59.0,
+    "compareAtPrice": 79.0,
+    "rating": 4.9,
+    "reviewCount": 115,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Minimalist aerospace titanium and frosted glass magnetic wireless power bank. Features glowing numeric LED battery percentage readout and 20W PD two-way fast charging.",
+    "images": [
+      "images/powerbank-mag.jpg"
+    ],
+    "variants": [
+      {
+        "name": "Natural Titanium",
+        "hex": "#9E9E9E",
+        "imageIndex": 0
+      },
+      {
+        "name": "Frosted Obsidian",
+        "hex": "#1A1A1A",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Snap-On MagSafe / Qi2 Compatible Magnetic Wireless Charging (15W)",
+      "Glowing Micro-LED Percentage Battery Display",
+      "20W Power Delivery 3.0 Bi-Directional Fast USB-C Port",
+      "Ultra-Strong 12N Neodymium N52 Magnetic Locking Grip",
+      "Aircraft-Grade CNC Aluminum Alloy Heat-Dissipation Enclosure"
+    ],
+    "specs": {
+      "Capacity": "10,000mAh / 38.5Wh (TSA Approved for Flight Carry-on)",
+      "Wireless Output": "5W / 7.5W / 10W / 15W Max Qi2 Fast Wireless",
+      "USB-C In/Out": "5V/3A, 9V/2.22A, 12V/1.67A (20W PD Max)",
+      "Safety Protection": "Overcharge, Overcurrent, Short-Circuit, Foreign Object Detection",
+      "Weight": "190 grams ultra-slim"
+    },
+    "inTheBox": [
+      "1x TECHNO MagFlow 10,000mAh Power Bank",
+      "1x Braided USB-C Fast-Charging Cable",
+      "1x User Manual & 2-Year Warranty"
+    ]
+  },
+  {
+    "id": "techno-ambient-sound-speaker",
+    "title": "TECHNO Acoustic 360 Spatial Speaker",
+    "shortTitle": "Acoustic 360 Speaker",
+    "series": "SERIES X ACOUSTICS",
+    "category": "Hardware & Power",
+    "price": 199.0,
+    "compareAtPrice": 299.0,
+    "rating": 4.9,
+    "reviewCount": 87,
+    "isSale": true,
+    "isBestSeller": true,
+    "inStock": true,
+    "description": "Room-filling 360-degree spatial audio speaker with dual passive radiators, anodized aluminum grille, and 24-hour party link.",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA-W_rcjQf5aG06Qb1Iv-KAE0yA-Rx9jt-GI0HUUAS8I6GmDHk3kcGmsy8oZaO1b2BjJSL9tioWadPryMF9MbbPPW_jGc2ENahFtbjUgX9b1i9oT6NWbNTPBhAf5sH03TuiIeofYpZirGVZMKgQBRaetp2I-uhcJN-E_B_r6xww6f-jboykMdQjODjceAYV3ayxkjsw7OngAE4bfXX6srj3UXRiI2csvOfChB3sb-LH"
+    ],
+    "variants": [
+      {
+        "name": "Anodized Silver",
+        "hex": "#E5E7EB",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Omnidirectional 360-Degree Spatial Sound Dispersion",
+      "Dual Opposing High-Excursion Passive Bass Radiators",
+      "Machined Aluminum Acoustic Dispersion Cones",
+      "24-Hour Battery Life with USB-C Fast Charge"
+    ],
+    "specs": {
+      "Power Output": "45W RMS Pure Audio Output",
+      "Frequency Range": "40Hz - 22,000Hz Room-Filling Sound",
+      "Battery": "24 Hours Continuous Playtime",
+      "Weight": "620 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Acoustic 360 Spatial Speaker",
+      "1x Fast Charging USB-C Cable",
+      "1x User Manual"
+    ]
+  },
+  {
+    "id": "techno-macbook-pro-dock",
+    "title": "TECHNO Precision Aluminum Laptop Stand & Hub",
+    "shortTitle": "Aluminum Laptop Stand & Hub",
+    "series": "DESK SERIES",
+    "category": "Hardware & Power",
+    "price": 89.0,
+    "compareAtPrice": 119.0,
+    "rating": 4.9,
+    "reviewCount": 94,
+    "isSale": true,
+    "isBestSeller": false,
+    "inStock": true,
+    "description": "Aviation-grade aluminum cooling dock with integrated 8-in-1 Thunderbolt 4 hub and 100W Power Delivery pass-through.",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCx7Jgh1N1qZ284iW8WUK4D0OEI3-jeN5eqhd-tJ9OPSzbC65Bt0-RRi76Fqr2ZrjWDU7G3lT1q7iHXfGanJ5N9eNDMras3ciq48VA3witABMWbQXx2nbfHukyhTlOQ-Fl-x5ycX8FZNBrDw6YKBbsBpV2ZWpevtVh5nEkmoO2QXivJNP8Ck-18R8W34h5n0pdZO98ADFqToh67VLgzZWkEn8KdV-rAgZznhSWyGpSp"
+    ],
+    "variants": [
+      {
+        "name": "Space Gray Aluminum",
+        "hex": "#4B5563",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Solid CNC Machined 6063 Aluminum Cooling Heatsink Stand",
+      "8-in-1 Ports: 4K 60Hz HDMI, 100W PD USB-C, 3x USB 3.2, SD/TF, Gigabit LAN",
+      "Ergonomic 15-Degree Elevation for Posture and Airflow",
+      "Non-Slip Protective Silicone Anti-Scratch Inlays"
+    ],
+    "specs": {
+      "Material": "100% Solid Aerospace Aluminum Alloy",
+      "Ports": "8 High-Speed Ports with 10Gbps Data Transfer",
+      "Power Delivery": "100W USB-C PD 3.0 Pass-Through",
+      "Weight": "410 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Aluminum Laptop Stand & Hub",
+      "1x High-Speed Host USB-C Cable",
+      "1x Quick Setup Guide"
+    ]
+  },
+  {
+    "id": "techno-65w-gan-fast-charger",
+    "title": "TECHNO 65W GaN Fast Charger",
+    "shortTitle": "65W GaN Fast Charger",
+    "series": "DESK SERIES",
+    "category": "Hardware & Power",
+    "price": 29.0,
+    "compareAtPrice": 39.0,
+    "rating": 4.9,
+    "reviewCount": 91,
+    "isSale": true,
+    "isBestSeller": false,
+    "inStock": true,
+    "description": "Ultra-compact Gallium Nitride (GaN) fast wall charger with dual USB-C Power Delivery 3.0 ports for rapid laptop, watch, and audio charging.",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBUuK-w8kpF5b6vQunu6nIVXOlBsp5EiMfu5vqoy-6PwuVUdPPN-28ElvZfF3Nvrrr-fhnEbcncLrcIqLVnBwej9U-pZvlpcckomCMPWxUwcvA4i6xQHxFCXsFlNH7XzR4HkNbv3yRaFiwWEEh-hBClRoeJxFn7ChJnLsCBn9o6w7fOq-bg5t8sAd4Isa8xiWSG7-2gmPfdIk9xXzWxD533fRNIhYD-DVHH2sI1sajy"
+    ],
+    "variants": [
+      {
+        "name": "Arctic White",
+        "hex": "#F5F5F7",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Gallium Nitride (GaN III) Technology: 50% Smaller with Zero Overheating",
+      "65W Max Single Port Output: Charges a MacBook Pro from 0 to 50% in 30 mins",
+      "Dual USB-C Intelligent Power Distribution",
+      "Foldable Travel Prongs for Compact Bag Portability"
+    ],
+    "specs": {
+      "Total Power": "65W Max Power Delivery 3.0 / PPS",
+      "Technology": "GaN III High-Efficiency Semiconductors",
+      "Weight": "95 grams Pocket Size"
+    },
+    "inTheBox": [
+      "1x TECHNO 65W GaN Fast Wall Charger",
+      "1x Instruction Manual & Safety Certifications"
+    ]
+  },
+  {
+    "id": "techno-magnetic-travel-case",
+    "title": "TECHNO Magnetic Travel Case",
+    "shortTitle": "Magnetic Travel Case",
+    "series": "DESK SERIES",
+    "category": "Hardware & Power",
+    "price": 39.0,
+    "compareAtPrice": 49.0,
+    "rating": 4.8,
+    "reviewCount": 46,
+    "isSale": true,
+    "isBestSeller": false,
+    "inStock": true,
+    "description": "Molded ballistic nylon protective travel case with quick magnetic latch and integrated cable organizer pouch for TECHNO headphones and smart gear.",
+    "images": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAt6zaJzvIbUuI7To-98uJpJp5-9RT8--CMqTBc5QkB_YmXSLq1eSo3Pi4Pp2QBFRGzN3TpsgnczhH9i9b96KLilstYsfqrpG-GDpH0ggJRdOanU0Xd92CyKmZDDkdCk18ReP8U_KBMNpp44SqKbwM_xiWci870q9PdLLihVrB5w6W4TVNKwNfGIgjOiSwPxW1oN6N2kPmbfMBCWZnnzp1iyYXRmr_VZ2xUwpaSjdSf"
+    ],
+    "variants": [
+      {
+        "name": "Standard Matte",
+        "hex": "#1A1A1A",
+        "imageIndex": 0
+      }
+    ],
+    "features": [
+      "Molded Ballistic 1680D Water-Repellent Outer Shell",
+      "Quick Magnetic Auto-Align Snap Latch",
+      "Soft Velvet Interior Lining Prevents Hardware Scratches",
+      "Internal Zippered Cable and Dongle Mesh Pocket"
+    ],
+    "specs": {
+      "Material": "1680D Ballistic Nylon + EVA Hardshell",
+      "Dimensions": "210mm x 180mm x 55mm",
+      "Weight": "130 grams"
+    },
+    "inTheBox": [
+      "1x TECHNO Magnetic Travel Case",
+      "1x Carabiner Clip"
+    ]
   }
 ]

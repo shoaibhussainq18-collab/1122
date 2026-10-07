@@ -1,8 +1,7 @@
 {
   "general": {
-    "cart": "Shopping Cart",
     "search": "Search",
-    "checkout": "Checkout",
-    "cash_on_delivery": "Cash On Delivery"
+    "cart": "Cart",
+    "checkout": "Checkout"
   }
 }

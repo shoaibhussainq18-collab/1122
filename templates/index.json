@@ -3,28 +3,32 @@
     "hero": {
       "type": "hero-banner"
     },
-    "new_arrivals": {
-      "type": "new-arrivals"
+    "props": {
+      "type": "value-props"
     },
-    "hublot_sale": {
-      "type": "hublot-sale"
+    "smartwatches": {
+      "type": "collection-smartwatches"
     },
-    "spotlight": {
-      "type": "spotlight-product"
+    "headphones": {
+      "type": "collection-headphones"
     },
     "airbuds": {
-      "type": "airbuds-collection"
+      "type": "collection-airbuds"
     },
-    "phone_coolers": {
-      "type": "phone-coolers"
+    "keyboards": {
+      "type": "collection-keyboards"
+    },
+    "hardware": {
+      "type": "collection-hardware"
     }
   },
   "order": [
     "hero",
-    "new_arrivals",
-    "hublot_sale",
-    "spotlight",
+    "props",
+    "smartwatches",
+    "headphones",
     "airbuds",
-    "phone_coolers"
+    "keyboards",
+    "hardware"
   ]
 }
