@@ -1,451 +1,378 @@
-<!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="#00e5ff">
-    <link rel="canonical" href="{{ canonical_url }}">
-
-    <title>
-      {{ page_title }}
-      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
-      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
-    </title>
-
-    {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
-    {% endif %}
-
-    <!-- Tailwind CSS v3 -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Google Fonts & Font Awesome Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #0a0a0a;
-        color: #e5e5e5;
-        overflow-x: hidden;
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>TECHNO | Flagship Acoustic & Minimal Tech Store</title>
+  <meta name="description" content="Official TECHNO Flagship Store. Discover precision-engineered noise-cancelling headphones, true wireless earbuds, and minimalist audio hardware."/>
+  
+  <!-- Tailwind CSS CDN with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#111111',
+              charcoal: '#1A1A1A',
+              cardBg: '#FAFAFA',
+              lightGray: '#F5F5F7',
+              borderGray: '#E5E7EB',
+              muted: '#737373',
+              purple: '#5A31F4',
+              purpleHover: '#4623cf',
+              accent: '#0A84FF'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+          }
+        }
       }
-      .font-mono {
-        font-family: 'JetBrains Mono', monospace;
-      }
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0a0a0a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #262626;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #00e5ff;
-      }
-    </style>
+    }
+  </script>
+  
+  <!-- Google Font Inter -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  
+  <!-- Custom Stylesheet -->
+  <!-- TECHNO Core Stylesheet (Liquid Asset + CDN Fallback) -->
+  <link rel="stylesheet" href="{{ 'style.css' | asset_url }}"/>
+  <link rel="stylesheet" href="https://shoaibhussainq18-collab.github.io/141633443434/style.css"/>
+  {{ content_for_header }}
+</head>
+<body class="bg-white text-brand-black min-h-screen flex flex-col selection:bg-black selection:text-white antialiased">
 
-    {{ content_for_header }}
-  </head>
-
-  <body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-cyan-400 selection:text-black">
-    {% section 'header' %}
-
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
-    </main>
-
-    {% section 'footer' %}
-
-    <!-- Slide-Over Cart Drawer -->
-    <div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden" id="themeCartDrawer">
-      <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-neutral-900 border-l border-neutral-800 shadow-2xl flex flex-col justify-between">
-        <div class="p-5 border-b border-neutral-800 flex items-center justify-between bg-neutral-950">
-          <div class="flex items-center space-x-2.5">
-            <i class="fa-solid fa-cart-shopping text-cyan-400"></i>
-            <h3 class="text-sm font-black text-white uppercase tracking-wider">Your TECHNO Cart</h3>
-            <span class="bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-[10px] font-mono px-2 py-0.5 rounded-full" id="drawerCartBadge">0</span>
-          </div>
-          <button type="button" class="text-neutral-400 hover:text-white p-1 cursor-pointer" onclick="toggleCartDrawer(false)">
-            <i class="fa-solid fa-xmark text-lg"></i>
-          </button>
+  <!-- ========================================== -->
+  <!-- 1. ANNOUNCEMENT BAR                       -->
+  <!-- ========================================== -->
+  <aside class="bg-[#F2F2F2] border-b border-gray-200 text-xs py-2 px-4 text-center font-normal tracking-wide text-gray-700" data-purpose="announcement-banner">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <div class="hidden md:flex items-center space-x-4">
+        <span class="text-gray-500 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Free 30-Day Risk-Free Trial
+        </span>
+        <span class="text-gray-300">|</span>
+        <span class="text-gray-500">2-Year Comprehensive Warranty</span>
+      </div>
+      
+      <p class="mx-auto md:mx-0 font-medium flex items-center gap-2">
+        <span class="bg-black text-white text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded">Special</span>
+        Free Worldwide Express Shipping on all orders over $100 USD
+      </p>
+      
+      <div class="hidden md:flex items-center space-x-4 text-gray-500">
+        <!-- Currency Selector -->
+        <div class="relative inline-block text-left">
+          <select id="currencySelector" onchange="technoApp.changeCurrency(this.value)" class="bg-transparent border-none text-xs font-semibold py-0 pl-1 pr-6 cursor-pointer focus:ring-0 text-gray-700 hover:text-black">
+            <option value="USD" selected>USD ($)</option>
+            <option value="EUR">EUR (€)</option>
+            <option value="GBP">GBP (£)</option>
+            <option value="CAD">CAD ($)</option>
+            <option value="PKR">PKR (Rs)</option>
+            <option value="AED">AED (د.إ)</option>
+          </select>
         </div>
+        <span class="text-gray-300">|</span>
+        <a href="#track-order" onclick="technoApp.navigate('track-order')" class="hover:text-black transition">Track Order</a>
+        <span class="text-gray-300">|</span>
+        <a href="#contact" onclick="technoApp.navigate('contact')" class="hover:text-black transition">Support 24/7</a>
+      </div>
+    </div>
+  </aside>
 
-        <div class="p-5 overflow-y-auto flex-1 space-y-3" id="themeCartItems">
-          <div class="text-center py-20" id="themeCartEmpty">
-            <div class="w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center mx-auto text-neutral-500 text-2xl mb-4">
-              <i class="fa-solid fa-bag-shopping"></i>
-            </div>
-            <p class="text-sm font-bold text-white">Your cart is empty</p>
-            <p class="text-xs text-neutral-400 mt-1">Explore our 25 flagship tech hardware products.</p>
-          </div>
+  <!-- ========================================== -->
+  <!-- 2. MAIN HEADER & NAVIGATION               -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300" id="mainHeader" data-purpose="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Mobile Menu Hamburger -->
+      <button onclick="technoApp.toggleMobileMenu()" aria-label="Open mobile navigation" class="md:hidden p-2 text-gray-700 hover:text-black">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+        </svg>
+      </button>
+
+      <!-- Desktop Primary Navigation -->
+      <nav class="hidden md:flex items-center space-x-7 text-sm font-medium tracking-tight" data-purpose="desktop-nav">
+        <a href="#home" onclick="technoApp.navigate('home')" class="nav-link py-1 hover:text-black transition" data-nav="home">Home</a>
+        <a href="#shop" onclick="technoApp.navigate('shop')" class="nav-link py-1 hover:text-black transition text-gray-600" data-nav="shop">Shop All</a>
+        <a href="#collections" onclick="technoApp.navigate('collections')" class="nav-link py-1 hover:text-black transition text-gray-600" data-nav="collections">Collections</a>
+        <a href="#product" onclick="technoApp.navigate('product')" class="nav-link py-1 hover:text-black transition text-gray-600" data-nav="product">Flagship Pro</a>
+        <a href="#about" onclick="technoApp.navigate('about')" class="nav-link py-1 hover:text-black transition text-gray-600" data-nav="about">About</a>
+        <a href="#blog" onclick="technoApp.navigate('blog')" class="nav-link py-1 hover:text-black transition text-gray-600" data-nav="blog">Journal</a>
+        <a href="#contact" onclick="technoApp.navigate('contact')" class="nav-link py-1 hover:text-black transition text-gray-600" data-nav="contact">Contact</a>
+      </nav>
+
+      <!-- Center Brand Logo -->
+      <div class="flex flex-col items-center cursor-pointer" onclick="technoApp.navigate('home')" data-purpose="brand-logo">
+        <span class="text-2xl md:text-3xl font-extrabold tracking-[0.25em] uppercase text-black leading-none hover:opacity-80 transition">
+          TECHNO
+        </span>
+        <span class="text-[9px] tracking-[0.35em] text-gray-400 uppercase mt-0.5">Technology Shop</span>
+      </div>
+
+      <!-- Action Utilities -->
+      <div class="flex items-center space-x-4 sm:space-x-5" data-purpose="header-utilities">
+        <!-- Live Search Trigger -->
+        <button onclick="technoApp.openSearchModal()" aria-label="Search Store" class="p-2 text-gray-700 hover:text-black hover:bg-gray-100 rounded-full transition" type="button">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+          </svg>
+        </button>
+
+        <!-- Track Order Icon Link -->
+        <button onclick="technoApp.navigate('track-order')" title="Track Your Order" class="hidden sm:inline-flex p-2 text-gray-700 hover:text-black hover:bg-gray-100 rounded-full transition" type="button">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.25V3.75c0-.621-.504-1.125-1.125-1.125h-9c-.621 0-1.125.504-1.125 1.125v10.5"/>
+          </svg>
+        </button>
+
+        <!-- Cart Trigger with Badge -->
+        <button onclick="technoApp.toggleCartDrawer()" aria-label="View Shopping Cart" class="p-2 text-gray-700 hover:text-black hover:bg-gray-100 rounded-full relative transition" type="button">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25c-.67 0-1.188-.578-1.119-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/>
+          </svg>
+          <span id="cartCountBadge" class="absolute top-1 right-0 bg-black text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center transition-transform transform scale-100">0</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-gray-200 px-6 py-5 space-y-4">
+      <a href="#home" onclick="technoApp.navigate('home'); technoApp.toggleMobileMenu();" class="block font-medium text-base text-gray-900">Home</a>
+      <a href="#shop" onclick="technoApp.navigate('shop'); technoApp.toggleMobileMenu();" class="block font-medium text-base text-gray-600">Shop Catalog</a>
+      <a href="#collections" onclick="technoApp.navigate('collections'); technoApp.toggleMobileMenu();" class="block font-medium text-base text-gray-600">Collections</a>
+      <a href="#product" onclick="technoApp.navigate('product'); technoApp.toggleMobileMenu();" class="block font-medium text-base text-gray-600">Flagship Product</a>
+      <a href="#about" onclick="technoApp.navigate('about'); technoApp.toggleMobileMenu();" class="block font-medium text-base text-gray-600">About Us</a>
+      <a href="#blog" onclick="technoApp.navigate('blog'); technoApp.toggleMobileMenu();" class="block font-medium text-base text-gray-600">TECHNO Journal</a>
+      <a href="#contact" onclick="technoApp.navigate('contact'); technoApp.toggleMobileMenu();" class="block font-medium text-base text-gray-600">Contact & Support</a>
+      <a href="#track-order" onclick="technoApp.navigate('track-order'); technoApp.toggleMobileMenu();" class="block font-medium text-base text-gray-600">Track Order</a>
+      <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+        <span>Currency: USD ($)</span>
+        <a href="#privacy" onclick="technoApp.navigate('privacy'); technoApp.toggleMobileMenu();">Legal Policies</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- 3. PAGE VIEW CONTAINER (ROUTING SYSTEM)     -->
+  <!-- ========================================== -->
+  <div id="appContainer" class="flex-grow">
+    {{ content_for_layout }}
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 4. SLIDE-OUT CART DRAWER                   -->
+  <!-- ========================================== -->
+  <div id="cartDrawerOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300" onclick="technoApp.toggleCartDrawer()"></div>
+  <aside id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-full sm:w-[450px] bg-white z-50 shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-out" aria-label="Shopping Cart">
+    <!-- Drawer Header -->
+    <div class="p-6 border-b border-gray-100 flex items-center justify-between bg-white">
+      <div class="flex items-center space-x-3">
+        <h3 class="text-base font-bold uppercase tracking-wider text-black">Your Cart</h3>
+        <span id="drawerItemCount" class="text-xs font-semibold bg-gray-100 text-gray-700 px-2 py-0.5 rounded-full">0 items</span>
+      </div>
+      <button onclick="technoApp.toggleCartDrawer()" class="p-1.5 text-gray-400 hover:text-black hover:bg-gray-100 rounded-full transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Indicator -->
+    <div class="bg-gray-50 px-6 py-3 border-b border-gray-100">
+      <div class="flex justify-between text-xs font-medium mb-1.5">
+        <span id="freeShippingNotice">Add $100.00 more for Free Express Delivery</span>
+        <span id="freeShippingPercent" class="font-bold text-black">0%</span>
+      </div>
+      <div class="w-full bg-gray-200 h-1.5 rounded-full overflow-hidden">
+        <div id="freeShippingBar" class="bg-black h-full w-0 transition-all duration-500"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items List Container -->
+    <div id="drawerCartItems" class="flex-1 overflow-y-auto p-6 space-y-4 divide-y divide-gray-100">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <!-- Drawer Footer / Checkout CTA -->
+    <div class="p-6 border-t border-gray-100 bg-[#FAFAFA] space-y-4">
+      <div class="space-y-1.5 text-sm">
+        <div class="flex justify-between text-gray-500 text-xs">
+          <span>Subtotal</span>
+          <span id="drawerSubtotal" class="font-semibold text-black">$0.00 USD</span>
         </div>
+        <div class="flex justify-between text-gray-500 text-xs">
+          <span>Estimated Shipping</span>
+          <span id="drawerShipping" class="font-semibold text-emerald-600">Calculated at checkout</span>
+        </div>
+        <div class="flex justify-between text-base font-bold text-black pt-2 border-t border-gray-200">
+          <span>Total</span>
+          <span id="drawerTotal">$0.00 USD</span>
+        </div>
+      </div>
 
-        <div class="p-5 border-t border-neutral-800 bg-neutral-950">
-          <div class="flex items-center justify-between text-sm font-bold text-white mb-2">
-            <span>Subtotal:</span>
-            <span id="themeCartSubtotal" class="font-mono text-cyan-400 font-black">$0.00</span>
+      <div class="space-y-2">
+        <button onclick="technoApp.toggleCartDrawer(); technoApp.navigate('checkout')" class="w-full bg-black hover:bg-neutral-800 text-white font-medium text-sm h-12 rounded-lg transition-all flex items-center justify-center space-x-2 uppercase tracking-wider">
+          <span>Proceed to Checkout</span>
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+        </button>
+        <button onclick="technoApp.toggleCartDrawer(); technoApp.navigate('cart')" class="w-full bg-white hover:bg-gray-100 text-gray-900 border border-gray-200 font-medium text-xs h-10 rounded-lg transition uppercase tracking-wider">
+          View Full Cart Page
+        </button>
+      </div>
+
+      <p class="text-[10px] text-center text-gray-400">Taxes and discounts calculated during checkout.</p>
+    </div>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- 5. LIVE SEARCH MODAL                       -->
+  <!-- ========================================== -->
+  <div id="searchModal" class="fixed inset-0 bg-black/60 backdrop-blur-md z-50 hidden opacity-0 transition-opacity duration-300 flex items-start justify-center pt-20 px-4">
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300" id="searchModalBox">
+      <!-- Input Row -->
+      <div class="p-4 sm:p-6 border-b border-gray-100 flex items-center gap-3">
+        <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/>
+        </svg>
+        <input id="searchInput" oninput="technoApp.handleLiveSearch(this.value)" type="text" placeholder="Search headphones, earbuds, chargers, speakers..." class="flex-1 border-none focus:ring-0 text-base font-medium placeholder-gray-400 text-black p-0"/>
+        <button onclick="technoApp.closeSearchModal()" class="text-xs uppercase font-bold tracking-wider text-gray-400 hover:text-black bg-gray-100 px-3 py-1.5 rounded-lg transition">ESC</button>
+      </div>
+
+      <!-- Quick Categories / Popular Searches -->
+      <div class="px-6 py-3 bg-gray-50 border-b border-gray-100 flex flex-wrap gap-2 text-xs">
+        <span class="text-gray-400 font-medium self-center mr-1">Trending:</span>
+        <button onclick="technoApp.setSearchTerm('Headphones')" class="bg-white border border-gray-200 px-2.5 py-1 rounded-full hover:border-black text-gray-700">Headphones</button>
+        <button onclick="technoApp.setSearchTerm('ANC')" class="bg-white border border-gray-200 px-2.5 py-1 rounded-full hover:border-black text-gray-700">ANC</button>
+        <button onclick="technoApp.setSearchTerm('Charger')" class="bg-white border border-gray-200 px-2.5 py-1 rounded-full hover:border-black text-gray-700">GaN Charger</button>
+        <button onclick="technoApp.setSearchTerm('Speaker')" class="bg-white border border-gray-200 px-2.5 py-1 rounded-full hover:border-black text-gray-700">Speaker</button>
+      </div>
+
+      <!-- Search Results Area -->
+      <div id="searchResultsList" class="p-6 max-h-[400px] overflow-y-auto divide-y divide-gray-100 space-y-3">
+        <!-- Results rendered here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 6. TOAST NOTIFICATIONS                     -->
+  <!-- ========================================== -->
+  <div id="toastContainer" class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3 pointer-events-none"></div>
+
+  <!-- ========================================== -->
+  <!-- 7. MAIN FOOTER                            -->
+  <!-- ========================================== -->
+  <footer class="bg-[#111111] text-white pt-16 pb-12 mt-auto border-t border-neutral-800" data-purpose="site-footer">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Row: Newsletter & Branding -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-neutral-800">
+        <div class="md:col-span-5 space-y-4">
+          <div class="cursor-pointer" onclick="technoApp.navigate('home')">
+            <h2 class="text-2xl font-black uppercase tracking-[0.25em]">TECHNO</h2>
+            <span class="text-[9px] tracking-[0.35em] text-neutral-400 uppercase">Acoustic Architecture</span>
           </div>
-          <p class="text-[11px] text-emerald-400 font-mono mb-4">
-            <i class="fa-solid fa-circle-check mr-1"></i> Express Courier Shipping Included
+          <p class="text-xs text-neutral-400 max-w-sm leading-relaxed">
+            Pioneering premium personal acoustic equipment and clean minimalistic modern consumer technology for creators, travelers, and audiophiles.
           </p>
-          <button type="button" class="w-full bg-cyan-400 hover:bg-cyan-300 text-black font-black py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all shadow-[0_0_20px_rgba(0,229,255,0.3)] cursor-pointer mb-2.5" onclick="openThemeCheckoutModal()">
-            Proceed to Checkout
-          </button>
-          <button type="button" class="w-full border border-neutral-800 text-neutral-400 hover:text-white font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider hover:bg-neutral-900 transition-colors cursor-pointer" onclick="toggleCartDrawer(false)">
-            Continue Shopping
-          </button>
+          <div class="flex items-center space-x-3 pt-2">
+            <span class="inline-flex items-center text-[11px] text-emerald-400 bg-emerald-950/60 border border-emerald-800/80 px-2.5 py-1 rounded-md">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse"></span>
+              All Systems Operational • Global Dispatch Active
+            </span>
+          </div>
+        </div>
+
+        <div class="md:col-span-7 flex flex-col justify-center">
+          <h5 class="text-xs uppercase font-bold tracking-widest text-neutral-300 mb-2">Subscribe to the TECHNO Journal</h5>
+          <p class="text-xs text-neutral-400 mb-4">Receive priority access to limited hardware drops, firmware updates, and exclusive 15% VIP member discount.</p>
+          <form class="flex max-w-md" onsubmit="technoApp.handleNewsletter(event)">
+            <input id="newsletterEmail" class="w-full bg-neutral-900 border border-neutral-700 text-sm px-4 py-2.5 rounded-l-lg text-white focus:outline-none focus:border-white placeholder-neutral-500" placeholder="Enter your email" type="email" required/>
+            <button class="bg-white text-black font-semibold text-xs px-6 py-2.5 rounded-r-lg uppercase tracking-wider hover:bg-neutral-200 transition" type="submit">
+              Join
+            </button>
+          </form>
+          <p class="text-[11px] text-neutral-500 mt-2">Use code <code class="text-neutral-300 font-mono">TECHNO15</code> at checkout for instant 15% off.</p>
         </div>
       </div>
-    </div>
 
-    <!-- Quick View Modal -->
-    <div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4" id="themeQuickViewModal">
-      <div class="bg-neutral-900 border border-neutral-800 rounded-2xl max-w-2xl w-full p-6 relative shadow-2xl">
-        <button type="button" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-lg p-1 cursor-pointer" onclick="closeQuickView()">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
-          <div class="aspect-square bg-neutral-950 border border-neutral-800 rounded-xl flex items-center justify-center p-4">
-            <img id="qvModalImg" src="" alt="" class="w-full h-full object-contain"/>
-          </div>
-          <div>
-            <span class="text-[10px] uppercase font-mono text-cyan-400 tracking-widest" id="qvModalCategory">CATEGORY</span>
-            <h3 class="text-lg font-black text-white mt-1 leading-tight" id="qvModalTitle">Product Title</h3>
-            <div class="mt-2 flex items-baseline space-x-2">
-              <span class="text-2xl font-black text-white font-mono" id="qvModalPrice">$0.00</span>
-              <span class="text-xs text-neutral-500 line-through font-mono" id="qvModalCompare">$0.00</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-3 leading-relaxed" id="qvModalDesc">Description</p>
-            <div class="mt-6 flex flex-col gap-2">
-              <button type="button" class="w-full bg-cyan-400 hover:bg-cyan-300 text-black font-black text-xs uppercase tracking-wider py-3 rounded-xl transition-all cursor-pointer shadow-[0_0_15px_rgba(0,229,255,0.3)]" id="qvModalAddBtn">
-                Add To Cart
-              </button>
-              <button type="button" class="w-full bg-neutral-800 hover:bg-neutral-700 text-white font-bold text-xs uppercase tracking-wider py-3 rounded-xl transition-colors cursor-pointer border border-neutral-700" id="qvModalBuyBtn">
-                Direct Buy Now
-              </button>
-            </div>
-          </div>
+      <!-- Links Grid (All 14 Store Pages Linked) -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 text-xs">
+        <div>
+          <h6 class="font-bold uppercase tracking-wider text-neutral-300 mb-4">Store Catalog</h6>
+          <ul class="space-y-2.5 text-neutral-400">
+            <li><a class="hover:text-white transition" href="#shop" onclick="technoApp.navigate('shop')">All Products</a></li>
+            <li><a class="hover:text-white transition" href="#collections" onclick="technoApp.navigate('collections')">Collections &amp; Categories</a></li>
+            <li><a class="hover:text-white transition" href="#product" onclick="technoApp.navigate('product')">TECHNO Headphones Pro</a></li>
+            <li><a class="hover:text-white transition" href="#shop" onclick="technoApp.navigate('shop', {category: 'Over-Ear Headphones'})">Over-Ear Headphones</a></li>
+            <li><a class="hover:text-white transition" href="#shop" onclick="technoApp.navigate('shop', {category: 'In-Ear Earphones'})">True Wireless Earbuds</a></li>
+            <li><a class="hover:text-white transition" href="#shop" onclick="technoApp.navigate('shop', {category: 'Accessories'})">Power &amp; Travel Accessories</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h6 class="font-bold uppercase tracking-wider text-neutral-300 mb-4">Customer Care</h6>
+          <ul class="space-y-2.5 text-neutral-400">
+            <li><a class="hover:text-white transition" href="#track-order" onclick="technoApp.navigate('track-order')">Track Your Order Live</a></li>
+            <li><a class="hover:text-white transition" href="#cart" onclick="technoApp.navigate('cart')">Shopping Cart</a></li>
+            <li><a class="hover:text-white transition" href="#checkout" onclick="technoApp.navigate('checkout')">Instant Checkout</a></li>
+            <li><a class="hover:text-white transition" href="#contact" onclick="technoApp.navigate('contact')">Support Center &amp; FAQs</a></li>
+            <li><a class="hover:text-white transition" href="#shipping" onclick="technoApp.navigate('shipping')">Global Shipping Policy</a></li>
+            <li><a class="hover:text-white transition" href="#refund" onclick="technoApp.navigate('refund')">30-Day Returns &amp; Warranty</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h6 class="font-bold uppercase tracking-wider text-neutral-300 mb-4">Company</h6>
+          <ul class="space-y-2.5 text-neutral-400">
+            <li><a class="hover:text-white transition" href="#about" onclick="technoApp.navigate('about')">Our Acoustic Manifesto</a></li>
+            <li><a class="hover:text-white transition" href="#blog" onclick="technoApp.navigate('blog')">TECHNO Journal &amp; News</a></li>
+            <li><a class="hover:text-white transition" href="#about" onclick="technoApp.navigate('about')">Sustainability &amp; Materials</a></li>
+            <li><a class="hover:text-white transition" href="#contact" onclick="technoApp.navigate('contact')">Press &amp; Wholesale Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h6 class="font-bold uppercase tracking-wider text-neutral-300 mb-4">Legal &amp; Privacy</h6>
+          <ul class="space-y-2.5 text-neutral-400">
+            <li><a class="hover:text-white transition" href="#privacy" onclick="technoApp.navigate('privacy')">Privacy Policy</a></li>
+            <li><a class="hover:text-white transition" href="#terms" onclick="technoApp.navigate('terms')">Terms of Service</a></li>
+            <li><a class="hover:text-white transition" href="#refund" onclick="technoApp.navigate('refund')">Refund &amp; Return Policy</a></li>
+            <li><a class="hover:text-white transition" href="#shipping" onclick="technoApp.navigate('shipping')">Shipping Policy</a></li>
+          </ul>
         </div>
       </div>
-    </div>
 
-    <!-- Direct Checkout / Order Modal -->
-    <div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4" id="themeCheckoutModal">
-      <div class="bg-neutral-900 border border-neutral-800 rounded-2xl max-w-lg w-full p-6 relative shadow-2xl">
-        <button type="button" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-lg p-1 cursor-pointer" onclick="closeCheckoutModal()">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="flex items-center space-x-3 mb-5">
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-lg">
-            <i class="fa-solid fa-bolt"></i>
-          </div>
-          <div>
-            <h3 class="text-base font-black text-white uppercase tracking-wider">Fast Direct Checkout</h3>
-            <p class="text-xs text-neutral-400">Complete your order with express global dispatch</p>
-          </div>
-        </div>
-
-        <div class="bg-neutral-950 border border-neutral-800 rounded-xl p-3.5 mb-5 text-xs">
-          <div class="flex justify-between items-center text-white font-bold">
-            <span id="coItemTitle">TECHNO Hardware</span>
-            <span id="coItemTotal" class="text-cyan-400 font-mono font-black">$0.00</span>
-          </div>
-          <div class="text-[11px] text-emerald-400 font-mono mt-1">
-            ✓ Free 2-3 Day Express Shipping Included
-          </div>
-        </div>
-
-        <form id="themeCheckoutForm" onsubmit="submitThemeOrder(event)" class="space-y-3.5 text-xs">
-          <div>
-            <label class="block font-bold text-neutral-300 mb-1">Full Name *</label>
-            <input type="text" id="coCustomerName" required placeholder="John Doe" class="w-full bg-neutral-950 rounded-lg border border-neutral-800 text-white text-xs py-2.5 px-3 focus:outline-none focus:border-cyan-400"/>
-          </div>
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="block font-bold text-neutral-300 mb-1">Email / Phone *</label>
-              <input type="text" id="coContact" required placeholder="contact@example.com" class="w-full bg-neutral-950 rounded-lg border border-neutral-800 text-white text-xs py-2.5 px-3 focus:outline-none focus:border-cyan-400"/>
-            </div>
-            <div>
-              <label class="block font-bold text-neutral-300 mb-1">City / Country *</label>
-              <input type="text" id="coCity" required placeholder="New York, USA" class="w-full bg-neutral-950 rounded-lg border border-neutral-800 text-white text-xs py-2.5 px-3 focus:outline-none focus:border-cyan-400"/>
-            </div>
-          </div>
-          <div>
-            <label class="block font-bold text-neutral-300 mb-1">Delivery Address *</label>
-            <textarea id="coAddress" required rows="2" placeholder="Street Address, Apartment, Postal Code" class="w-full bg-neutral-950 rounded-lg border border-neutral-800 text-white text-xs py-2.5 px-3 focus:outline-none focus:border-cyan-400"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-cyan-400 hover:bg-cyan-300 text-black font-black py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all shadow-[0_0_20px_rgba(0,229,255,0.4)] cursor-pointer mt-2">
-            Confirm Order &bull; Pay on Delivery / Express
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <!-- Search Modal -->
-    <div class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4" id="themeSearchModal">
-      <div class="bg-neutral-900 border border-neutral-800 rounded-2xl max-w-xl w-full p-6 relative shadow-2xl">
-        <button type="button" class="absolute top-4 right-4 text-neutral-400 hover:text-white text-lg p-1 cursor-pointer" onclick="closeSearchModal()">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <h3 class="text-sm font-black text-white uppercase tracking-wider mb-4 flex items-center space-x-2">
-          <i class="fa-solid fa-magnifying-glass text-cyan-400"></i>
-          <span>Search 25 Tech Hardware Models</span>
-        </h3>
-        <input type="text" id="themeSearchInput" placeholder="Type watch, headphones, keyboard, airbuds..." oninput="handleThemeSearch(this.value)" class="w-full bg-neutral-950 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-cyan-400"/>
-        <div id="themeSearchResults" class="mt-4 max-h-80 overflow-y-auto space-y-2">
-          <p class="text-xs text-neutral-500 py-4 text-center">Type to search the entire TECHNO catalog...</p>
+      <!-- Bottom Bar -->
+      <div class="pt-8 border-t border-neutral-800 flex flex-col md:flex-row items-center justify-between text-[11px] text-neutral-500">
+        <p>© 2026 TECHNO Inc. All rights reserved. Powered by Shopify &amp; GitHub Pages.</p>
+        
+        <!-- Payment Badges Representation -->
+        <div class="flex items-center space-x-3 mt-4 md:mt-0 opacity-80">
+          <span class="bg-neutral-800 px-2 py-1 rounded text-neutral-300 text-[10px] font-bold">VISA</span>
+          <span class="bg-neutral-800 px-2 py-1 rounded text-neutral-300 text-[10px] font-bold">MASTERCARD</span>
+          <span class="bg-neutral-800 px-2 py-1 rounded text-neutral-300 text-[10px] font-bold">APPLE PAY</span>
+          <span class="bg-neutral-800 px-2 py-1 rounded text-neutral-300 text-[10px] font-bold">SHOP PAY</span>
+          <span class="bg-neutral-800 px-2 py-1 rounded text-neutral-300 text-[10px] font-bold">PAYPAL</span>
         </div>
       </div>
+
     </div>
+  </footer>
 
-    <!-- Toast Notification -->
-    <div class="fixed bottom-6 right-6 z-50 bg-neutral-900 border border-cyan-500/50 text-white text-xs font-bold px-4 py-3 rounded-xl shadow-2xl flex items-center space-x-3 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" id="themeToast">
-      <i class="fa-solid fa-circle-check text-cyan-400 text-sm"></i>
-      <span id="themeToastMsg">Item updated!</span>
-    </div>
-
-    <!-- Embedded Theme Products Database -->
-    <script id="techno-theme-db" type="application/json">
-      [{"id": "techno-chrono-ultra-titanium-smartwatch", "title": "TECHNO Chrono Ultra Titanium Smartwatch", "shortTitle": "Chrono Ultra Titanium", "series": "TECHNO CHRONO", "category": "Smartwatches", "price": 349.0, "compareAtPrice": 449.0, "rating": 5.0, "reviewCount": 142, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Aerospace-grade Grade 5 titanium smartwatch with edge-to-edge Sapphire AMOLED display, dual-band GPS, medical-grade PPG biosensors, and 14-day battery longevity.", "images": ["images/smartwatch-ultra.jpg", "images/smartwatch-sport.jpg"], "variants": [{"name": "Natural Titanium", "hex": "#9E9E9E", "imageIndex": 0}, {"name": "Stealth DLC Black", "hex": "#111111", "imageIndex": 0}], "features": ["Grade 5 Aerospace Titanium Unibody with Sapphire Crystal Glass", "1.43-inch Always-On AMOLED Retina Display (1,000 nits outdoor peak)", "14-Day Battery Life on a Single Fast Magnetic Charge", "10 ATM Water Resistance (100 meters dive & open-water swim rated)", "Dual-Frequency GPS (L1+L5) with Real-Time Turn-by-Turn Waypoints"], "specs": {"Case Material": "Grade 5 Titanium with Micro-Blasted Matte Finish", "Display": "1.43\" Ultra-Retina Sapphire AMOLED (466x466, 326 PPI)", "Battery Life": "14 Days Typical Use / 36 Hours Continuous Dual-GPS", "Biosensors": "8-Channel PPG Optical Heart Rate, SpO2, ECG Sensor, Skin Temp", "Water Resistance": "100m / 10 ATM / MIL-STD-810H Certified", "Connectivity": "Bluetooth 5.3 BLE, Dual-Band GPS (L1+L5), NFC Contactless Pay", "Dimensions & Weight": "46mm x 46mm x 12.1mm \u2022 52 grams (without strap)"}, "inTheBox": ["1x TECHNO Chrono Ultra Titanium Smartwatch", "1x Magnetic Fast-Charging Puck (USB-C)", "1x Grade 5 Titanium Link Bracelet + 1x Fluoroelastomer Sport Strap", "1x Certificate of Authenticity & 2-Year International Warranty"]}, {"id": "techno-pulse-pro-sport-smartwatch", "title": "TECHNO Pulse Pro Ceramic Sport Watch", "shortTitle": "Pulse Pro Sport", "series": "TECHNO CHRONO", "category": "Smartwatches", "price": 179.0, "compareAtPrice": 249.0, "rating": 4.8, "reviewCount": 98, "isSale": true, "isBestSeller": false, "inStock": true, "description": "Curved borderless OLED sport watch featuring high-temperature ceramic bezel, real-time VO2 Max tracking, apnea sleep analysis, and breathable fluoroelastomer loop strap.", "images": ["images/smartwatch-sport.jpg", "images/smartwatch-ultra.jpg"], "variants": [{"name": "Onyx Black", "hex": "#171717", "imageIndex": 0}, {"name": "Glacier Cyan", "hex": "#00E5FF", "imageIndex": 0}], "features": ["Curved Borderless OLED Display with Neon Ambient Telemetry Rings", "VO2 Max, Lactate Threshold, and Real-Time Heart Rate Zone Alerts", "5 ATM Water Resistance with Automatic Lap Counting & Stroke Detection", "Featherweight 34g Ergonomic Aerodynamic Chassis"], "specs": {"Case Material": "Zirconia Ceramic Bezel with Polycarbonate Subframe", "Display": "1.78\" Curved AMOLED (368x448, 800 nits)", "Battery Life": "Up to 9 Days Normal / 24 Hours Continuous Sport Mode", "Sport Modes": "120+ Tracked Disciplines with Auto-Recognition", "Biosensors": "PPG 4.0 BioTracker, Continuous SpO2, HRV Stress Monitor", "Water Resistance": "5 ATM (50 meters swim proof)", "Weight": "34 grams ultra-balanced"}, "inTheBox": ["1x TECHNO Pulse Pro Ceramic Sport Watch", "1x High-Tension Fluoroelastomer Sport Loop", "1x Fast Magnetic USB-C Charging Cable", "1x Quick Setup Guide & Warranty Card"]}, {"id": "techno-apex-stealth-tactical-watch", "title": "TECHNO Apex Stealth Tactical GPS Watch", "shortTitle": "Apex Stealth Tactical", "series": "TECHNO CHRONO", "category": "Smartwatches", "price": 299.0, "compareAtPrice": 399.0, "rating": 4.9, "reviewCount": 76, "isSale": true, "isBestSeller": false, "inStock": true, "description": "Engineered to MIL-STD-810H military standards with solar power harvesting, night vision compatibility, barometric storm alerts, and tactical stealth mode.", "images": ["https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80", "images/smartwatch-ultra.jpg"], "variants": [{"name": "Matte Tactical Black", "hex": "#121212", "imageIndex": 0}, {"name": "Desert Olive", "hex": "#4B5320", "imageIndex": 0}], "features": ["Real-Time Outdoor Tactical Telemetry on High-Contrast Sunlight Screen", "Night Vision Compatible Backlight & Stealth Mode", "Built-in 3-Axis Compass, Barometric Altimeter, and Gyroscope", "Dual-Position Coordinate Formatting (MGRS & Lat/Long)"], "specs": {"Bezel Material": "Diamond-Like Carbon (DLC) Coated Titanium", "Display": "1.4\" Sunlight-Visible Transflective Memory-in-Pixel", "Battery Life": "24 Days Typical / 48 Hours Full GPS Mode", "Durability": "MIL-STD-810H Thermal, Shock, and Water Resistance", "Water Rating": "10 ATM / 100 meters", "Weight": "58 grams"}, "inTheBox": ["1x TECHNO Apex Stealth Tactical Watch", "1x Tactical Ballistic Nylon Quick-Release Strap", "1x Heavy-Duty Braided Charging Cord", "1x Tactical Field Manual"]}, {"id": "techno-aero-slim-active-watch", "title": "TECHNO Aero Slim Ultra-Light Fitness Watch", "shortTitle": "Aero Slim Active", "series": "TECHNO CHRONO", "category": "Smartwatches", "price": 129.0, "compareAtPrice": 179.0, "rating": 4.7, "reviewCount": 112, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Weighing only 26 grams, the Aero Slim features a continuous health telemetry engine, 10-day battery life, and high-refresh 60Hz curved Retina display.", "images": ["https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=800&q=80", "images/smartwatch-sport.jpg"], "variants": [{"name": "Space Gray", "hex": "#4B5563", "imageIndex": 0}, {"name": "Rose Quartz", "hex": "#F43F5E", "imageIndex": 0}], "features": ["Featherweight 26g Chassis Designed for 24/7 Sleep Tracking", "1.82\" Curved Borderless Retina Display with Smooth 60Hz Refresh", "Personalized AI Sleep & Recovery Coach with HRV Monitoring", "One-Tap Measurement of Heart Rate, SpO2, and Stress in 45 Seconds"], "specs": {"Case Material": "Aviation-Grade 6063 Anodized Aluminum Alloy", "Display": "1.82\" AMOLED Retina (408x480, 347 PPI, 60Hz)", "Battery Life": "10 Days Typical / 14 Days Battery Saver Mode", "Sensors": "BioTracker 4.0 Optical Sensor, 3-Axis Accelerometer", "Water Resistance": "5 ATM (50 meters)", "Weight": "26 grams without strap"}, "inTheBox": ["1x TECHNO Aero Slim Active Watch", "1x Soft-Touch Breathable Silicone Band", "1x Magnetic Charging Cable", "1x Quick Start Guide"]}, {"id": "techno-vanguard-esim-lte-smartwatch", "title": "TECHNO Vanguard eSIM LTE Smartwatch", "shortTitle": "Vanguard 4G LTE", "series": "TECHNO CHRONO", "category": "Smartwatches", "price": 369.0, "compareAtPrice": 479.0, "rating": 4.8, "reviewCount": 85, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Untether from your phone. Autonomous 4G LTE cellular connectivity with built-in speaker, beamforming microphone, NFC payments, and music streaming.", "images": ["https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&w=800&q=80", "images/smartwatch-ultra.jpg"], "variants": [{"name": "Stealth Obsidian", "hex": "#111827", "imageIndex": 0}, {"name": "Polar White Ceramic", "hex": "#F3F4F6", "imageIndex": 0}], "features": ["Autonomous eSIM 4G LTE Connectivity for Independent Phone Calls & SMS", "Stream Offline Audio Directly to Bluetooth Headphones", "Contactless NFC Payments via TECHNO Pay Global Gateway", "Dual HD Microphones with AI Noise Suppression for Clear Wrist Calls"], "specs": {"Connectivity": "4G LTE Standalone eSIM, Wi-Fi 2.4/5GHz, Bluetooth 5.3, NFC", "Display": "1.43\" Super AMOLED (466x466, 326 PPI, Always-On)", "Storage": "32GB High-Speed Flash Memory for Apps & Audio", "Battery Life": "5 Days Smart Mode / 48 Hours Heavy LTE Usage", "Water Rating": "5 ATM Water Resistance", "Weight": "54 grams"}, "inTheBox": ["1x TECHNO Vanguard eSIM LTE Smartwatch", "1x Quick Release Matte Silicone Strap", "1x Magnetic Charging Stand", "1x eSIM Activation Guide"]}, {"id": "techno-wireless-noise-cancelling-headphones-pro", "title": "TECHNO Wireless Noise-Cancelling Headphones Pro", "shortTitle": "Wireless Pro", "series": "TECHNO SERIES X", "category": "Headphones", "price": 199.0, "compareAtPrice": 299.0, "rating": 4.9, "reviewCount": 184, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Engineered for supreme acoustic fidelity with personalized Spatial Audio, adaptive ANC, and unmatched 40-hour wireless playtime. Precision crafted in lightweight matte composite.", "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuAhzeAfkVnIFbTvX5yZrgkk251E9hSCkp2M3Tn1tOYXoiXBjmcMpqf-hgPIOxHC_e1AyLBA4CoNA1K75G0w001pXRLWovNJbkjW-wiOPU8aL5Afplz6EY8pv-IIGA83yrunIDWXxvwOzxj_62ipNjL6N8CLb-pNQBP1tnJl84S7XOF7n76FfWn2mtgFxafWH6xPMJFSq0_goaPS-xc1_xxKgnoB36GO60vykpjbi3M7", "https://lh3.googleusercontent.com/aida-public/AB6AXuBrw64PfO2ZJcgO6xZlxLTltn4NcpGdeSPmraI5we3gxeShHtODAJB4y_RwUBtNPAQ4H5EkejyBwYLUgrlc4QieHFUBSdbJwShmaTsDD1DvdccQw-nvL6EBgI5PYejr4HWrXXEbPnk6_qi3Jxl_clEJkAvrTaAb0Nowxnb3-tGJ0LfgS681seampXxeohmYe9ICOcPYl3gAN-5lHg8eqLyCY35mC-WTSaTW8rz2qe3G"], "variants": [{"name": "Matte White / Silver", "hex": "#EAEAEA", "imageIndex": 0}, {"name": "Stealth Black", "hex": "#1A1A1A", "imageIndex": 1}], "features": ["Active Noise Cancellation (ANC) with Transparency Mode", "Up to 40 Hours of Playback with Fast USB-C Quick Charge", "Custom 40mm Hi-Res Audio Certified Titanium Drivers", "Ergonomic Ultra-Plush Memory Foam Ear Cushions"], "specs": {"Transducer Size": "40mm Custom High-Excursion Titanium", "Frequency Response": "10Hz - 40,000Hz (Hi-Res Certified)", "Noise Cancellation": "Hybrid ANC with 6 Adaptive Microphones", "Bluetooth": "Bluetooth 5.3 Multipoint & LDAC High-Res", "Battery Life": "40 Hours (ANC On) / 55 Hours (ANC Off)", "Weight": "248 grams"}, "inTheBox": ["1x TECHNO Wireless Pro Headphones", "1x Protective Magnetic Travel Case", "1x 3.5mm Gold-Plated Audio Cable", "1x USB-C Fast-Charging Braided Cable"]}, {"id": "techno-studio-air-open-back-monitor", "title": "TECHNO Studio Air Open-Back Reference Monitor", "shortTitle": "Studio Air Open-Back", "series": "TECHNO SERIES X", "category": "Headphones", "price": 249.0, "compareAtPrice": 349.0, "rating": 5.0, "reviewCount": 92, "isSale": true, "isBestSeller": false, "inStock": true, "description": "50mm planar magnetic acoustic transducers in an open-back aluminum mesh chamber. Delivers surgical mastering accuracy, zero inner-ear pressure, and limitless soundstage.", "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuDkIbnZpshtyNmE0iWr11pFI9uPaRi-kEOabvsUs72354KDYfTp1dn3EoOzyRXJC1rdgrte2w_yyY-BQU8ecXDdDZKaMQuAyEDshaDka0Lp_wR9oUdEeKnCgftMEpn90K-xuUEshlcNEjenK-opYcwE8-DmRv7BTuAYRnYx1NbSjTtRpd1Cq56mSljRxIxnCX_bH8QExJE2Su0wkKA-yybhGgdBrM3r65GZuaO0m9kP"], "variants": [{"name": "Anodized Silver Mesh", "hex": "#D1D5DB", "imageIndex": 0}], "features": ["Custom 50mm Planar Magnetic Diaphragms with Neodymium Stator Array", "Acoustically Transparent Open-Back Honeycomb Stainless Steel Grille", "Zero Fatigue Ultra-Breathable Velour Memory Foam Ear Cushions", "Dual-Entry Detachable Silver-Plated OFC Audiophile Cable"], "specs": {"Driver Type": "50mm Planar Magnetic Ultra-Thin Diaphragm", "Acoustic Design": "Open-Back Circumaural", "Frequency Response": "5Hz - 50,000Hz Audiophile Grade", "Impedance": "38 Ohms", "Weight": "285 grams"}, "inTheBox": ["1x TECHNO Studio Air Reference Headphones", "1x 2.5m Silver-Plated OFC 3.5mm Cable", "1x 6.35mm Gold-Plated Studio Adapter"]}, {"id": "techno-studio-anc-plus-edition", "title": "TECHNO Studio ANC+ Spatial Audio Headphones", "shortTitle": "Studio ANC+ Edition", "series": "TECHNO SERIES X", "category": "Headphones", "price": 279.0, "compareAtPrice": 369.0, "rating": 4.9, "reviewCount": 118, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Dynamic head-tracking 3D spatial acoustics with custom carbon-fiber acoustic chambers, room calibration microphones, and 50-hour battery longevity.", "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuAKWiKmrwGyImiWkFAT7Tdxt5p-2WkIBkhmGU5rlKvXSTDY8bbjfVYiTlvgiXd29K_QC-dwOtTGrWvUGlMSvhrkjQIgRBQSNLtN4AHkJ4an_pNiLx_tDh4rzyBbQWtTWNuYZ3eKM_AlD-uYeNxM2lHcgcFWntbBfFx8SEouDY4iTlrG7TQ3L5Eqskr6gNUJGDS6gzdscy61JtajMeOuArDJU8rYFtNgf4GztsIZAqSM"], "variants": [{"name": "Carbon Weave Black", "hex": "#18181B", "imageIndex": 0}], "features": ["Real-Time Spatial Audio with Dynamic 6-Axis Gyroscopic Head Tracking", "Carbon Fiber Enclosure Dampening Resonances for Micro-Detail Clarity", "Lossless LDAC 990kbps Transmission and USB-C 24-bit/96kHz DAC", "50-Hour Extended Battery Life with Quick Charge"], "specs": {"Acoustic Chambers": "Multi-Layered Real Carbon Fiber Composite", "Drivers": "45mm Carbon Bio-Cellulose Dome Drivers", "ANC Performance": "Adaptive Hybrid ANC up to 45dB Noise Reduction", "Battery": "50 Hours Playtime / 15m Charge = 8 Hours", "Weight": "260 grams"}, "inTheBox": ["1x TECHNO Studio ANC+ Headphones", "1x Hard Shell Molded Storage Case", "1x Lossless USB-C Audio Cable", "1x 3.5mm Braided Auxiliary Cable"]}, {"id": "techno-carbon-master-audiophile-headphone", "title": "TECHNO Carbon Master Audiophile Headphones", "shortTitle": "Carbon Master Audiophile", "series": "TECHNO SERIES X", "category": "Headphones", "price": 389.0, "compareAtPrice": 499.0, "rating": 5.0, "reviewCount": 47, "isSale": true, "isBestSeller": false, "inStock": true, "description": "The pinnacle of acoustic engineering. Real forged carbon fiber earcups, 50mm pure beryllium-coated drivers, balanced 4.4mm pentaconn connectivity, and plush Alcantara padding.", "images": ["https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80"], "variants": [{"name": "Forged Marble Carbon", "hex": "#171717", "imageIndex": 0}], "features": ["50mm Pure Beryllium-Coated Diaphragms for Instantaneous Transient Speed", "Solid Forged Carbon Acoustic Resonators CNC Milled from Solid Blocks", "Dual Balanced 4.4mm Pentaconn + 3.5mm OFC Silver-Litz Wiring", "Italian Alcantara Memory Foam Cushions for Supreme Comfort"], "specs": {"Transducer": "50mm Beryllium Deposited Ultra-Rigid Diaphragm", "Frequency Response": "4Hz - 52,000Hz Master Reference", "Impedance": "32 Ohms", "Weight": "295 grams"}, "inTheBox": ["1x TECHNO Carbon Master Audiophile Headphones", "1x 4.4mm Balanced Silver-Plated Cable (1.8m)", "1x 3.5mm Single-Ended Audiophile Cable (1.8m)"]}, {"id": "techno-quiet-commute-anc-headphones", "title": "TECHNO QuietCommute Ultra-Comfort ANC Headphones", "shortTitle": "QuietCommute ANC", "series": "TECHNO SERIES X", "category": "Headphones", "price": 159.0, "compareAtPrice": 219.0, "rating": 4.8, "reviewCount": 139, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Engineered for subway, airplane, and open-office commuters. Delivers 45dB noise suppression, zero clamping pressure headband, and massive 60-hour runtime.", "images": ["https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80"], "variants": [{"name": "Stealth Charcoal", "hex": "#27272A", "imageIndex": 0}], "features": ["45dB Active Noise Cancellation Targeting Low-Frequency Engine Drone", "Zero Clamping Force Memory Headband for 12-Hour Continuous Wearing", "60-Hour Industry-Leading Battery Life with Fast Charge", "Fold-Flat Dual-Axis Swivel Mechanism for Compact Bag Storage"], "specs": {"Drivers": "40mm Custom Neodymium Dynamic Drivers", "Battery Life": "60 Hours (ANC On) / 75 Hours (ANC Off)", "Connectivity": "Bluetooth 5.3 Multipoint Dual-Device Pairing", "Weight": "220 grams Featherweight Over-Ear"}, "inTheBox": ["1x TECHNO QuietCommute ANC Headphones", "1x Compact Slim Travel Case", "1x Fast Charging USB-C Cable"]}, {"id": "techno-aero-pods-pro-gen2-anc", "title": "TECHNO Aero Pods Pro Gen 2 ANC Earbuds", "shortTitle": "Aero Pods Pro Gen 2", "series": "AERO SERIES", "category": "Airbuds", "price": 149.0, "compareAtPrice": 199.0, "rating": 5.0, "reviewCount": 215, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Next-generation true wireless earbuds with dual-driver acoustic architecture, 42dB smart adaptive ANC, dynamic head-tracking spatial audio, and Qi wireless charging case.", "images": ["https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?auto=format&fit=crop&w=800&q=80"], "variants": [{"name": "Glacier White", "hex": "#F8FAFC", "imageIndex": 0}], "features": ["Dual-Driver Acoustic System (11mm Sub-Bass Woofer + Micro Tweeter)", "42dB Adaptive Noise Cancellation with Auto Environmental Sensing", "3D Spatial Audio with Dynamic Real-Time Head Tracking", "Qi Wireless & MagSafe Fast-Charging Aluminum-Hinged Case"], "specs": {"Drivers": "11mm Liquid Crystal Polymer + Balanced Micro-Tweeter", "Battery Life": "8.5 Hours Single Charge / 36 Hours with Charging Case", "Noise Cancellation": "Adaptive Smart Hybrid ANC up to 42dB", "Water Rating": "IPX5 Water & Sweat Resistance", "Weight": "4.2 grams per bud \u2022 46g charging case"}, "inTheBox": ["2x TECHNO Aero Pods Pro Earbuds (L/R)", "1x Wireless Fast-Charging Protective Case", "4x Pairs Ergonomic Silicone Ear Tips (XS, S, M, L)", "1x Braided USB-C Fast Charging Cable"]}, {"id": "techno-earbuds-pro-high-res", "title": "TECHNO True Wireless Earbuds Pro", "shortTitle": "True Wireless Pro", "series": "AERO SERIES", "category": "Airbuds", "price": 199.0, "compareAtPrice": 299.0, "rating": 4.9, "reviewCount": 164, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Lossless wireless in-ear monitors with custom graphene drivers, beamforming quad microphones, and wireless charging case.", "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuAG8qwu8PQm-tsEaM_sK7xqCHzTlMtlSyf9Auh7MOunv2Lwi7T2_L4oy9y6g7c_Z7RYGbRuHRIL1ILRgm4hUJXWiwObkDIZmT7gUAP7oa4Jn3JoI3YkXHFAQP2MUUAasuxP1SKZ3uGtOFlPnxUBV8gaVP-PoxkfFt9cMckizpQJJKLQE7ZFk6cxjuwnQNr_qJNB7A-oFzfC6ewtPJXxKcQ1TawznuYqR9wlHRlkY8-_"], "variants": [{"name": "Obsidian Black", "hex": "#111827", "imageIndex": 0}], "features": ["Custom Graphene Excursion Drivers for Audiophile Bass Precision", "Quad Beamforming Microphones with Wind-Noise Reduction", "Fast Wireless Qi Charging + Rapid USB-C Recharge", "IPX7 Water Resistance for Active Workouts"], "specs": {"Drivers": "10mm Custom Ultra-Rigid Graphene Drivers", "Battery Life": "8 Hours Single Play / 32 Hours Total", "Bluetooth": "Bluetooth 5.3 Low Latency Multipoint", "Weight": "4.8 grams per bud"}, "inTheBox": ["2x TECHNO True Wireless Earbuds (L/R)", "1x Wireless Charging Case", "3x Sets Memory Foam & Silicone Ear Tips", "1x USB-C Cable"]}, {"id": "techno-aero-pods-wireless-active", "title": "TECHNO Aero Pods Wireless Active", "shortTitle": "Aero Pods Active", "series": "AERO SERIES", "category": "Airbuds", "price": 129.0, "compareAtPrice": 179.0, "rating": 4.8, "reviewCount": 110, "isSale": true, "isBestSeller": false, "inStock": true, "description": "Ultra-compact ergonomic true wireless earbuds featuring sub-bass boost chamber, touch controls, and IPX7 sweat resistance.", "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuDh1IgBMLixmfXRjfWHp9PSVT5mPv9rZ36a-CChq9MkYaX2BwKJgYbnM-ZjWjYu5jHIhKzJJs84PPrlTeUYwFsaQrvNqWziYLf0ixkyF7OhorelxtCeCLVPNRQS8Tjx46zQEliwNGITgCxK1R6wSovEuic027_elWMMuDtLQYk9J5RC-PJq_IuyZ7tLUc18iLaHaDY1ii3aXyaTLnmqr3rncIiploDU46yNECEh6cpj"], "variants": [{"name": "Matte Slate", "hex": "#374151", "imageIndex": 0}], "features": ["Ergonomic Concha Contour for Zero Slip During Sprints", "Sub-Bass Acoustic Resonator Tube for Deep Punchy Impact", "Capacitive Touch Panels on Stems", "IPX7 Submersible Waterproofing"], "specs": {"Drivers": "10mm Bio-Cellulose Diaphragms", "Battery": "7 Hours Buds / 28 Hours Total", "Weight": "3.9 grams Ultra-Light"}, "inTheBox": ["2x TECHNO Aero Pods Wireless Active Earbuds", "1x Charging Pod Case", "3x Pairs Sport Grip Tips", "1x Fast Charging Cord"]}, {"id": "techno-reference-tws-balanced-armature", "title": "TECHNO Reference TWS Balanced Armature Buds", "shortTitle": "Reference TWS Buds", "series": "AERO SERIES", "category": "Airbuds", "price": 179.0, "compareAtPrice": 239.0, "rating": 5.0, "reviewCount": 78, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Triple-driver hybrid configuration featuring Knowles balanced armature and 10mm DLC dynamic woofer. Delivers certified 24-bit/96kHz LDAC lossless wireless audiophile sound.", "images": ["https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?auto=format&fit=crop&w=800&q=80"], "variants": [{"name": "Pure Obsidian", "hex": "#111827", "imageIndex": 0}], "features": ["Triple-Driver Hybrid Architecture (Knowles Balanced Armature + 10mm DLC)", "Lossless LDAC Transmission at 990 kbps (Hi-Res Audio Certified)", "Precision Charging Case with Battery Indicator LEDs", "Custom 10-Band Parametric EQ Calibration via TECHNO App"], "specs": {"Acoustic System": "Dual Knowles BA + 10mm Diamond-Like Carbon Dynamic", "Frequency Response": "10Hz - 45,000Hz Ultra-Wide", "Audio Codecs": "LDAC, aptX Lossless, AAC, SBC", "Battery": "7 Hours (LDAC On) / 30 Hours Total with Case", "Weight": "5.1 grams per earbud"}, "inTheBox": ["2x TECHNO Reference TWS Earbuds", "1x Charging Case", "6x Sets SpinFit & Memory Foam Tips", "1x Braided USB-C Cable"]}, {"id": "techno-nano-stealth-wireless-buds", "title": "TECHNO Nano Buds Ultra-Mini Stealth Earbuds", "shortTitle": "Nano Buds Stealth", "series": "AERO SERIES", "category": "Airbuds", "price": 89.0, "compareAtPrice": 129.0, "rating": 4.8, "reviewCount": 167, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Compact stealth wireless earbuds. Low-profile in-concha fit delivers punchy Hi-Fi sound and passive noise isolation with 24 hours total battery reserve.", "images": ["https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80"], "variants": [{"name": "Stealth Black", "hex": "#18181B", "imageIndex": 0}], "features": ["Ultra-Low Profile 3.4g Flush Fit Design", "Passive Noise Blocking (-26dB) Without Ear Canal Pressure Fatigue", "Pocketable Micro Capsule Charging Case", "Bluetooth 5.3 Instant Auto-Connect"], "specs": {"Driver": "6mm Custom Micro Dynamic Driver", "Form Factor": "Ultra-Miniature Flush Ear-Canal Fit", "Battery": "6 Hours Continuous Play / 24 Hours with Capsule Case", "Weight": "3.4 grams"}, "inTheBox": ["2x TECHNO Nano Buds (L/R)", "1x Capsule Charging Case", "3x Soft-Touch Silicon Tips", "1x USB-C Cable"]}, {"id": "techno-apex-75-mechanical-keyboard", "title": "TECHNO Apex 75 Low-Profile Mechanical Keyboard", "shortTitle": "Apex 75 Keyboard", "series": "DESK SERIES", "category": "Keyboards", "price": 149.0, "compareAtPrice": 199.0, "rating": 4.9, "reviewCount": 162, "isSale": true, "isBestSeller": true, "inStock": true, "description": "CNC machined aluminum 75% wireless mechanical keyboard. Features hot-swappable low-profile switches, custom acoustic dampening pads, and 1000Hz polling rate.", "images": ["images/keyboard-minimal.jpg"], "variants": [{"name": "Space Gray Anodized", "hex": "#4B5563", "imageIndex": 0}, {"name": "Matte Obsidian", "hex": "#111111", "imageIndex": 0}], "features": ["CNC Machined 6063 Aerospace Aluminum Unibody Top Plate", "Hot-Swappable Low-Profile Tactile Switches with Factory Pre-Lube", "Tri-Mode Connectivity: 2.4GHz Ultra-Low Latency, Bluetooth 5.3, USB-C", "Dual Acoustic PORON Gaskets and IXPE Sound Dampening Sheet", "220 Hours Wireless Battery Life with 4000mAh Cell"], "specs": {"Form Factor": "75% Compact Layout (84 Keys)", "Switch Type": "TECHNO Low-Profile Mechanical Switches (Hot-Swappable)", "Keycaps": "Premium Doubleshot PBT Ergonomic Profile", "Connectivity": "Wireless 2.4GHz (1000Hz), Bluetooth 5.3, USB-C", "Battery": "4000mAh Rechargeable (Up to 220 Hours)", "Weight": "680 grams"}, "inTheBox": ["1x TECHNO Apex 75 Mechanical Keyboard", "1x 2.4GHz Ultra-Slim USB-A Receiver", "1x Braided USB-C Cable (1.8m)", "1x Dual Switch & Keycap Puller Tool"]}, {"id": "techno-cyberboard-65-gasket-keyboard", "title": "TECHNO Cyberboard 65% Gasket-Mount Keyboard", "shortTitle": "Cyberboard 65 Gasket", "series": "DESK SERIES", "category": "Keyboards", "price": 179.0, "compareAtPrice": 249.0, "rating": 5.0, "reviewCount": 114, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Heavyweight CNC anodized aluminum 65% custom keyboard. Built with pure PORON gasket suspension, flexible poly-carbonate plate, and deep acoustic thock.", "images": ["https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80", "images/keyboard-minimal.jpg"], "variants": [{"name": "Anodized Silver", "hex": "#D1D5DB", "imageIndex": 0}, {"name": "Deep Midnight Purple", "hex": "#581C87", "imageIndex": 0}], "features": ["Solid 1.2kg CNC Milled 6063 Aluminum Chassis with Brass Accent Weight", "True Gasket-Mount Isolation Eliminates Harsh Bottom-Out Vibrations", "Factory Lubed Mechanical Switches with Custom Thock Acoustics", "Custom RGB South-Facing LEDs with Underglow Diffuser Strip"], "specs": {"Form Factor": "65% Exploded Layout (68 Keys)", "Mounting": "Multi-Layer PORON Gasket Isolation Mount", "Plate": "CNC Precision Polycarbonate Flex-Cut Plate", "Switches": "Hot-Swap 5-Pin Compatible (Pre-Lubed Linear 45g)", "Weight": "1250 grams solid desktop anchor"}, "inTheBox": ["1x TECHNO Cyberboard 65 Mechanical Keyboard", "1x Coiled Aviator USB-C Custom Cable", "1x Aluminum Keycap & Switch Puller", "1x Acrylic Dust Cover"]}, {"id": "techno-matrix-80-tkl-tournament-keyboard", "title": "TECHNO Matrix 80 Tenkeyless Tournament Keyboard", "shortTitle": "Matrix 80 TKL", "series": "DESK SERIES", "category": "Keyboards", "price": 169.0, "compareAtPrice": 229.0, "rating": 4.9, "reviewCount": 96, "isSale": true, "isBestSeller": false, "inStock": true, "description": "Tournament tenkeyless board equipped with mechanical switches, rapid trigger reset, hot-swap PCB sockets, and aircraft-grade aluminum top plate.", "images": ["https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=800&q=80", "images/keyboard-minimal.jpg"], "variants": [{"name": "Tournament Matte Black", "hex": "#111827", "imageIndex": 0}], "features": ["1000Hz Ultra-Low Latency Tournament Polling Engine", "Hot-Swappable 5-Pin Mechanical Switch Sockets", "Aircraft-Grade Anodized Aluminum Top Plate", "High-Durability Textured PBT Keycaps"], "specs": {"Layout": "80% Tenkeyless (87 Keys ANSI)", "Switches": "TECHNO Custom Mechanical Linear Switches (Hot-Swappable)", "Keycaps": "Doubleshot PBT Textured Profile", "Weight": "980 grams"}, "inTheBox": ["1x TECHNO Matrix 80 TKL Keyboard", "1x Detachable High-Speed Braided USB-C Cable", "1x Keycap Puller Tool"]}, {"id": "techno-cyberacoustic-rgb-gaming-keyboard", "title": "TECHNO CyberAcoustic RGB Mechanical Keyboard", "shortTitle": "CyberAcoustic RGB Keyboard", "series": "DESK SERIES", "category": "Keyboards", "price": 139.0, "compareAtPrice": 189.0, "rating": 4.8, "reviewCount": 88, "isSale": true, "isBestSeller": false, "inStock": true, "description": "Full-spectrum RGB mechanical keyboard with sound-dampening silicon base, responsive linear mechanical switches, and wireless Bluetooth 5.3 connection.", "images": ["https://images.unsplash.com/photo-1626958390898-162d3577f293?auto=format&fit=crop&w=800&q=80"], "variants": [{"name": "Cyber Black Edition", "hex": "#09090B", "imageIndex": 0}], "features": ["Per-Key South-Facing RGB Backlight with 18 Custom Lighting Presets", "Pre-Lubed Linear Mechanical Switches with Satisfying Tactile Return", "Sound-Absorbing Silicone Base Pad for Clean Acoustic Resonance", "Tri-Mode Wireless Connectivity: 2.4GHz, Bluetooth 5.3, USB-C"], "specs": {"Layout": "75% Layout (84 Keys)", "Switches": "Hot-Swap Mechanical Linear Red (45g)", "Battery": "3000mAh Lithium-Polymer (Up to 180 Hours)", "Weight": "720 grams"}, "inTheBox": ["1x TECHNO CyberAcoustic RGB Keyboard", "1x USB-C Braided Cable", "1x 2.4GHz Nano Wireless Receiver", "1x Keycap & Switch Puller"]}, {"id": "techno-ultra-slim-aluminum-wireless-keyboard", "title": "TECHNO Ultra-Slim Aluminum Wireless Keyboard", "shortTitle": "Ultra-Slim Aluminum Keyboard", "series": "DESK SERIES", "category": "Keyboards", "price": 119.0, "compareAtPrice": 169.0, "rating": 4.9, "reviewCount": 105, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Minimalist low-profile aluminum wireless keyboard. Scissor-switch quiet keycaps, multi-device fast switching, and ultra-thin 12mm profile.", "images": ["https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80"], "variants": [{"name": "Anodized Silver", "hex": "#E5E7EB", "imageIndex": 0}, {"name": "Space Gray", "hex": "#4B5563", "imageIndex": 0}], "features": ["Precision CNC Anodized Aluminum Top Enclosure", "Whisper-Quiet Scissor Switch Key Travel (1.5mm)", "Bluetooth 5.3 Multi-Pairing with Instant 1-Key Device Switch", "Type-C Rechargeable with 3 Months Battery on a Single Charge"], "specs": {"Form Factor": "Compact Tenkeyless (78 Keys)", "Thickness": "12mm Ultra-Slim Profile", "Battery": "Rechargeable Lithium-Ion (3 Months Typical)", "Weight": "420 grams"}, "inTheBox": ["1x TECHNO Ultra-Slim Aluminum Keyboard", "1x USB-C Charging Cable", "1x User Manual"]}, {"id": "techno-magflow-magnetic-powerbank", "title": "TECHNO MagFlow 10,000mAh Magnetic Power Bank", "shortTitle": "MagFlow 10K Power Bank", "series": "DESK SERIES", "category": "Hardware & Power", "price": 59.0, "compareAtPrice": 79.0, "rating": 4.9, "reviewCount": 115, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Minimalist aerospace titanium and frosted glass magnetic wireless power bank. Features glowing numeric LED battery percentage readout and 20W PD two-way fast charging.", "images": ["images/powerbank-mag.jpg"], "variants": [{"name": "Natural Titanium", "hex": "#9E9E9E", "imageIndex": 0}, {"name": "Frosted Obsidian", "hex": "#1A1A1A", "imageIndex": 0}], "features": ["Snap-On MagSafe / Qi2 Compatible Magnetic Wireless Charging (15W)", "Glowing Micro-LED Percentage Battery Display", "20W Power Delivery 3.0 Bi-Directional Fast USB-C Port", "Ultra-Strong 12N Neodymium N52 Magnetic Locking Grip", "Aircraft-Grade CNC Aluminum Alloy Heat-Dissipation Enclosure"], "specs": {"Capacity": "10,000mAh / 38.5Wh (TSA Approved for Flight Carry-on)", "Wireless Output": "5W / 7.5W / 10W / 15W Max Qi2 Fast Wireless", "USB-C In/Out": "5V/3A, 9V/2.22A, 12V/1.67A (20W PD Max)", "Safety Protection": "Overcharge, Overcurrent, Short-Circuit, Foreign Object Detection", "Weight": "190 grams ultra-slim"}, "inTheBox": ["1x TECHNO MagFlow 10,000mAh Power Bank", "1x Braided USB-C Fast-Charging Cable", "1x User Manual & 2-Year Warranty"]}, {"id": "techno-ambient-sound-speaker", "title": "TECHNO Acoustic 360 Spatial Speaker", "shortTitle": "Acoustic 360 Speaker", "series": "SERIES X ACOUSTICS", "category": "Hardware & Power", "price": 199.0, "compareAtPrice": 299.0, "rating": 4.9, "reviewCount": 87, "isSale": true, "isBestSeller": true, "inStock": true, "description": "Room-filling 360-degree spatial audio speaker with dual passive radiators, anodized aluminum grille, and 24-hour party link.", "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuA-W_rcjQf5aG06Qb1Iv-KAE0yA-Rx9jt-GI0HUUAS8I6GmDHk3kcGmsy8oZaO1b2BjJSL9tioWadPryMF9MbbPPW_jGc2ENahFtbjUgX9b1i9oT6NWbNTPBhAf5sH03TuiIeofYpZirGVZMKgQBRaetp2I-uhcJN-E_B_r6xww6f-jboykMdQjODjceAYV3ayxkjsw7OngAE4bfXX6srj3UXRiI2csvOfChB3sb-LH"], "variants": [{"name": "Anodized Silver", "hex": "#E5E7EB", "imageIndex": 0}], "features": ["Omnidirectional 360-Degree Spatial Sound Dispersion", "Dual Opposing High-Excursion Passive Bass Radiators", "Machined Aluminum Acoustic Dispersion Cones", "24-Hour Battery Life with USB-C Fast Charge"], "specs": {"Power Output": "45W RMS Pure Audio Output", "Frequency Range": "40Hz - 22,000Hz Room-Filling Sound", "Battery": "24 Hours Continuous Playtime", "Weight": "620 grams"}, "inTheBox": ["1x TECHNO Acoustic 360 Spatial Speaker", "1x Fast Charging USB-C Cable", "1x User Manual"]}, {"id": "techno-macbook-pro-dock", "title": "TECHNO Precision Aluminum Laptop Stand & Hub", "shortTitle": "Aluminum Laptop Stand & Hub", "series": "DESK SERIES", "category": "Hardware & Power", "price": 89.0, "compareAtPrice": 119.0, "rating": 4.9, "reviewCount": 94, "isSale": true, "isBestSeller": false, "inStock": true, "description": "Aviation-grade aluminum cooling dock with integrated 8-in-1 Thunderbolt 4 hub and 100W Power Delivery pass-through.", "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuCx7Jgh1N1qZ284iW8WUK4D0OEI3-jeN5eqhd-tJ9OPSzbC65Bt0-RRi76Fqr2ZrjWDU7G3lT1q7iHXfGanJ5N9eNDMras3ciq48VA3witABMWbQXx2nbfHukyhTlOQ-Fl-x5ycX8FZNBrDw6YKBbsBpV2ZWpevtVh5nEkmoO2QXivJNP8Ck-18R8W34h5n0pdZO98ADFqToh67VLgzZWkEn8KdV-rAgZznhSWyGpSp"], "variants": [{"name": "Space Gray Aluminum", "hex": "#4B5563", "imageIndex": 0}], "features": ["Solid CNC Machined 6063 Aluminum Cooling Heatsink Stand", "8-in-1 Ports: 4K 60Hz HDMI, 100W PD USB-C, 3x USB 3.2, SD/TF, Gigabit LAN", "Ergonomic 15-Degree Elevation for Posture and Airflow", "Non-Slip Protective Silicone Anti-Scratch Inlays"], "specs": {"Material": "100% Solid Aerospace Aluminum Alloy", "Ports": "8 High-Speed Ports with 10Gbps Data Transfer", "Power Delivery": "100W USB-C PD 3.0 Pass-Through", "Weight": "410 grams"}, "inTheBox": ["1x TECHNO Aluminum Laptop Stand & Hub", "1x High-Speed Host USB-C Cable", "1x Quick Setup Guide"]}, {"id": "techno-65w-gan-fast-charger", "title": "TECHNO 65W GaN Fast Charger", "shortTitle": "65W GaN Fast Charger", "series": "DESK SERIES", "category": "Hardware & Power", "price": 29.0, "compareAtPrice": 39.0, "rating": 4.9, "reviewCount": 91, "isSale": true, "isBestSeller": false, "inStock": true, "description": "Ultra-compact Gallium Nitride (GaN) fast wall charger with dual USB-C Power Delivery 3.0 ports for rapid laptop, watch, and audio charging.", "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuBUuK-w8kpF5b6vQunu6nIVXOlBsp5EiMfu5vqoy-6PwuVUdPPN-28ElvZfF3Nvrrr-fhnEbcncLrcIqLVnBwej9U-pZvlpcckomCMPWxUwcvA4i6xQHxFCXsFlNH7XzR4HkNbv3yRaFiwWEEh-hBClRoeJxFn7ChJnLsCBn9o6w7fOq-bg5t8sAd4Isa8xiWSG7-2gmPfdIk9xXzWxD533fRNIhYD-DVHH2sI1sajy"], "variants": [{"name": "Arctic White", "hex": "#F5F5F7", "imageIndex": 0}], "features": ["Gallium Nitride (GaN III) Technology: 50% Smaller with Zero Overheating", "65W Max Single Port Output: Charges a MacBook Pro from 0 to 50% in 30 mins", "Dual USB-C Intelligent Power Distribution", "Foldable Travel Prongs for Compact Bag Portability"], "specs": {"Total Power": "65W Max Power Delivery 3.0 / PPS", "Technology": "GaN III High-Efficiency Semiconductors", "Weight": "95 grams Pocket Size"}, "inTheBox": ["1x TECHNO 65W GaN Fast Wall Charger", "1x Instruction Manual & Safety Certifications"]}, {"id": "techno-magnetic-travel-case", "title": "TECHNO Magnetic Travel Case", "shortTitle": "Magnetic Travel Case", "series": "DESK SERIES", "category": "Hardware & Power", "price": 39.0, "compareAtPrice": 49.0, "rating": 4.8, "reviewCount": 46, "isSale": true, "isBestSeller": false, "inStock": true, "description": "Molded ballistic nylon protective travel case with quick magnetic latch and integrated cable organizer pouch for TECHNO headphones and smart gear.", "images": ["https://lh3.googleusercontent.com/aida-public/AB6AXuAt6zaJzvIbUuI7To-98uJpJp5-9RT8--CMqTBc5QkB_YmXSLq1eSo3Pi4Pp2QBFRGzN3TpsgnczhH9i9b96KLilstYsfqrpG-GDpH0ggJRdOanU0Xd92CyKmZDDkdCk18ReP8U_KBMNpp44SqKbwM_xiWci870q9PdLLihVrB5w6W4TVNKwNfGIgjOiSwPxW1oN6N2kPmbfMBCWZnnzp1iyYXRmr_VZ2xUwpaSjdSf"], "variants": [{"name": "Standard Matte", "hex": "#1A1A1A", "imageIndex": 0}], "features": ["Molded Ballistic 1680D Water-Repellent Outer Shell", "Quick Magnetic Auto-Align Snap Latch", "Soft Velvet Interior Lining Prevents Hardware Scratches", "Internal Zippered Cable and Dongle Mesh Pocket"], "specs": {"Material": "1680D Ballistic Nylon + EVA Hardshell", "Dimensions": "210mm x 180mm x 55mm", "Weight": "130 grams"}, "inTheBox": ["1x TECHNO Magnetic Travel Case", "1x Carabiner Clip"]}]
-    </script>
-
-    <!-- Theme Interactive Script -->
-    <script>
-      let THEME_PRODUCTS = [];
-      try {
-        const raw = document.getElementById('techno-theme-db').textContent;
-        THEME_PRODUCTS = JSON.parse(raw);
-      } catch(e) {
-        console.error("Failed to parse theme database", e);
-      }
-
-      let themeCart = [];
-
-      function updateCartUI() {
-        const totalCount = themeCart.reduce((sum, item) => sum + item.qty, 0);
-        const headerBadge = document.getElementById('headerCartCount');
-        if (headerBadge) headerBadge.textContent = totalCount;
-        const drawerBadge = document.getElementById('drawerCartBadge');
-        if (drawerBadge) drawerBadge.textContent = totalCount;
-
-        const container = document.getElementById('themeCartItems');
-        const emptyMsg = document.getElementById('themeCartEmpty');
-        const subtotalEl = document.getElementById('themeCartSubtotal');
-
-        let subtotal = 0;
-        if (themeCart.length === 0) {
-          if (emptyMsg) emptyMsg.style.display = 'block';
-          if (subtotalEl) subtotalEl.textContent = '$0.00';
-          return;
-        }
-
-        if (emptyMsg) emptyMsg.style.display = 'none';
-        container.innerHTML = '';
-
-        themeCart.forEach((item, idx) => {
-          subtotal += item.price * item.qty;
-          const row = document.createElement('div');
-          row.className = 'flex items-center justify-between gap-3 p-3 bg-neutral-950 border border-neutral-800 rounded-xl text-xs';
-          row.innerHTML = `
-            <img src="${item.img}" class="w-12 h-12 object-contain bg-neutral-900 rounded-lg p-1 border border-neutral-800"/>
-            <div class="flex-1 min-w-0">
-              <h4 class="font-bold text-white truncate">${item.title}</h4>
-              <div class="text-neutral-400 font-mono mt-0.5">$${item.price.toFixed(2)} x ${item.qty}</div>
-            </div>
-            <div class="flex items-center space-x-2">
-              <span class="font-black text-cyan-400 font-mono">$${(item.price * item.qty).toFixed(2)}</span>
-              <button onclick="removeFromThemeCart(${idx})" class="text-red-400 hover:text-red-300 p-1 cursor-pointer">
-                <i class="fa-solid fa-trash-can"></i>
-              </button>
-            </div>
-          `;
-          container.appendChild(row);
-        });
-
-        if (subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
-      }
-
-      function addToCart(productId, qty = 1) {
-        const p = THEME_PRODUCTS.find(i => i.id === productId);
-        if (!p) return;
-        const existing = themeCart.find(i => i.id === productId);
-        const img = p.images[0].startsWith('images/') ? `https://shoaibhussainq18-collab.github.io/141633443434/${p.images[0]}` : p.images[0];
-        if (existing) {
-          existing.qty += qty;
-        } else {
-          themeCart.push({ id: p.id, title: p.title, price: p.price, img: img, qty: qty });
-        }
-        updateCartUI();
-        showThemeToast(`Added "${p.title}" to cart!`);
-      }
-
-      function removeFromThemeCart(idx) {
-        themeCart.splice(idx, 1);
-        updateCartUI();
-      }
-
-      function toggleCartDrawer(open) {
-        const el = document.getElementById('themeCartDrawer');
-        if (open) {
-          el.classList.remove('hidden');
-          el.classList.add('flex');
-        } else {
-          el.classList.add('hidden');
-          el.classList.remove('flex');
-        }
-      }
-
-      function showThemeToast(msg) {
-        const toast = document.getElementById('themeToast');
-        const text = document.getElementById('themeToastMsg');
-        text.textContent = msg;
-        toast.classList.remove('translate-y-20', 'opacity-0');
-        setTimeout(() => {
-          toast.classList.add('translate-y-20', 'opacity-0');
-        }, 2500);
-      }
-
-      function openQuickView(productId) {
-        const p = THEME_PRODUCTS.find(i => i.id === productId);
-        if (!p) return;
-        const img = p.images[0].startsWith('images/') ? `https://shoaibhussainq18-collab.github.io/141633443434/${p.images[0]}` : p.images[0];
-        document.getElementById('qvModalImg').src = img;
-        document.getElementById('qvModalCategory').textContent = p.category.toUpperCase();
-        document.getElementById('qvModalTitle').textContent = p.title;
-        document.getElementById('qvModalPrice').textContent = `$${p.price.toFixed(2)}`;
-        document.getElementById('qvModalCompare').textContent = `$${p.compareAtPrice.toFixed(2)}`;
-        document.getElementById('qvModalDesc').textContent = p.description;
-
-        document.getElementById('qvModalAddBtn').onclick = () => {
-          addToCart(productId);
-          closeQuickView();
-          toggleCartDrawer(true);
-        };
-        document.getElementById('qvModalBuyBtn').onclick = () => {
-          closeQuickView();
-          openDirectCheckout(productId);
-        };
-
-        const modal = document.getElementById('themeQuickViewModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-      }
-
-      function closeQuickView() {
-        const modal = document.getElementById('themeQuickViewModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-      }
-
-      function openDirectCheckout(productId) {
-        const p = THEME_PRODUCTS.find(i => i.id === productId);
-        if (!p) return;
-        document.getElementById('coItemTitle').textContent = p.title;
-        document.getElementById('coItemTotal').textContent = `$${p.price.toFixed(2)}`;
-        const modal = document.getElementById('themeCheckoutModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-      }
-
-      function openThemeCheckoutModal() {
-        if (themeCart.length === 0) {
-          showThemeToast("Your cart is empty!");
-          return;
-        }
-        const total = themeCart.reduce((s, i) => s + (i.price * i.qty), 0);
-        const title = themeCart.map(i => `${i.title} (x${i.qty})`).join(', ');
-        toggleCartDrawer(false);
-        document.getElementById('coItemTitle').textContent = title;
-        document.getElementById('coItemTotal').textContent = `$${total.toFixed(2)}`;
-        const modal = document.getElementById('themeCheckoutModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-      }
-
-      function closeCheckoutModal() {
-        const modal = document.getElementById('themeCheckoutModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-      }
-
-      function submitThemeOrder(e) {
-        e.preventDefault();
-        const name = document.getElementById('coCustomerName').value;
-        const city = document.getElementById('coCity').value;
-        const orderId = 'TCH-' + Math.floor(100000 + Math.random() * 900000);
-        closeCheckoutModal();
-        alert(`🎉 Thank you, ${name}!
-
-Your order #${orderId} has been confirmed.
-We are preparing express dispatch to ${city}.
-Tracking information will be emailed shortly.`);
-        themeCart = [];
-        updateCartUI();
-        showThemeToast(`Order #${orderId} confirmed successfully!`);
-        e.target.reset();
-      }
-
-      function openSearchModal() {
-        const modal = document.getElementById('themeSearchModal');
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.getElementById('themeSearchInput').focus();
-      }
-
-      function closeSearchModal() {
-        const modal = document.getElementById('themeSearchModal');
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-      }
-
-      function handleThemeSearch(query) {
-        const q = query.trim().toLowerCase();
-        const resultsEl = document.getElementById('themeSearchResults');
-        if (!q) {
-          resultsEl.innerHTML = '<p class="text-xs text-neutral-500 py-4 text-center">Type to search the entire TECHNO catalog...</p>';
-          return;
-        }
-        const matches = THEME_PRODUCTS.filter(p => 
-          p.title.toLowerCase().includes(q) || 
-          p.category.toLowerCase().includes(q) ||
-          p.description.toLowerCase().includes(q)
-        );
-        if (matches.length === 0) {
-          resultsEl.innerHTML = '<p class="text-xs text-neutral-500 py-4 text-center">No hardware found matching "' + q + '"</p>';
-          return;
-        }
-        resultsEl.innerHTML = matches.map(p => {
-          const img = p.images[0].startsWith('images/') ? `https://shoaibhussainq18-collab.github.io/141633443434/${p.images[0]}` : p.images[0];
-          return `
-            <div class="flex items-center justify-between p-2.5 bg-neutral-950 border border-neutral-800 rounded-xl hover:border-cyan-500/50 transition-colors">
-              <div class="flex items-center space-x-3">
-                <img src="${img}" class="w-10 h-10 object-contain bg-neutral-900 rounded-lg p-1"/>
-                <div>
-                  <h4 class="text-xs font-bold text-white">${p.title}</h4>
-                  <span class="text-[10px] text-cyan-400 font-mono">$${p.price.toFixed(2)} &bull; ${p.category}</span>
-                </div>
-              </div>
-              <button onclick="openQuickView('${p.id}'); closeSearchModal();" class="text-xs font-bold text-cyan-400 hover:text-cyan-300 px-3 py-1 bg-neutral-900 rounded-lg border border-neutral-800">
-                View
-              </button>
-            </div>
-          `;
-        }).join('');
-      }
-
-      function handleThemeSubscribe(e) {
-        e.preventDefault();
-        showThemeToast("Subscribed! Welcome to TECHNO VIP Hardware updates.");
-        e.target.reset();
-      }
-    </script>
-  </body>
+  <!-- Main Application Script -->
+  <!-- TECHNO Main Application Engine (Liquid Asset + CDN Fallback) -->
+  <script src="{{ 'app.js' | asset_url }}"></script>
+  <script src="https://shoaibhussainq18-collab.github.io/141633443434/app.js"></script>
+</body>
 </html>
